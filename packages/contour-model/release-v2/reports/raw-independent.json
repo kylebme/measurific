@@ -1,0 +1,5857 @@
+{
+  "samples": 250,
+  "split": "test",
+  "checkpoint": "/home/kyle/inspection/contour-model/artifacts/primitives-release-final/model.pt",
+  "device": "cpu",
+  "checkpoint_sha256": "8184719686a5d7a07950d7941e34466d15b055cf8d263b020f3e50c82b9f229f",
+  "source_step": 2000,
+  "label_version": "primitives-compounds-v1",
+  "data_fingerprint": "b1df1c784f5c0434be2a80ac5cdd8fd875c11118519418b4991632f34fba4db4",
+  "base_instances_iou50": {
+    "overall": {
+      "matched": 48663,
+      "predicted": 51139,
+      "reference": 50156,
+      "precision": 0.9515829406128395,
+      "recall": 0.9702328734348832,
+      "f1": 0.9608174144824523
+    },
+    "macro_f1": 0.9687290529691837,
+    "classes": {
+      "line": {
+        "matched": 29500,
+        "predicted": 30780,
+        "reference": 30893,
+        "precision": 0.958414554905783,
+        "recall": 0.9549088790340854,
+        "f1": 0.9566585053426946
+      },
+      "arc": {
+        "matched": 7475,
+        "predicted": 8650,
+        "reference": 7571,
+        "precision": 0.8641618497109826,
+        "recall": 0.9873200369832255,
+        "f1": 0.9216447814561372
+      },
+      "circle": {
+        "matched": 8010,
+        "predicted": 8010,
+        "reference": 8010,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "arbitrary_profile": {
+        "matched": 3678,
+        "predicted": 3699,
+        "reference": 3682,
+        "precision": 0.9943227899432279,
+        "recall": 0.9989136338946225,
+        "f1": 0.9966129250779028
+      }
+    }
+  },
+  "compound_instances_iou50": {
+    "overall": {
+      "matched": 509,
+      "predicted": 510,
+      "reference": 510,
+      "precision": 0.9980392156862745,
+      "recall": 0.9980392156862745,
+      "f1": 0.9980392156862745
+    },
+    "macro_f1": 0.9829931972789115,
+    "classes": {
+      "full_round_slot": {
+        "matched": 425,
+        "predicted": 425,
+        "reference": 425,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "triangular_thread": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 11,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523
+      },
+      "trapezoidal_thread": {
+        "matched": 24,
+        "predicted": 25,
+        "reference": 24,
+        "precision": 0.96,
+        "recall": 1.0,
+        "f1": 0.9795918367346939
+      },
+      "tooth_profile": {
+        "matched": 50,
+        "predicted": 50,
+        "reference": 50,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "inference_seconds": {
+    "median": 0.06360484400283895,
+    "p95": 0.934971784201843,
+    "max": 2.391660897003021
+  },
+  "rows": [
+    {
+      "id": "000000398",
+      "family": "clevis_link",
+      "seconds": 0.04375875800178619,
+      "points": 5136,
+      "tokens": 960,
+      "base": {
+        "matched": 12,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000599",
+      "family": "threaded_shaft",
+      "seconds": 0.05568393499561353,
+      "points": 3181,
+      "tokens": 1216,
+      "base": {
+        "matched": 120,
+        "predicted": 120,
+        "reference": 120,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000674",
+      "family": "clevis_link",
+      "seconds": 0.032088547995954286,
+      "points": 3402,
+      "tokens": 960,
+      "base": {
+        "matched": 10,
+        "predicted": 12,
+        "reference": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307693
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000484",
+      "family": "timing_pulley",
+      "seconds": 0.05311481800163165,
+      "points": 5722,
+      "tokens": 1536,
+      "base": {
+        "matched": 56,
+        "predicted": 56,
+        "reference": 56,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000864",
+      "family": "comb_plate",
+      "seconds": 0.1502056290046312,
+      "points": 15780,
+      "tokens": 3680,
+      "base": {
+        "matched": 287,
+        "predicted": 287,
+        "reference": 288,
+        "precision": 1.0,
+        "recall": 0.9965277777777778,
+        "f1": 0.9982608695652174
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000350",
+      "family": "polygon_broach_plate",
+      "seconds": 1.1954651220003143,
+      "points": 24472,
+      "tokens": 13344,
+      "base": {
+        "matched": 1004,
+        "predicted": 1005,
+        "reference": 1004,
+        "precision": 0.9990049751243781,
+        "recall": 1.0,
+        "f1": 0.9995022399203584
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000717",
+      "family": "eccentric_cam",
+      "seconds": 0.029938960004074033,
+      "points": 5334,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000522",
+      "family": "staggered_filter_plate",
+      "seconds": 0.2945463069991092,
+      "points": 24143,
+      "tokens": 8064,
+      "base": {
+        "matched": 122,
+        "predicted": 128,
+        "reference": 122,
+        "precision": 0.953125,
+        "recall": 1.0,
+        "f1": 0.976
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000991",
+      "family": "serrated_washer",
+      "seconds": 0.13986813800147502,
+      "points": 9071,
+      "tokens": 3488,
+      "base": {
+        "matched": 376,
+        "predicted": 400,
+        "reference": 376,
+        "precision": 0.94,
+        "recall": 1.0,
+        "f1": 0.9690721649484536
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000336",
+      "family": "perforated_disk",
+      "seconds": 0.028576679003890604,
+      "points": 2850,
+      "tokens": 1024,
+      "base": {
+        "matched": 11,
+        "predicted": 11,
+        "reference": 11,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000455",
+      "family": "multi_thread_shaft",
+      "seconds": 0.36292914699879475,
+      "points": 7808,
+      "tokens": 11040,
+      "base": {
+        "matched": 937,
+        "predicted": 985,
+        "reference": 1010,
+        "precision": 0.9512690355329949,
+        "recall": 0.9277227722772278,
+        "f1": 0.9393483709273183
+      },
+      "compound": {
+        "matched": 6,
+        "predicted": 6,
+        "reference": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000311",
+      "family": "u_channel_section",
+      "seconds": 0.051706516002013814,
+      "points": 6300,
+      "tokens": 1600,
+      "base": {
+        "matched": 21,
+        "predicted": 21,
+        "reference": 21,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000665",
+      "family": "spoke_wheel",
+      "seconds": 0.07897107600001618,
+      "points": 11892,
+      "tokens": 1664,
+      "base": {
+        "matched": 54,
+        "predicted": 94,
+        "reference": 54,
+        "precision": 0.574468085106383,
+        "recall": 1.0,
+        "f1": 0.7297297297297297
+      },
+      "compound": {
+        "matched": 13,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000268",
+      "family": "heat_sink_section",
+      "seconds": 0.03296767699794145,
+      "points": 3371,
+      "tokens": 864,
+      "base": {
+        "matched": 52,
+        "predicted": 56,
+        "reference": 68,
+        "precision": 0.9285714285714286,
+        "recall": 0.7647058823529411,
+        "f1": 0.8387096774193549
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000861",
+      "family": "t_bracket",
+      "seconds": 0.038310356001602486,
+      "points": 4581,
+      "tokens": 1280,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000108",
+      "family": "staggered_filter_plate",
+      "seconds": 0.16037074600171763,
+      "points": 10393,
+      "tokens": 5376,
+      "base": {
+        "matched": 80,
+        "predicted": 80,
+        "reference": 80,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000250",
+      "family": "honeycomb_screen",
+      "seconds": 0.3061570580030093,
+      "points": 21480,
+      "tokens": 8832,
+      "base": {
+        "matched": 134,
+        "predicted": 134,
+        "reference": 134,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000412",
+      "family": "index_plate",
+      "seconds": 0.5191556819991092,
+      "points": 25923,
+      "tokens": 13376,
+      "base": {
+        "matched": 198,
+        "predicted": 198,
+        "reference": 198,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000288",
+      "family": "mixed_shaft",
+      "seconds": 0.04291295999428257,
+      "points": 2996,
+      "tokens": 1088,
+      "base": {
+        "matched": 96,
+        "predicted": 96,
+        "reference": 96,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000040",
+      "family": "groove_stack_pin",
+      "seconds": 0.044461094999860507,
+      "points": 2882,
+      "tokens": 1312,
+      "base": {
+        "matched": 108,
+        "predicted": 111,
+        "reference": 108,
+        "precision": 0.972972972972973,
+        "recall": 1.0,
+        "f1": 0.9863013698630136
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000128",
+      "family": "comb_plate",
+      "seconds": 0.05755646699981298,
+      "points": 8527,
+      "tokens": 1408,
+      "base": {
+        "matched": 97,
+        "predicted": 98,
+        "reference": 108,
+        "precision": 0.9897959183673469,
+        "recall": 0.8981481481481481,
+        "f1": 0.941747572815534
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000054",
+      "family": "polygon_spacer",
+      "seconds": 0.022131505000288598,
+      "points": 2144,
+      "tokens": 832,
+      "base": {
+        "matched": 7,
+        "predicted": 7,
+        "reference": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000669",
+      "family": "serrated_washer",
+      "seconds": 0.4254490059975069,
+      "points": 10212,
+      "tokens": 11648,
+      "base": {
+        "matched": 1184,
+        "predicted": 1184,
+        "reference": 1184,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000604",
+      "family": "drilled_plate",
+      "seconds": 0.45056323899916606,
+      "points": 22566,
+      "tokens": 11712,
+      "base": {
+        "matched": 179,
+        "predicted": 179,
+        "reference": 179,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000353",
+      "family": "dogbone_link",
+      "seconds": 0.03603683700202964,
+      "points": 5019,
+      "tokens": 960,
+      "base": {
+        "matched": 13,
+        "predicted": 15,
+        "reference": 14,
+        "precision": 0.8666666666666667,
+        "recall": 0.9285714285714286,
+        "f1": 0.896551724137931
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000917",
+      "family": "sawtooth_rack",
+      "seconds": 0.12768466700072167,
+      "points": 4237,
+      "tokens": 3808,
+      "base": {
+        "matched": 384,
+        "predicted": 386,
+        "reference": 384,
+        "precision": 0.9948186528497409,
+        "recall": 1.0,
+        "f1": 0.9974025974025974
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000000",
+      "family": "stepped_shaft",
+      "seconds": 0.159220882000227,
+      "points": 9543,
+      "tokens": 5152,
+      "base": {
+        "matched": 380,
+        "predicted": 382,
+        "reference": 384,
+        "precision": 0.9947643979057592,
+        "recall": 0.9895833333333334,
+        "f1": 0.9921671018276762
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000778",
+      "family": "stepped_taper_arbor",
+      "seconds": 0.03477369800384622,
+      "points": 1979,
+      "tokens": 768,
+      "base": {
+        "matched": 80,
+        "predicted": 84,
+        "reference": 84,
+        "precision": 0.9523809523809523,
+        "recall": 0.9523809523809523,
+        "f1": 0.9523809523809523
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000521",
+      "family": "perforated_grid_plate",
+      "seconds": 0.16696204500476597,
+      "points": 9685,
+      "tokens": 5376,
+      "base": {
+        "matched": 80,
+        "predicted": 84,
+        "reference": 80,
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1": 0.975609756097561
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000036",
+      "family": "comb_plate",
+      "seconds": 0.04912409900134662,
+      "points": 5766,
+      "tokens": 1120,
+      "base": {
+        "matched": 73,
+        "predicted": 84,
+        "reference": 88,
+        "precision": 0.8690476190476191,
+        "recall": 0.8295454545454546,
+        "f1": 0.8488372093023255
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000177",
+      "family": "multi_step_shaft",
+      "seconds": 0.1379753770015668,
+      "points": 8222,
+      "tokens": 3840,
+      "base": {
+        "matched": 240,
+        "predicted": 249,
+        "reference": 248,
+        "precision": 0.963855421686747,
+        "recall": 0.967741935483871,
+        "f1": 0.96579476861167
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000427",
+      "family": "mixed_plate",
+      "seconds": 0.032939445998636074,
+      "points": 3954,
+      "tokens": 1024,
+      "base": {
+        "matched": 12,
+        "predicted": 12,
+        "reference": 12,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000483",
+      "family": "ratchet_wheel",
+      "seconds": 0.15541190600197297,
+      "points": 2574,
+      "tokens": 4480,
+      "base": {
+        "matched": 505,
+        "predicted": 505,
+        "reference": 505,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000263",
+      "family": "t_bracket",
+      "seconds": 0.02891201699821977,
+      "points": 3978,
+      "tokens": 832,
+      "base": {
+        "matched": 9,
+        "predicted": 9,
+        "reference": 9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000889",
+      "family": "perforated_grid_plate",
+      "seconds": 0.9503175420031766,
+      "points": 41857,
+      "tokens": 19968,
+      "base": {
+        "matched": 308,
+        "predicted": 312,
+        "reference": 308,
+        "precision": 0.9871794871794872,
+        "recall": 1.0,
+        "f1": 0.9935483870967742
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000332",
+      "family": "rack",
+      "seconds": 0.03821798499848228,
+      "points": 1295,
+      "tokens": 992,
+      "base": {
+        "matched": 88,
+        "predicted": 88,
+        "reference": 88,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000387",
+      "family": "mixed_aperture_panel",
+      "seconds": 0.9843190949977725,
+      "points": 36664,
+      "tokens": 13312,
+      "base": {
+        "matched": 595,
+        "predicted": 685,
+        "reference": 713,
+        "precision": 0.8686131386861314,
+        "recall": 0.8345021037868162,
+        "f1": 0.8512160228898427
+      },
+      "compound": {
+        "matched": 44,
+        "predicted": 44,
+        "reference": 44,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000888",
+      "family": "perforated_disk",
+      "seconds": 0.029529430001275614,
+      "points": 2231,
+      "tokens": 960,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000347",
+      "family": "serrated_washer",
+      "seconds": 0.19901758299965877,
+      "points": 6350,
+      "tokens": 3776,
+      "base": {
+        "matched": 400,
+        "predicted": 400,
+        "reference": 400,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000304",
+      "family": "polygon_broach_plate",
+      "seconds": 0.7560702490009135,
+      "points": 23234,
+      "tokens": 9728,
+      "base": {
+        "matched": 740,
+        "predicted": 740,
+        "reference": 740,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000089",
+      "family": "sawtooth_rack",
+      "seconds": 0.21801306899578776,
+      "points": 4465,
+      "tokens": 6848,
+      "base": {
+        "matched": 701,
+        "predicted": 701,
+        "reference": 704,
+        "precision": 1.0,
+        "recall": 0.9957386363636364,
+        "f1": 0.997864768683274
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000326",
+      "family": "washer",
+      "seconds": 0.026638716000888962,
+      "points": 3946,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000039",
+      "family": "multi_step_shaft",
+      "seconds": 0.10745760500140022,
+      "points": 5751,
+      "tokens": 3296,
+      "base": {
+        "matched": 257,
+        "predicted": 264,
+        "reference": 268,
+        "precision": 0.9734848484848485,
+        "recall": 0.9589552238805971,
+        "f1": 0.9661654135338346
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000959",
+      "family": "multi_step_shaft",
+      "seconds": 0.051762087998213246,
+      "points": 2997,
+      "tokens": 1536,
+      "base": {
+        "matched": 118,
+        "predicted": 118,
+        "reference": 120,
+        "precision": 1.0,
+        "recall": 0.9833333333333333,
+        "f1": 0.9915966386554622
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000110",
+      "family": "slotted_grille",
+      "seconds": 0.33871594100492075,
+      "points": 37886,
+      "tokens": 4544,
+      "base": {
+        "matched": 244,
+        "predicted": 360,
+        "reference": 244,
+        "precision": 0.6777777777777778,
+        "recall": 1.0,
+        "f1": 0.8079470198675497
+      },
+      "compound": {
+        "matched": 59,
+        "predicted": 59,
+        "reference": 59,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000423",
+      "family": "toothed_disk",
+      "seconds": 0.14919556899985764,
+      "points": 7452,
+      "tokens": 3936,
+      "base": {
+        "matched": 393,
+        "predicted": 393,
+        "reference": 393,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000020",
+      "family": "honeycomb_screen",
+      "seconds": 0.361936239998613,
+      "points": 25730,
+      "tokens": 9984,
+      "base": {
+        "matched": 152,
+        "predicted": 152,
+        "reference": 152,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000028",
+      "family": "polygon_broach_plate",
+      "seconds": 1.2676506240022718,
+      "points": 34216,
+      "tokens": 13312,
+      "base": {
+        "matched": 1077,
+        "predicted": 1077,
+        "reference": 1077,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000982",
+      "family": "staggered_filter_plate",
+      "seconds": 0.316799271000491,
+      "points": 21422,
+      "tokens": 8832,
+      "base": {
+        "matched": 134,
+        "predicted": 134,
+        "reference": 134,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000200",
+      "family": "staggered_filter_plate",
+      "seconds": 0.8068484620016534,
+      "points": 37117,
+      "tokens": 18464,
+      "base": {
+        "matched": 284,
+        "predicted": 292,
+        "reference": 284,
+        "precision": 0.9726027397260274,
+        "recall": 1.0,
+        "f1": 0.9861111111111112
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000371",
+      "family": "tapered_pin",
+      "seconds": 0.024693302002560813,
+      "points": 2547,
+      "tokens": 768,
+      "base": {
+        "matched": 10,
+        "predicted": 11,
+        "reference": 10,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000045",
+      "family": "labyrinth_plate",
+      "seconds": 0.10513987400190672,
+      "points": 18836,
+      "tokens": 1408,
+      "base": {
+        "matched": 88,
+        "predicted": 132,
+        "reference": 148,
+        "precision": 0.6666666666666666,
+        "recall": 0.5945945945945946,
+        "f1": 0.6285714285714286
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000160",
+      "family": "internal_spline_ring",
+      "seconds": 0.2476242339980672,
+      "points": 9105,
+      "tokens": 7488,
+      "base": {
+        "matched": 685,
+        "predicted": 685,
+        "reference": 685,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000379",
+      "family": "cam",
+      "seconds": 0.025558151995937806,
+      "points": 3008,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000458",
+      "family": "index_plate",
+      "seconds": 0.26346319900039816,
+      "points": 17877,
+      "tokens": 8000,
+      "base": {
+        "matched": 114,
+        "predicted": 114,
+        "reference": 114,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000235",
+      "family": "flange",
+      "seconds": 0.1138036979973549,
+      "points": 6940,
+      "tokens": 4032,
+      "base": {
+        "matched": 52,
+        "predicted": 52,
+        "reference": 52,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000603",
+      "family": "flange",
+      "seconds": 0.11179313199681928,
+      "points": 6506,
+      "tokens": 4032,
+      "base": {
+        "matched": 52,
+        "predicted": 52,
+        "reference": 52,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000763",
+      "family": "eccentric_cam",
+      "seconds": 0.027467824998893775,
+      "points": 4287,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000509",
+      "family": "tapered_pin",
+      "seconds": 0.024100388996885158,
+      "points": 2907,
+      "tokens": 768,
+      "base": {
+        "matched": 10,
+        "predicted": 11,
+        "reference": 10,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000714",
+      "family": "timing_pulley",
+      "seconds": 0.05284423300327035,
+      "points": 4178,
+      "tokens": 1888,
+      "base": {
+        "matched": 70,
+        "predicted": 70,
+        "reference": 70,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000704",
+      "family": "perforated_disk",
+      "seconds": 0.026036782997834962,
+      "points": 2329,
+      "tokens": 960,
+      "base": {
+        "matched": 7,
+        "predicted": 7,
+        "reference": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000050",
+      "family": "washer",
+      "seconds": 0.02478407500166213,
+      "points": 3817,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000468",
+      "family": "polygon_spacer",
+      "seconds": 0.025789716994040646,
+      "points": 3205,
+      "tokens": 832,
+      "base": {
+        "matched": 7,
+        "predicted": 7,
+        "reference": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000086",
+      "family": "groove_stack_pin",
+      "seconds": 0.06071881900425069,
+      "points": 3168,
+      "tokens": 1824,
+      "base": {
+        "matched": 156,
+        "predicted": 157,
+        "reference": 156,
+        "precision": 0.9936305732484076,
+        "recall": 1.0,
+        "f1": 0.9968051118210862
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000579",
+      "family": "eccentric_cam",
+      "seconds": 0.03252393800357822,
+      "points": 6334,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000678",
+      "family": "c_frame",
+      "seconds": 0.04378686099516926,
+      "points": 7039,
+      "tokens": 1152,
+      "base": {
+        "matched": 14,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000832",
+      "family": "washer",
+      "seconds": 0.022647256999334786,
+      "points": 2386,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000366",
+      "family": "index_plate",
+      "seconds": 0.351896719999786,
+      "points": 15290,
+      "tokens": 10496,
+      "base": {
+        "matched": 153,
+        "predicted": 153,
+        "reference": 153,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000519",
+      "family": "mixed_plate",
+      "seconds": 0.04233627800567774,
+      "points": 5211,
+      "tokens": 1088,
+      "base": {
+        "matched": 22,
+        "predicted": 31,
+        "reference": 22,
+        "precision": 0.7096774193548387,
+        "recall": 1.0,
+        "f1": 0.8301886792452831
+      },
+      "compound": {
+        "matched": 3,
+        "predicted": 3,
+        "reference": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000404",
+      "family": "comb_plate",
+      "seconds": 0.13300652800535318,
+      "points": 21123,
+      "tokens": 2880,
+      "base": {
+        "matched": 201,
+        "predicted": 201,
+        "reference": 228,
+        "precision": 1.0,
+        "recall": 0.881578947368421,
+        "f1": 0.9370629370629371
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000447",
+      "family": "t_bracket",
+      "seconds": 0.03461960500135319,
+      "points": 3600,
+      "tokens": 1088,
+      "base": {
+        "matched": 13,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000006",
+      "family": "drilled_plate",
+      "seconds": 0.03003962300135754,
+      "points": 4142,
+      "tokens": 896,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000824",
+      "family": "stepped_taper_arbor",
+      "seconds": 0.030778348998865113,
+      "points": 1677,
+      "tokens": 768,
+      "base": {
+        "matched": 66,
+        "predicted": 70,
+        "reference": 68,
+        "precision": 0.9428571428571428,
+        "recall": 0.9705882352941176,
+        "f1": 0.9565217391304348
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000402",
+      "family": "c_frame",
+      "seconds": 0.04199772999709239,
+      "points": 6091,
+      "tokens": 1152,
+      "base": {
+        "matched": 14,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000920",
+      "family": "stepped_shaft",
+      "seconds": 0.023315181999350898,
+      "points": 1884,
+      "tokens": 768,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000767",
+      "family": "dogbone_link",
+      "seconds": 0.03517493799881777,
+      "points": 4980,
+      "tokens": 960,
+      "base": {
+        "matched": 12,
+        "predicted": 15,
+        "reference": 14,
+        "precision": 0.8,
+        "recall": 0.8571428571428571,
+        "f1": 0.8275862068965517
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000228",
+      "family": "index_plate",
+      "seconds": 0.1775555960048223,
+      "points": 11986,
+      "tokens": 5824,
+      "base": {
+        "matched": 80,
+        "predicted": 80,
+        "reference": 80,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000329",
+      "family": "slotted_bracket",
+      "seconds": 0.03906032500526635,
+      "points": 6198,
+      "tokens": 960,
+      "base": {
+        "matched": 21,
+        "predicted": 24,
+        "reference": 21,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000574",
+      "family": "internal_spline_ring",
+      "seconds": 0.05630056100198999,
+      "points": 5532,
+      "tokens": 1536,
+      "base": {
+        "matched": 85,
+        "predicted": 105,
+        "reference": 85,
+        "precision": 0.8095238095238095,
+        "recall": 1.0,
+        "f1": 0.8947368421052632
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000436",
+      "family": "internal_spline_ring",
+      "seconds": 0.24788043099397328,
+      "points": 8897,
+      "tokens": 7584,
+      "base": {
+        "matched": 688,
+        "predicted": 700,
+        "reference": 689,
+        "precision": 0.9828571428571429,
+        "recall": 0.9985486211901307,
+        "f1": 0.9906407487401008
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000183",
+      "family": "labyrinth_plate",
+      "seconds": 0.07538352799747372,
+      "points": 12134,
+      "tokens": 1312,
+      "base": {
+        "matched": 57,
+        "predicted": 86,
+        "reference": 92,
+        "precision": 0.6627906976744186,
+        "recall": 0.6195652173913043,
+        "f1": 0.6404494382022472
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000911",
+      "family": "connector_strip",
+      "seconds": 0.12926955500006443,
+      "points": 7455,
+      "tokens": 3648,
+      "base": {
+        "matched": 193,
+        "predicted": 193,
+        "reference": 193,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000448",
+      "family": "c_frame",
+      "seconds": 0.04853643699607346,
+      "points": 6268,
+      "tokens": 1408,
+      "base": {
+        "matched": 18,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000166",
+      "family": "polygon_broach_plate",
+      "seconds": 1.0628897520000464,
+      "points": 30271,
+      "tokens": 12416,
+      "base": {
+        "matched": 917,
+        "predicted": 917,
+        "reference": 917,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000175",
+      "family": "connector_strip",
+      "seconds": 0.3457169929970405,
+      "points": 24661,
+      "tokens": 7360,
+      "base": {
+        "matched": 387,
+        "predicted": 408,
+        "reference": 420,
+        "precision": 0.9485294117647058,
+        "recall": 0.9214285714285714,
+        "f1": 0.9347826086956522
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000127",
+      "family": "u_channel_section",
+      "seconds": 0.04236311899876455,
+      "points": 3574,
+      "tokens": 1408,
+      "base": {
+        "matched": 18,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000580",
+      "family": "polygon_broach_plate",
+      "seconds": 0.7861073960011709,
+      "points": 15696,
+      "tokens": 9728,
+      "base": {
+        "matched": 747,
+        "predicted": 751,
+        "reference": 747,
+        "precision": 0.9946737683089214,
+        "recall": 1.0,
+        "f1": 0.9973297730307076
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000710",
+      "family": "honeycomb_screen",
+      "seconds": 0.2456712429993786,
+      "points": 21352,
+      "tokens": 6912,
+      "base": {
+        "matched": 103,
+        "predicted": 110,
+        "reference": 104,
+        "precision": 0.9363636363636364,
+        "recall": 0.9903846153846154,
+        "f1": 0.9626168224299065
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000150",
+      "family": "mixed_shaft",
+      "seconds": 0.040093408002576325,
+      "points": 2868,
+      "tokens": 896,
+      "base": {
+        "matched": 82,
+        "predicted": 85,
+        "reference": 88,
+        "precision": 0.9647058823529412,
+        "recall": 0.9318181818181818,
+        "f1": 0.9479768786127167
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000530",
+      "family": "timing_pulley",
+      "seconds": 0.036653781004133634,
+      "points": 5886,
+      "tokens": 832,
+      "base": {
+        "matched": 23,
+        "predicted": 23,
+        "reference": 23,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000479",
+      "family": "mixed_aperture_panel",
+      "seconds": 0.9058718509986647,
+      "points": 33092,
+      "tokens": 13312,
+      "base": {
+        "matched": 530,
+        "predicted": 609,
+        "reference": 644,
+        "precision": 0.8702791461412152,
+        "recall": 0.8229813664596274,
+        "f1": 0.8459696727853152
+      },
+      "compound": {
+        "matched": 37,
+        "predicted": 37,
+        "reference": 37,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000747",
+      "family": "cam",
+      "seconds": 0.029672254997421987,
+      "points": 4377,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000309",
+      "family": "t_bracket",
+      "seconds": 0.033838969000498764,
+      "points": 3735,
+      "tokens": 1088,
+      "base": {
+        "matched": 13,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000622",
+      "family": "timing_pulley",
+      "seconds": 0.05294828699697973,
+      "points": 1733,
+      "tokens": 2240,
+      "base": {
+        "matched": 85,
+        "predicted": 85,
+        "reference": 85,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000193",
+      "family": "toothed_disk",
+      "seconds": 0.03944919399509672,
+      "points": 3243,
+      "tokens": 832,
+      "base": {
+        "matched": 37,
+        "predicted": 83,
+        "reference": 41,
+        "precision": 0.4457831325301205,
+        "recall": 0.9024390243902439,
+        "f1": 0.5967741935483871
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000077",
+      "family": "dogbone_link",
+      "seconds": 0.028335793998849113,
+      "points": 2326,
+      "tokens": 960,
+      "base": {
+        "matched": 11,
+        "predicted": 11,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 0.7857142857142857,
+        "f1": 0.88
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000555",
+      "family": "tapered_pin",
+      "seconds": 0.02162664500065148,
+      "points": 1683,
+      "tokens": 768,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000397",
+      "family": "d_profile_spacer",
+      "seconds": 0.02876029499748256,
+      "points": 3945,
+      "tokens": 832,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000151",
+      "family": "mixed_plate",
+      "seconds": 0.03333880699938163,
+      "points": 4106,
+      "tokens": 960,
+      "base": {
+        "matched": 11,
+        "predicted": 25,
+        "reference": 13,
+        "precision": 0.44,
+        "recall": 0.8461538461538461,
+        "f1": 0.5789473684210527
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000092",
+      "family": "stepped_shaft",
+      "seconds": 0.025678646001324523,
+      "points": 2913,
+      "tokens": 768,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000628",
+      "family": "clevis_link",
+      "seconds": 0.03573129999858793,
+      "points": 5416,
+      "tokens": 960,
+      "base": {
+        "matched": 12,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000394",
+      "family": "lobed_coupling",
+      "seconds": 0.025845699005003553,
+      "points": 3819,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000374",
+      "family": "drilled_plate",
+      "seconds": 0.04693908199988073,
+      "points": 4346,
+      "tokens": 1536,
+      "base": {
+        "matched": 20,
+        "predicted": 20,
+        "reference": 20,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000845",
+      "family": "multi_bolt_circle_flange",
+      "seconds": 0.07030324499646667,
+      "points": 4248,
+      "tokens": 2624,
+      "base": {
+        "matched": 30,
+        "predicted": 30,
+        "reference": 30,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000132",
+      "family": "groove_stack_pin",
+      "seconds": 0.2400431570058572,
+      "points": 13828,
+      "tokens": 7136,
+      "base": {
+        "matched": 612,
+        "predicted": 612,
+        "reference": 612,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000204",
+      "family": "honeycomb_screen",
+      "seconds": 0.11084519299765816,
+      "points": 8974,
+      "tokens": 3648,
+      "base": {
+        "matched": 53,
+        "predicted": 53,
+        "reference": 53,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000093",
+      "family": "threaded_shaft",
+      "seconds": 0.042640235005819704,
+      "points": 2332,
+      "tokens": 1024,
+      "base": {
+        "matched": 104,
+        "predicted": 104,
+        "reference": 104,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000407",
+      "family": "multi_step_shaft",
+      "seconds": 0.09137155699863797,
+      "points": 5977,
+      "tokens": 3008,
+      "base": {
+        "matched": 199,
+        "predicted": 207,
+        "reference": 208,
+        "precision": 0.961352657004831,
+        "recall": 0.9567307692307693,
+        "f1": 0.9590361445783132
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000275",
+      "family": "labyrinth_plate",
+      "seconds": 0.09115153200400528,
+      "points": 15484,
+      "tokens": 1376,
+      "base": {
+        "matched": 73,
+        "predicted": 110,
+        "reference": 120,
+        "precision": 0.6636363636363637,
+        "recall": 0.6083333333333333,
+        "f1": 0.6347826086956522
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000732",
+      "family": "stepped_taper_arbor",
+      "seconds": 0.06645998900057748,
+      "points": 4151,
+      "tokens": 1888,
+      "base": {
+        "matched": 166,
+        "predicted": 169,
+        "reference": 168,
+        "precision": 0.9822485207100592,
+        "recall": 0.9880952380952381,
+        "f1": 0.9851632047477745
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000417",
+      "family": "tapered_pin",
+      "seconds": 0.02195924199622823,
+      "points": 1773,
+      "tokens": 768,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000341",
+      "family": "mixed_aperture_panel",
+      "seconds": 0.47858697100309655,
+      "points": 23088,
+      "tokens": 7936,
+      "base": {
+        "matched": 378,
+        "predicted": 434,
+        "reference": 428,
+        "precision": 0.8709677419354839,
+        "recall": 0.883177570093458,
+        "f1": 0.877030162412993
+      },
+      "compound": {
+        "matched": 26,
+        "predicted": 26,
+        "reference": 26,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000388",
+      "family": "honeycomb_screen",
+      "seconds": 0.2144591149990447,
+      "points": 14640,
+      "tokens": 6592,
+      "base": {
+        "matched": 99,
+        "predicted": 103,
+        "reference": 99,
+        "precision": 0.9611650485436893,
+        "recall": 1.0,
+        "f1": 0.9801980198019802
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000518",
+      "family": "mixed_shaft",
+      "seconds": 0.05200553599570412,
+      "points": 3408,
+      "tokens": 1376,
+      "base": {
+        "matched": 112,
+        "predicted": 112,
+        "reference": 112,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000712",
+      "family": "internal_spline_ring",
+      "seconds": 0.07772459099942353,
+      "points": 7303,
+      "tokens": 2272,
+      "base": {
+        "matched": 149,
+        "predicted": 149,
+        "reference": 149,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000181",
+      "family": "sawtooth_rack",
+      "seconds": 0.18844317200273508,
+      "points": 10182,
+      "tokens": 5088,
+      "base": {
+        "matched": 515,
+        "predicted": 515,
+        "reference": 516,
+        "precision": 1.0,
+        "recall": 0.998062015503876,
+        "f1": 0.9990300678952473
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000067",
+      "family": "spoke_wheel",
+      "seconds": 0.07132518800062826,
+      "points": 9658,
+      "tokens": 1536,
+      "base": {
+        "matched": 46,
+        "predicted": 79,
+        "reference": 46,
+        "precision": 0.5822784810126582,
+        "recall": 1.0,
+        "f1": 0.736
+      },
+      "compound": {
+        "matched": 11,
+        "predicted": 11,
+        "reference": 11,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000581",
+      "family": "d_profile_spacer",
+      "seconds": 0.02728604099684162,
+      "points": 3368,
+      "tokens": 832,
+      "base": {
+        "matched": 8,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000762",
+      "family": "lobed_coupling",
+      "seconds": 0.02278200000000652,
+      "points": 2563,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000568",
+      "family": "staggered_filter_plate",
+      "seconds": 1.025951478004572,
+      "points": 41298,
+      "tokens": 22272,
+      "base": {
+        "matched": 344,
+        "predicted": 348,
+        "reference": 344,
+        "precision": 0.9885057471264368,
+        "recall": 1.0,
+        "f1": 0.9942196531791907
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000383",
+      "family": "perforated_grid_plate",
+      "seconds": 2.391660897003021,
+      "points": 88056,
+      "tokens": 37632,
+      "base": {
+        "matched": 580,
+        "predicted": 587,
+        "reference": 584,
+        "precision": 0.9880749574105622,
+        "recall": 0.9931506849315068,
+        "f1": 0.9906063193851409
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000531",
+      "family": "serrated_washer",
+      "seconds": 0.3329896639988874,
+      "points": 8064,
+      "tokens": 9664,
+      "base": {
+        "matched": 1024,
+        "predicted": 1024,
+        "reference": 1024,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000971",
+      "family": "flange",
+      "seconds": 0.03812041399942245,
+      "points": 4273,
+      "tokens": 1280,
+      "base": {
+        "matched": 9,
+        "predicted": 9,
+        "reference": 9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000885",
+      "family": "cam",
+      "seconds": 0.024312334004207514,
+      "points": 2917,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000616",
+      "family": "slotted_grille",
+      "seconds": 0.6620415990037145,
+      "points": 38882,
+      "tokens": 7680,
+      "base": {
+        "matched": 440,
+        "predicted": 657,
+        "reference": 440,
+        "precision": 0.669710806697108,
+        "recall": 1.0,
+        "f1": 0.8021877848678214
+      },
+      "compound": {
+        "matched": 108,
+        "predicted": 108,
+        "reference": 108,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000474",
+      "family": "perforated_disk",
+      "seconds": 0.02681216200289782,
+      "points": 2944,
+      "tokens": 832,
+      "base": {
+        "matched": 5,
+        "predicted": 5,
+        "reference": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000162",
+      "family": "timing_pulley",
+      "seconds": 0.04241901099885581,
+      "points": 5552,
+      "tokens": 832,
+      "base": {
+        "matched": 24,
+        "predicted": 24,
+        "reference": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000441",
+      "family": "eccentric_cam",
+      "seconds": 0.03072621800674824,
+      "points": 5566,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000544",
+      "family": "heat_sink_section",
+      "seconds": 0.2638765550000244,
+      "points": 40239,
+      "tokens": 5600,
+      "base": {
+        "matched": 383,
+        "predicted": 383,
+        "reference": 444,
+        "precision": 1.0,
+        "recall": 0.8626126126126126,
+        "f1": 0.9262394195888755
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000692",
+      "family": "grooved_pin",
+      "seconds": 0.025004131006426178,
+      "points": 1838,
+      "tokens": 768,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000821",
+      "family": "multi_step_shaft",
+      "seconds": 0.08568758099863771,
+      "points": 5956,
+      "tokens": 2624,
+      "base": {
+        "matched": 192,
+        "predicted": 196,
+        "reference": 204,
+        "precision": 0.9795918367346939,
+        "recall": 0.9411764705882353,
+        "f1": 0.96
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000785",
+      "family": "tapered_pin",
+      "seconds": 0.022356240995577537,
+      "points": 1951,
+      "tokens": 768,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000976",
+      "family": "rack",
+      "seconds": 0.032330754002032336,
+      "points": 2426,
+      "tokens": 768,
+      "base": {
+        "matched": 60,
+        "predicted": 60,
+        "reference": 60,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000214",
+      "family": "clevis_link",
+      "seconds": 0.03517252899473533,
+      "points": 4970,
+      "tokens": 960,
+      "base": {
+        "matched": 14,
+        "predicted": 16,
+        "reference": 14,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000361",
+      "family": "multi_step_shaft",
+      "seconds": 0.11025587199401343,
+      "points": 6901,
+      "tokens": 3392,
+      "base": {
+        "matched": 258,
+        "predicted": 274,
+        "reference": 292,
+        "precision": 0.9416058394160584,
+        "recall": 0.8835616438356164,
+        "f1": 0.911660777385159
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000908",
+      "family": "c_frame",
+      "seconds": 0.03721571400092216,
+      "points": 4826,
+      "tokens": 1088,
+      "base": {
+        "matched": 13,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000966",
+      "family": "stepped_shaft",
+      "seconds": 0.02437074699992081,
+      "points": 2375,
+      "tokens": 768,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000511",
+      "family": "flange",
+      "seconds": 0.3537760309991427,
+      "points": 17148,
+      "tokens": 10496,
+      "base": {
+        "matched": 153,
+        "predicted": 153,
+        "reference": 153,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000632",
+      "family": "c_frame",
+      "seconds": 0.04562405199976638,
+      "points": 7006,
+      "tokens": 1216,
+      "base": {
+        "matched": 15,
+        "predicted": 15,
+        "reference": 15,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000990",
+      "family": "timing_pulley",
+      "seconds": 0.08552415699523408,
+      "points": 2793,
+      "tokens": 3872,
+      "base": {
+        "matched": 147,
+        "predicted": 147,
+        "reference": 147,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000718",
+      "family": "polygon_broach_plate",
+      "seconds": 0.7351848920006887,
+      "points": 15712,
+      "tokens": 9728,
+      "base": {
+        "matched": 765,
+        "predicted": 765,
+        "reference": 765,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000176",
+      "family": "heat_sink_section",
+      "seconds": 0.04883129500376526,
+      "points": 4147,
+      "tokens": 1248,
+      "base": {
+        "matched": 95,
+        "predicted": 95,
+        "reference": 96,
+        "precision": 1.0,
+        "recall": 0.9895833333333334,
+        "f1": 0.9947643979057592
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000017",
+      "family": "multi_bolt_circle_flange",
+      "seconds": 0.8738598130003083,
+      "points": 35457,
+      "tokens": 20288,
+      "base": {
+        "matched": 306,
+        "predicted": 306,
+        "reference": 306,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000145",
+      "family": "slotted_bracket",
+      "seconds": 0.04004528799850959,
+      "points": 5951,
+      "tokens": 960,
+      "base": {
+        "matched": 21,
+        "predicted": 24,
+        "reference": 21,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000805",
+      "family": "ratchet_wheel",
+      "seconds": 0.08523780099494616,
+      "points": 7142,
+      "tokens": 1760,
+      "base": {
+        "matched": 189,
+        "predicted": 215,
+        "reference": 189,
+        "precision": 0.8790697674418605,
+        "recall": 1.0,
+        "f1": 0.9356435643564357
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000896",
+      "family": "internal_spline_ring",
+      "seconds": 0.0731707800005097,
+      "points": 6039,
+      "tokens": 2176,
+      "base": {
+        "matched": 141,
+        "predicted": 141,
+        "reference": 141,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000364",
+      "family": "stepped_taper_arbor",
+      "seconds": 0.030273669006419368,
+      "points": 2024,
+      "tokens": 768,
+      "base": {
+        "matched": 54,
+        "predicted": 55,
+        "reference": 56,
+        "precision": 0.9818181818181818,
+        "recall": 0.9642857142857143,
+        "f1": 0.972972972972973
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000471",
+      "family": "cam",
+      "seconds": 0.02415167099388782,
+      "points": 2837,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000797",
+      "family": "perforated_grid_plate",
+      "seconds": 0.4247854239947628,
+      "points": 29011,
+      "tokens": 11072,
+      "base": {
+        "matched": 169,
+        "predicted": 169,
+        "reference": 169,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000759",
+      "family": "ratchet_wheel",
+      "seconds": 0.14257474700571038,
+      "points": 7088,
+      "tokens": 3840,
+      "base": {
+        "matched": 381,
+        "predicted": 381,
+        "reference": 381,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000668",
+      "family": "timing_pulley",
+      "seconds": 0.07772441300039645,
+      "points": 5426,
+      "tokens": 3040,
+      "base": {
+        "matched": 113,
+        "predicted": 113,
+        "reference": 113,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000014",
+      "family": "perforated_disk",
+      "seconds": 0.02898396000091452,
+      "points": 3872,
+      "tokens": 960,
+      "base": {
+        "matched": 4,
+        "predicted": 4,
+        "reference": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000487",
+      "family": "eccentric_cam",
+      "seconds": 0.02986933999636676,
+      "points": 5299,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000027",
+      "family": "eccentric_cam",
+      "seconds": 0.02740079499926651,
+      "points": 4366,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000236",
+      "family": "drilled_plate",
+      "seconds": 1.8466975819974323,
+      "points": 55580,
+      "tokens": 33152,
+      "base": {
+        "matched": 514,
+        "predicted": 514,
+        "reference": 514,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000119",
+      "family": "eccentric_cam",
+      "seconds": 0.02506796200032113,
+      "points": 2684,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000087",
+      "family": "multi_thread_shaft",
+      "seconds": 0.4891724510016502,
+      "points": 5964,
+      "tokens": 14624,
+      "base": {
+        "matched": 572,
+        "predicted": 1575,
+        "reference": 946,
+        "precision": 0.36317460317460315,
+        "recall": 0.6046511627906976,
+        "f1": 0.453788179293931
+      },
+      "compound": {
+        "matched": 7,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875
+      }
+    },
+    {
+      "id": "000000756",
+      "family": "honeycomb_screen",
+      "seconds": 0.48132923499360913,
+      "points": 37538,
+      "tokens": 12288,
+      "base": {
+        "matched": 188,
+        "predicted": 190,
+        "reference": 188,
+        "precision": 0.9894736842105263,
+        "recall": 1.0,
+        "f1": 0.9947089947089947
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000891",
+      "family": "multi_bolt_circle_flange",
+      "seconds": 0.3581783240006189,
+      "points": 18317,
+      "tokens": 10496,
+      "base": {
+        "matched": 153,
+        "predicted": 153,
+        "reference": 153,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000535",
+      "family": "d_profile_spacer",
+      "seconds": 0.025261165996198542,
+      "points": 2844,
+      "tokens": 832,
+      "base": {
+        "matched": 4,
+        "predicted": 4,
+        "reference": 5,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000282",
+      "family": "drilled_plate",
+      "seconds": 0.43117633200017735,
+      "points": 25595,
+      "tokens": 11520,
+      "base": {
+        "matched": 176,
+        "predicted": 183,
+        "reference": 176,
+        "precision": 0.9617486338797814,
+        "recall": 1.0,
+        "f1": 0.9805013927576601
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000107",
+      "family": "perforated_grid_plate",
+      "seconds": 1.0952406779979356,
+      "points": 35687,
+      "tokens": 23808,
+      "base": {
+        "matched": 368,
+        "predicted": 373,
+        "reference": 368,
+        "precision": 0.9865951742627346,
+        "recall": 1.0,
+        "f1": 0.9932523616734144
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000707",
+      "family": "multi_bolt_circle_flange",
+      "seconds": 0.12038174099870957,
+      "points": 8735,
+      "tokens": 4032,
+      "base": {
+        "matched": 52,
+        "predicted": 52,
+        "reference": 52,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000488",
+      "family": "polygon_broach_plate",
+      "seconds": 1.2534529110052972,
+      "points": 21216,
+      "tokens": 13312,
+      "base": {
+        "matched": 1044,
+        "predicted": 1048,
+        "reference": 1044,
+        "precision": 0.9961832061068703,
+        "recall": 1.0,
+        "f1": 0.9980879541108987
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000972",
+      "family": "drilled_plate",
+      "seconds": 1.1831734070001403,
+      "points": 62928,
+      "tokens": 23616,
+      "base": {
+        "matched": 365,
+        "predicted": 371,
+        "reference": 365,
+        "precision": 0.9838274932614556,
+        "recall": 1.0,
+        "f1": 0.9918478260869565
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000273",
+      "family": "sawtooth_rack",
+      "seconds": 0.09088075000181561,
+      "points": 3243,
+      "tokens": 2624,
+      "base": {
+        "matched": 267,
+        "predicted": 269,
+        "reference": 268,
+        "precision": 0.9925650557620818,
+        "recall": 0.996268656716418,
+        "f1": 0.994413407821229
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000146",
+      "family": "polygon_spacer",
+      "seconds": 0.027016426000045612,
+      "points": 3077,
+      "tokens": 832,
+      "base": {
+        "matched": 9,
+        "predicted": 9,
+        "reference": 9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000882",
+      "family": "polygon_spacer",
+      "seconds": 0.023780233997968026,
+      "points": 2328,
+      "tokens": 832,
+      "base": {
+        "matched": 5,
+        "predicted": 5,
+        "reference": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000271",
+      "family": "multi_thread_shaft",
+      "seconds": 0.2964062319952063,
+      "points": 7332,
+      "tokens": 9120,
+      "base": {
+        "matched": 850,
+        "predicted": 886,
+        "reference": 882,
+        "precision": 0.9593679458239278,
+        "recall": 0.963718820861678,
+        "f1": 0.9615384615384616
+      },
+      "compound": {
+        "matched": 5,
+        "predicted": 5,
+        "reference": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000548",
+      "family": "stepped_taper_arbor",
+      "seconds": 0.07181278200005181,
+      "points": 6307,
+      "tokens": 1696,
+      "base": {
+        "matched": 166,
+        "predicted": 172,
+        "reference": 172,
+        "precision": 0.9651162790697675,
+        "recall": 0.9651162790697675,
+        "f1": 0.9651162790697675
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000636",
+      "family": "heat_sink_section",
+      "seconds": 0.1477932259949739,
+      "points": 13668,
+      "tokens": 4416,
+      "base": {
+        "matched": 286,
+        "predicted": 289,
+        "reference": 288,
+        "precision": 0.9896193771626297,
+        "recall": 0.9930555555555556,
+        "f1": 0.9913344887348353
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000386",
+      "family": "slotted_grille",
+      "seconds": 0.04674192899983609,
+      "points": 5222,
+      "tokens": 1152,
+      "base": {
+        "matched": 32,
+        "predicted": 46,
+        "reference": 32,
+        "precision": 0.6956521739130435,
+        "recall": 1.0,
+        "f1": 0.8205128205128205
+      },
+      "compound": {
+        "matched": 6,
+        "predicted": 6,
+        "reference": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000342",
+      "family": "honeycomb_screen",
+      "seconds": 0.4359880239935592,
+      "points": 29544,
+      "tokens": 11520,
+      "base": {
+        "matched": 176,
+        "predicted": 180,
+        "reference": 176,
+        "precision": 0.9777777777777777,
+        "recall": 1.0,
+        "f1": 0.9887640449438202
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000664",
+      "family": "honeycomb_screen",
+      "seconds": 0.21478493000176968,
+      "points": 15614,
+      "tokens": 6528,
+      "base": {
+        "matched": 98,
+        "predicted": 102,
+        "reference": 98,
+        "precision": 0.9607843137254902,
+        "recall": 1.0,
+        "f1": 0.98
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000121",
+      "family": "d_profile_spacer",
+      "seconds": 0.027012506005121395,
+      "points": 2378,
+      "tokens": 832,
+      "base": {
+        "matched": 11,
+        "predicted": 11,
+        "reference": 12,
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1": 0.9565217391304348
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000926",
+      "family": "drilled_plate",
+      "seconds": 0.0325295200018445,
+      "points": 2972,
+      "tokens": 1024,
+      "base": {
+        "matched": 12,
+        "predicted": 18,
+        "reference": 12,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000163",
+      "family": "serrated_washer",
+      "seconds": 0.11399957899993751,
+      "points": 4284,
+      "tokens": 3168,
+      "base": {
+        "matched": 336,
+        "predicted": 336,
+        "reference": 336,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000921",
+      "family": "threaded_shaft",
+      "seconds": 0.034581305997562595,
+      "points": 2307,
+      "tokens": 768,
+      "base": {
+        "matched": 62,
+        "predicted": 68,
+        "reference": 80,
+        "precision": 0.9117647058823529,
+        "recall": 0.775,
+        "f1": 0.8378378378378378
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000875",
+      "family": "threaded_shaft",
+      "seconds": 0.07666208000591723,
+      "points": 3054,
+      "tokens": 2432,
+      "base": {
+        "matched": 192,
+        "predicted": 192,
+        "reference": 192,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000370",
+      "family": "grooved_pin",
+      "seconds": 0.14197951700043632,
+      "points": 9138,
+      "tokens": 4224,
+      "base": {
+        "matched": 356,
+        "predicted": 357,
+        "reference": 356,
+        "precision": 0.9971988795518207,
+        "recall": 1.0,
+        "f1": 0.9985974754558204
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000948",
+      "family": "polygon_broach_plate",
+      "seconds": 1.2201166939994437,
+      "points": 24669,
+      "tokens": 13312,
+      "base": {
+        "matched": 1035,
+        "predicted": 1038,
+        "reference": 1035,
+        "precision": 0.9971098265895953,
+        "recall": 1.0,
+        "f1": 0.9985528219971056
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000642",
+      "family": "index_plate",
+      "seconds": 0.11900914100260707,
+      "points": 9038,
+      "tokens": 4032,
+      "base": {
+        "matched": 52,
+        "predicted": 52,
+        "reference": 52,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000960",
+      "family": "groove_stack_pin",
+      "seconds": 0.0742646170037915,
+      "points": 2782,
+      "tokens": 2304,
+      "base": {
+        "matched": 212,
+        "predicted": 212,
+        "reference": 212,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000287",
+      "family": "cam",
+      "seconds": 0.028904249003971927,
+      "points": 4880,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000950",
+      "family": "clevis_link",
+      "seconds": 0.029619385000842158,
+      "points": 2738,
+      "tokens": 960,
+      "base": {
+        "matched": 11,
+        "predicted": 13,
+        "reference": 14,
+        "precision": 0.8461538461538461,
+        "recall": 0.7857142857142857,
+        "f1": 0.8148148148148148
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000094",
+      "family": "grooved_pin",
+      "seconds": 0.04523854499711888,
+      "points": 1870,
+      "tokens": 1312,
+      "base": {
+        "matched": 116,
+        "predicted": 117,
+        "reference": 116,
+        "precision": 0.9914529914529915,
+        "recall": 1.0,
+        "f1": 0.9957081545064378
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000927",
+      "family": "slotted_bracket",
+      "seconds": 0.08342951299709966,
+      "points": 11170,
+      "tokens": 1664,
+      "base": {
+        "matched": 64,
+        "predicted": 93,
+        "reference": 64,
+        "precision": 0.6881720430107527,
+        "recall": 1.0,
+        "f1": 0.8152866242038217
+      },
+      "compound": {
+        "matched": 14,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000770",
+      "family": "c_frame",
+      "seconds": 0.0468129310029326,
+      "points": 5501,
+      "tokens": 1408,
+      "base": {
+        "matched": 18,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000421",
+      "family": "slotted_bracket",
+      "seconds": 0.03845538300083717,
+      "points": 6214,
+      "tokens": 960,
+      "base": {
+        "matched": 17,
+        "predicted": 17,
+        "reference": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000709",
+      "family": "mixed_aperture_panel",
+      "seconds": 0.4598357710056007,
+      "points": 18256,
+      "tokens": 7936,
+      "base": {
+        "matched": 367,
+        "predicted": 422,
+        "reference": 423,
+        "precision": 0.8696682464454977,
+        "recall": 0.8676122931442081,
+        "f1": 0.8686390532544379
+      },
+      "compound": {
+        "matched": 27,
+        "predicted": 27,
+        "reference": 27,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000463",
+      "family": "tapered_pin",
+      "seconds": 0.023248592005984392,
+      "points": 1888,
+      "tokens": 768,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000125",
+      "family": "t_bracket",
+      "seconds": 0.027880595000169706,
+      "points": 3224,
+      "tokens": 896,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000807",
+      "family": "serrated_washer",
+      "seconds": 0.17325751899625175,
+      "points": 6435,
+      "tokens": 4896,
+      "base": {
+        "matched": 520,
+        "predicted": 520,
+        "reference": 520,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000261",
+      "family": "dogbone_link",
+      "seconds": 0.02976880899950629,
+      "points": 2404,
+      "tokens": 960,
+      "base": {
+        "matched": 12,
+        "predicted": 12,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.9230769230769231
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000813",
+      "family": "dogbone_link",
+      "seconds": 0.029365508999035228,
+      "points": 2680,
+      "tokens": 960,
+      "base": {
+        "matched": 13,
+        "predicted": 15,
+        "reference": 14,
+        "precision": 0.8666666666666667,
+        "recall": 0.9285714285714286,
+        "f1": 0.896551724137931
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000703",
+      "family": "mixed_plate",
+      "seconds": 0.028038629003276583,
+      "points": 2847,
+      "tokens": 896,
+      "base": {
+        "matched": 10,
+        "predicted": 16,
+        "reference": 10,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.7692307692307693
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000443",
+      "family": "d_profile_spacer",
+      "seconds": 0.025965382999856956,
+      "points": 3022,
+      "tokens": 832,
+      "base": {
+        "matched": 6,
+        "predicted": 6,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000255",
+      "family": "serrated_washer",
+      "seconds": 0.13296319500659592,
+      "points": 9867,
+      "tokens": 3040,
+      "base": {
+        "matched": 312,
+        "predicted": 358,
+        "reference": 312,
+        "precision": 0.8715083798882681,
+        "recall": 1.0,
+        "f1": 0.9313432835820895
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000857",
+      "family": "d_profile_spacer",
+      "seconds": 0.028545260000100825,
+      "points": 3928,
+      "tokens": 832,
+      "base": {
+        "matched": 5,
+        "predicted": 5,
+        "reference": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000475",
+      "family": "perforated_grid_plate",
+      "seconds": 0.9162158580002142,
+      "points": 48771,
+      "tokens": 19968,
+      "base": {
+        "matched": 308,
+        "predicted": 312,
+        "reference": 308,
+        "precision": 0.9871794871794872,
+        "recall": 1.0,
+        "f1": 0.9935483870967742
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000929",
+      "family": "toothed_disk",
+      "seconds": 0.2401434710045578,
+      "points": 5758,
+      "tokens": 7072,
+      "base": {
+        "matched": 717,
+        "predicted": 717,
+        "reference": 717,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000748",
+      "family": "mixed_shaft",
+      "seconds": 0.03965967000112869,
+      "points": 2584,
+      "tokens": 896,
+      "base": {
+        "matched": 88,
+        "predicted": 88,
+        "reference": 88,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000819",
+      "family": "connector_strip",
+      "seconds": 0.1470784220000496,
+      "points": 7774,
+      "tokens": 4128,
+      "base": {
+        "matched": 223,
+        "predicted": 224,
+        "reference": 224,
+        "precision": 0.9955357142857143,
+        "recall": 0.9955357142857143,
+        "f1": 0.9955357142857143
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000298",
+      "family": "internal_spline_ring",
+      "seconds": 0.250016173995391,
+      "points": 9389,
+      "tokens": 7552,
+      "base": {
+        "matched": 681,
+        "predicted": 681,
+        "reference": 681,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000103",
+      "family": "cam",
+      "seconds": 0.02543285099818604,
+      "points": 2932,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000434",
+      "family": "honeycomb_screen",
+      "seconds": 1.6646354849945055,
+      "points": 88400,
+      "tokens": 27520,
+      "base": {
+        "matched": 426,
+        "predicted": 426,
+        "reference": 426,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000935",
+      "family": "perforated_grid_plate",
+      "seconds": 0.1259208170013153,
+      "points": 8081,
+      "tokens": 3328,
+      "base": {
+        "matched": 48,
+        "predicted": 48,
+        "reference": 48,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000218",
+      "family": "c_frame",
+      "seconds": 0.038881902997673023,
+      "points": 3407,
+      "tokens": 1152,
+      "base": {
+        "matched": 14,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000025",
+      "family": "serrated_washer",
+      "seconds": 0.49654390000068815,
+      "points": 4816,
+      "tokens": 12064,
+      "base": {
+        "matched": 1376,
+        "predicted": 1376,
+        "reference": 1376,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000741",
+      "family": "flange",
+      "seconds": 0.27237391699600266,
+      "points": 16124,
+      "tokens": 8000,
+      "base": {
+        "matched": 114,
+        "predicted": 114,
+        "reference": 114,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000933",
+      "family": "mixed_plate",
+      "seconds": 0.03773385800013784,
+      "points": 3827,
+      "tokens": 1088,
+      "base": {
+        "matched": 16,
+        "predicted": 17,
+        "reference": 16,
+        "precision": 0.9411764705882353,
+        "recall": 1.0,
+        "f1": 0.9696969696969697
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000826",
+      "family": "index_plate",
+      "seconds": 0.5001610920007806,
+      "points": 22125,
+      "tokens": 13408,
+      "base": {
+        "matched": 198,
+        "predicted": 198,
+        "reference": 198,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000528",
+      "family": "internal_spline_ring",
+      "seconds": 0.26916617499955464,
+      "points": 8745,
+      "tokens": 7328,
+      "base": {
+        "matched": 661,
+        "predicted": 661,
+        "reference": 661,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000913",
+      "family": "multi_step_shaft",
+      "seconds": 0.11591747399506858,
+      "points": 3839,
+      "tokens": 1408,
+      "base": {
+        "matched": 108,
+        "predicted": 108,
+        "reference": 112,
+        "precision": 1.0,
+        "recall": 0.9642857142857143,
+        "f1": 0.9818181818181818
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000365",
+      "family": "sawtooth_rack",
+      "seconds": 0.17358534799859626,
+      "points": 6396,
+      "tokens": 4928,
+      "base": {
+        "matched": 506,
+        "predicted": 508,
+        "reference": 508,
+        "precision": 0.9960629921259843,
+        "recall": 0.9960629921259843,
+        "f1": 0.9960629921259843
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000501",
+      "family": "multi_thread_shaft",
+      "seconds": 0.3309419430006528,
+      "points": 8550,
+      "tokens": 9504,
+      "base": {
+        "matched": 922,
+        "predicted": 928,
+        "reference": 1026,
+        "precision": 0.9935344827586207,
+        "recall": 0.898635477582846,
+        "f1": 0.9437052200614124
+      },
+      "compound": {
+        "matched": 7,
+        "predicted": 7,
+        "reference": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000499",
+      "family": "multi_step_shaft",
+      "seconds": 0.16801210400444688,
+      "points": 12507,
+      "tokens": 4608,
+      "base": {
+        "matched": 365,
+        "predicted": 375,
+        "reference": 380,
+        "precision": 0.9733333333333334,
+        "recall": 0.9605263157894737,
+        "f1": 0.9668874172185431
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000205",
+      "family": "spoke_wheel",
+      "seconds": 0.12804441600019345,
+      "points": 20736,
+      "tokens": 2240,
+      "base": {
+        "matched": 90,
+        "predicted": 90,
+        "reference": 90,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 22,
+        "predicted": 22,
+        "reference": 22,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000226",
+      "family": "stepped_taper_arbor",
+      "seconds": 0.0657488370052306,
+      "points": 4997,
+      "tokens": 1632,
+      "base": {
+        "matched": 148,
+        "predicted": 151,
+        "reference": 152,
+        "precision": 0.9801324503311258,
+        "recall": 0.9736842105263158,
+        "f1": 0.976897689768977
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000435",
+      "family": "spoke_wheel",
+      "seconds": 0.05401760400127387,
+      "points": 8469,
+      "tokens": 1216,
+      "base": {
+        "matched": 26,
+        "predicted": 41,
+        "reference": 26,
+        "precision": 0.6341463414634146,
+        "recall": 1.0,
+        "f1": 0.7761194029850746
+      },
+      "compound": {
+        "matched": 6,
+        "predicted": 6,
+        "reference": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000842",
+      "family": "perforated_disk",
+      "seconds": 0.03434338100487366,
+      "points": 4377,
+      "tokens": 1024,
+      "base": {
+        "matched": 11,
+        "predicted": 14,
+        "reference": 11,
+        "precision": 0.7857142857142857,
+        "recall": 1.0,
+        "f1": 0.88
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000860",
+      "family": "l_bracket",
+      "seconds": 0.031297993002226576,
+      "points": 3948,
+      "tokens": 896,
+      "base": {
+        "matched": 8,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000262",
+      "family": "l_bracket",
+      "seconds": 0.03825471000163816,
+      "points": 5047,
+      "tokens": 1088,
+      "base": {
+        "matched": 11,
+        "predicted": 11,
+        "reference": 11,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000706",
+      "family": "staggered_filter_plate",
+      "seconds": 0.6385912530022324,
+      "points": 23400,
+      "tokens": 16000,
+      "base": {
+        "matched": 246,
+        "predicted": 252,
+        "reference": 246,
+        "precision": 0.9761904761904762,
+        "recall": 1.0,
+        "f1": 0.9879518072289156
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000738",
+      "family": "grooved_pin",
+      "seconds": 0.14046861599490512,
+      "points": 6098,
+      "tokens": 4384,
+      "base": {
+        "matched": 380,
+        "predicted": 380,
+        "reference": 380,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000217",
+      "family": "t_bracket",
+      "seconds": 0.037326417994336225,
+      "points": 5157,
+      "tokens": 1024,
+      "base": {
+        "matched": 12,
+        "predicted": 12,
+        "reference": 12,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000794",
+      "family": "mixed_shaft",
+      "seconds": 0.05445631300244713,
+      "points": 3823,
+      "tokens": 1056,
+      "base": {
+        "matched": 136,
+        "predicted": 136,
+        "reference": 136,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000789",
+      "family": "slotted_bracket",
+      "seconds": 0.03652030100056436,
+      "points": 4519,
+      "tokens": 960,
+      "base": {
+        "matched": 17,
+        "predicted": 20,
+        "reference": 17,
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1": 0.918918918918919
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000477",
+      "family": "multi_bolt_circle_flange",
+      "seconds": 0.07056416499835905,
+      "points": 3966,
+      "tokens": 2624,
+      "base": {
+        "matched": 30,
+        "predicted": 30,
+        "reference": 30,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000820",
+      "family": "heat_sink_section",
+      "seconds": 0.2586306599987438,
+      "points": 28503,
+      "tokens": 6144,
+      "base": {
+        "matched": 461,
+        "predicted": 461,
+        "reference": 484,
+        "precision": 1.0,
+        "recall": 0.9524793388429752,
+        "f1": 0.9756613756613757
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000494",
+      "family": "c_frame",
+      "seconds": 0.0514873770007398,
+      "points": 7791,
+      "tokens": 1280,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000595",
+      "family": "sawtooth_rack",
+      "seconds": 0.21334716199635295,
+      "points": 4321,
+      "tokens": 6656,
+      "base": {
+        "matched": 682,
+        "predicted": 684,
+        "reference": 684,
+        "precision": 0.9970760233918129,
+        "recall": 0.9970760233918129,
+        "f1": 0.9970760233918129
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000254",
+      "family": "timing_pulley",
+      "seconds": 0.11180299200350419,
+      "points": 4472,
+      "tokens": 4864,
+      "base": {
+        "matched": 185,
+        "predicted": 185,
+        "reference": 185,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000030",
+      "family": "clevis_link",
+      "seconds": 0.03699063100066269,
+      "points": 4634,
+      "tokens": 960,
+      "base": {
+        "matched": 14,
+        "predicted": 16,
+        "reference": 14,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000152",
+      "family": "perforated_disk",
+      "seconds": 0.02816880300088087,
+      "points": 2534,
+      "tokens": 928,
+      "base": {
+        "matched": 9,
+        "predicted": 13,
+        "reference": 9,
+        "precision": 0.6923076923076923,
+        "recall": 1.0,
+        "f1": 0.8181818181818182
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000470",
+      "family": "rack",
+      "seconds": 0.03374977799830958,
+      "points": 2388,
+      "tokens": 768,
+      "base": {
+        "matched": 64,
+        "predicted": 64,
+        "reference": 64,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000299",
+      "family": "ratchet_wheel",
+      "seconds": 0.14358295599959092,
+      "points": 4094,
+      "tokens": 3904,
+      "base": {
+        "matched": 433,
+        "predicted": 433,
+        "reference": 433,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000322",
+      "family": "stepped_shaft",
+      "seconds": 0.02586722100386396,
+      "points": 2158,
+      "tokens": 768,
+      "base": {
+        "matched": 16,
+        "predicted": 16,
+        "reference": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000098",
+      "family": "drilled_plate",
+      "seconds": 0.4213213449984323,
+      "points": 19243,
+      "tokens": 11520,
+      "base": {
+        "matched": 176,
+        "predicted": 180,
+        "reference": 176,
+        "precision": 0.9777777777777777,
+        "recall": 1.0,
+        "f1": 0.9887640449438202
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000957",
+      "family": "connector_strip",
+      "seconds": 0.2965840629985905,
+      "points": 16958,
+      "tokens": 6912,
+      "base": {
+        "matched": 382,
+        "predicted": 382,
+        "reference": 384,
+        "precision": 1.0,
+        "recall": 0.9947916666666666,
+        "f1": 0.9973890339425587
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000863",
+      "family": "u_channel_section",
+      "seconds": 0.03757580400269944,
+      "points": 3456,
+      "tokens": 1152,
+      "base": {
+        "matched": 14,
+        "predicted": 14,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000745",
+      "family": "toothed_disk",
+      "seconds": 0.04725612200127216,
+      "points": 2530,
+      "tokens": 1088,
+      "base": {
+        "matched": 113,
+        "predicted": 113,
+        "reference": 113,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000537",
+      "family": "dogbone_link",
+      "seconds": 0.031248972001776565,
+      "points": 3110,
+      "tokens": 960,
+      "base": {
+        "matched": 10,
+        "predicted": 10,
+        "reference": 14,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333334
+      },
+      "compound": {
+        "matched": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000157",
+      "family": "mixed_aperture_panel",
+      "seconds": 0.23481478600297123,
+      "points": 10937,
+      "tokens": 4928,
+      "base": {
+        "matched": 202,
+        "predicted": 236,
+        "reference": 226,
+        "precision": 0.8559322033898306,
+        "recall": 0.8938053097345132,
+        "f1": 0.8744588744588745
+      },
+      "compound": {
+        "matched": 17,
+        "predicted": 17,
+        "reference": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000096",
+      "family": "washer",
+      "seconds": 0.02536242999485694,
+      "points": 3137,
+      "tokens": 832,
+      "base": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000726",
+      "family": "comb_plate",
+      "seconds": 0.1255220399980317,
+      "points": 6292,
+      "tokens": 4032,
+      "base": {
+        "matched": 315,
+        "predicted": 316,
+        "reference": 316,
+        "precision": 0.9968354430379747,
+        "recall": 0.9968354430379747,
+        "f1": 0.9968354430379747
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000775",
+      "family": "multi_step_shaft",
+      "seconds": 0.03405287500208942,
+      "points": 2035,
+      "tokens": 832,
+      "base": {
+        "matched": 66,
+        "predicted": 68,
+        "reference": 68,
+        "precision": 0.9705882352941176,
+        "recall": 0.9705882352941176,
+        "f1": 0.9705882352941176
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000414",
+      "family": "stepped_shaft",
+      "seconds": 0.11291360700124642,
+      "points": 5172,
+      "tokens": 3552,
+      "base": {
+        "matched": 278,
+        "predicted": 284,
+        "reference": 296,
+        "precision": 0.9788732394366197,
+        "recall": 0.9391891891891891,
+        "f1": 0.9586206896551724
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "id": "000000485",
+      "family": "serrated_washer",
+      "seconds": 0.41413929400005145,
+      "points": 8791,
+      "tokens": 11136,
+      "base": {
+        "matched": 1192,
+        "predicted": 1192,
+        "reference": 1192,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 2,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "id": "000000140",
+      "family": "grooved_pin",
+      "seconds": 0.06146085100044729,
+      "points": 2426,
+      "tokens": 1600,
+      "base": {
+        "matched": 148,
+        "predicted": 148,
+        "reference": 148,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "compound": {
+        "matched": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    }
+  ]
+}

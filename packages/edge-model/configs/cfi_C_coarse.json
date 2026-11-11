@@ -1,0 +1,142 @@
+{
+ "model": {
+  "coarse_widths": [
+   24,
+   48,
+   64
+  ],
+  "coarse_blocks": [
+   0,
+   2,
+   2
+  ],
+  "ctx_channels": 16,
+  "block": "dense",
+  "norm": "ln",
+  "fine_width": 24,
+  "fine_dilations": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "fine_expand": 2,
+  "decoder": "block",
+  "dec_hidden": 32,
+  "dec_fourier": [
+   1,
+   2,
+   4,
+   8
+  ],
+  "edge_head": true,
+  "context": "seed"
+ },
+ "sampler": {
+  "weights": {
+   "edge": 0.322,
+   "dense": 0.184,
+   "narrow": 0.138,
+   "corner": 0.138,
+   "sparse": 0.092,
+   "uniform": 0.046,
+   "contaminant": 0.08
+  },
+  "jitter_px": 16.0,
+  "focus_weights": null,
+  "p_lattice": 0.3
+ },
+ "aug": {
+  "background_level": [
+   0.35,
+   0.95
+  ],
+  "offset": [
+   0.0,
+   0.03
+  ],
+  "full_well_e": [
+   6000.0,
+   60000.0
+  ],
+  "read_noise": [
+   0.0001,
+   0.002
+  ],
+  "bit_depths": [
+   8,
+   10,
+   12,
+   16
+  ],
+  "exposure_ref": "backlight",
+  "backlight_jitter": 0.03,
+  "p_sharpen": 0.2,
+  "sharpen_sigma": [
+   0.5,
+   1.5
+  ],
+  "sharpen_amount": [
+   0.0,
+   0.6
+  ],
+  "p_jpeg": 0.1,
+  "jpeg_quality": [
+   75,
+   95
+  ]
+ },
+ "crop": {
+  "size": 192,
+  "border": 24,
+  "n_near": 3072,
+  "n_band": 1536,
+  "n_uniform": 512,
+  "band_px": 8.0,
+  "coarse_band_px": 8,
+  "dist_clip": 2.0,
+  "seed_inputs": "coarse",
+  "p_anywhere": 0.15,
+  "p_downscale": 0.1,
+  "downscale": [
+   1.0,
+   2.0
+  ],
+  "coarse_jitter_px": 1.0,
+  "coarse_logit_scale": [
+   0.7,
+   1.4
+  ]
+ },
+ "train": {
+  "batch": 16,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "warmup_frac": 0.05,
+  "schedule": "cosine",
+  "budget_minutes": 60,
+  "amp": "bf16",
+  "compile": true,
+  "workers": 14,
+  "seed": 0,
+  "quick_eval_minutes": 10.0,
+  "quick_eval_crops": 64,
+  "final_eval_crops": 400,
+  "checkpoint_minutes": 10.0,
+  "grad_clip": 1.0,
+  "loss_weights": {
+   "occ": 1.0,
+   "dist": 0.5,
+   "dir": 0.2,
+   "occ4": 0.2,
+   "band4": 0.2,
+   "pband": 0.2
+  },
+  "band_pos_weight": 4.0
+ },
+ "data": {
+  "cache": "v4",
+  "pool": 16,
+  "swap_every": 48
+ }
+}

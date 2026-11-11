@@ -1,0 +1,208 @@
+{
+  "name": "measurific",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
+    "build": "tsc -b && vite build",
+    "start": "electron .",
+    "test": "vitest run && node --test electron/*.node-test.cjs",
+    "camera:build:mac": "../camera-bridge/scripts/build-macos.sh",
+    "dist:mac": "npm run build && npm run camera:build:mac && npm run python:build && electron-builder --mac --publish never",
+    "demo-data": "./.venv/bin/python scripts/generate_demo_samples.py",
+    "python:lock": "uv pip compile python/runtime/requirements.in --universal --python-version 3.13 --generate-hashes -o python/runtime/requirements.lock",
+    "python:build": "node scripts/build-python-runtime.mjs",
+    "camera:build:linux": "../camera-bridge/scripts/build-linux.sh",
+    "camera:build:win": "bash ../camera-bridge/scripts/build-windows.sh",
+    "smoke:worker": "node scripts/smoke-worker.mjs",
+    "dist:linux": "npm run build && npm run camera:build:linux && npm run python:build && electron-builder --linux --publish never",
+    "dist:win": "npm run build && npm run camera:build:win && npm run python:build && electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "electron-store": "^11.0.2"
+  },
+  "devDependencies": {
+    "@floating-ui/dom": "^1.8.0",
+    "@fontsource/geist-mono": "^5.3.0",
+    "@fontsource/geist-sans": "^5.3.0",
+    "@radix-ui/react-tooltip": "^1.2.7",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^5.0.0",
+    "wait-on": "^8.0.1",
+    "zustand": "^5.0.3"
+  },
+  "build": {
+    "appId": "io.github.kylebme.measurific",
+    "productName": "Measurific",
+    "artifactName": "Measurific-${version}-${os}-${arch}.${ext}",
+    "directories": {
+      "output": "release",
+      "buildResources": "build-resources"
+    },
+    "asar": true,
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "!electron/*.node-test.cjs",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "build/python-runtime",
+        "to": "python",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "python/worker.py",
+        "to": "worker/worker.py"
+      },
+      {
+        "from": "../packages/contour-model/release-v6/onnx",
+        "to": "models/contour",
+        "filter": [
+          "*.onnx",
+          "model.json"
+        ]
+      },
+      {
+        "from": "../packages/edge-model/models/sdf_v5-onnx",
+        "to": "models/edge",
+        "filter": [
+          "*.onnx",
+          "model.json"
+        ]
+      },
+      {
+        "from": "../packages/edge-model/models/coarse_v2-onnx",
+        "to": "models/coarse_v2-onnx",
+        "filter": ["*.onnx", "coarse.json"]
+      },
+      {
+        "from": "../LICENSE",
+        "to": "LICENSE.txt"
+      },
+      {
+        "from": "../THIRD_PARTY_NOTICES.md",
+        "to": "THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "from": "demo-data",
+        "to": "demo-data",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "kylebme",
+        "repo": "measurific",
+        "releaseType": "draft"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.graphics-design",
+      "identity": "-",
+      "hardenedRuntime": true,
+      "entitlements": "build-resources/entitlements.mac.plist",
+      "entitlementsInherit": "build-resources/entitlements.mac.plist",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "extraResources": [
+        {
+          "from": "../camera-bridge/dist/macos-${arch}",
+          "to": "camera-bridge",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ],
+      "extendInfo": {
+        "NSCameraUsageDescription": "Measurific uses connected machine-vision cameras to capture inspection images.",
+        "NSLocalNetworkUsageDescription": "Measurific discovers and streams from GigE Vision cameras on the local network."
+      }
+    },
+    "dmg": {
+      "writeUpdateInfo": false
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "extraResources": [
+        {
+          "from": "../camera-bridge/dist/win32-${arch}",
+          "to": "camera-bridge",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "deleteAppDataOnUninstall": false,
+      "differentialPackage": true
+    },
+    "linux": {
+      "category": "Science",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "extraResources": [
+        {
+          "from": "../camera-bridge/dist/linux-${arch}",
+          "to": "camera-bridge",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    }
+  },
+  "description": "Sub-pixel dimensional inspection for telecentric machine-vision images",
+  "author": "Kyle Bartholomew",
+  "license": "MIT",
+  "homepage": "https://github.com/kylebme/measurific",
+  "repository": "github:kylebme/measurific"
+}

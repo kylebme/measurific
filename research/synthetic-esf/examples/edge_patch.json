@@ -1,0 +1,11 @@
+{
+  "config": {
+    "camera": {"width": 1920, "height": 1080, "pixel_pitch_um": 3.45, "magnification": 0.5},
+    "illumination": {"kind": "cone", "half_angle_deg": 0.25, "samples": 32},
+    "optics": {"object_na": 0.015, "wavelength_um": 0.63, "psf": "gaussian", "sigma_px": 0.65, "support_px": 4},
+    "sampling": {"supersample": 16, "tile_px": 32}
+  },
+  "shapes": [{"kind": "box", "name": "gauge_block", "size_mm": [0.4416, 1.0, 0.1], "center_mm": [0.00231, 0, 0]}],
+  "roi": [976, 524, 32, 32],
+  "dataset": {"count": 3, "seed": 2026, "random_phase": true, "exposures_ms": [0.25, 1, 4], "repeat_captures": 2}
+}

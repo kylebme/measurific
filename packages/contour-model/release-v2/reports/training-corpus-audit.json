@@ -1,0 +1,29 @@
+{
+  "samples": 12000,
+  "families": 46,
+  "split_counts": {
+    "train": 9586,
+    "val": 992,
+    "test": 923,
+    "ood": 499
+  },
+  "base_support_length": [
+    0.0,
+    3973100.6617002487,
+    463776.1613571644,
+    2351798.0334613323,
+    238379.93201065063
+  ],
+  "compound_support_length": [
+    5346038.042860031,
+    1109389.3357810974,
+    43152.71083164215,
+    105682.99604415894,
+    422790.5903224945
+  ],
+  "whole_base_membership": true,
+  "design_split_isolation": true,
+  "cache_targets_normalized": true,
+  "max_tokens": 37632,
+  "max_rings": 577
+}

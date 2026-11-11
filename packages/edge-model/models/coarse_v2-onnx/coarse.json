@@ -1,0 +1,56 @@
+{
+ "format": "edgesr-coarse-onnx-v1",
+ "model_config": {
+  "widths": [
+   16,
+   24,
+   32,
+   48,
+   64,
+   96
+  ],
+  "blocks": [
+   0,
+   1,
+   2,
+   2,
+   2,
+   2
+  ],
+  "dec_blocks": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "block": "dense",
+  "expand": 2,
+  "dilations": [
+   1,
+   2,
+   4
+  ],
+  "in_mode": "raw",
+  "contact_px": 2,
+  "sdf_clip": 6.0,
+  "aux_inputs": true,
+  "instance_head": "contact",
+  "center_sigma": 5.0,
+  "offset_scale": 64.0
+ },
+ "parity_max_abs": 2.6702880859375e-05,
+ "input": "full frame area-resampled to 512 x 512 (edgesr.coarse.model_reading), channels from edgesr.coarse.coarse_inputs (reading, [valid ROI, log2 aspect])",
+ "outputs": [
+  "part logit",
+  "contact logit",
+  "sdf / sdf_clip"
+ ],
+ "source": "coarse_v2.pt",
+ "provenance": {
+  "training_checkpoint": "work/runs/c5_wires_debris_ft45/final.pt",
+  "train_steps": 28257,
+  "train_seconds": 2700.052880525589,
+  "note": ""
+ }
+}

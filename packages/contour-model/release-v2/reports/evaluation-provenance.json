@@ -1,0 +1,12 @@
+{
+  "model_sha256": "8184719686a5d7a07950d7941e34466d15b055cf8d263b020f3e50c82b9f229f",
+  "source_checkpoint": "/home/kyle/inspection/contour-model/artifacts/primitives-corrected-final-b/best.pt",
+  "source_checkpoint_sha256": "a222c1ff899478469f4f0dd13bda9a77c9059e8be52967bccc95f1a7ac22afce",
+  "inference_source_sha256": "fcb1d5ce2f0530e6da4592c19f03045e21d085c0597299a6bb3ded331177edec",
+  "weight_selection": "Validation only; corrected-final-b best step 2000",
+  "independent_cohort_policy": "Never used for weight training/checkpoint selection. Isolated fragment findings informed the final repeat-support detector guard; not an untouched test of that guard.",
+  "classification_reports": "Physical-length-weighted token classifications; macro averages exclude ID 0",
+  "raw_reports": "Class-aware raw observed-edge length IoU >= 0.5, one-to-one assignment; all base proposals including abstained proposals; no confidence filtering",
+  "thread_detection_policy": "At least four constituent line/arc spans in each candidate thread side; detected compounds always choose their most likely class",
+  "sampling": "adaptive-turn-v1"
+}

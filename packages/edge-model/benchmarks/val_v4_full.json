@@ -1,0 +1,513 @@
+{
+ "name": "val_v4_full",
+ "split": "val",
+ "cache": "v4",
+ "aug": {
+  "background_level": [
+   0.35,
+   0.95
+  ],
+  "offset": [
+   0.0,
+   0.03
+  ],
+  "full_well_e": [
+   6000.0,
+   60000.0
+  ],
+  "read_noise": [
+   0.0001,
+   0.002
+  ],
+  "bit_depths": [
+   8,
+   10,
+   12,
+   16
+  ],
+  "exposure_ref": "backlight",
+  "backlight_jitter": 0.0
+ },
+ "images": [
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001358",
+   "aug_seed": 1490179394
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006758",
+   "aug_seed": 472543782
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001058",
+   "aug_seed": 1338295013
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004358",
+   "aug_seed": 1181759575
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000986",
+   "aug_seed": 1591799938
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004886",
+   "aug_seed": 2028326414
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002486",
+   "aug_seed": 1606789083
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005186",
+   "aug_seed": 1355461688
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002347",
+   "aug_seed": 1844873307
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001447",
+   "aug_seed": 940026458
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003847",
+   "aug_seed": 877778428
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004447",
+   "aug_seed": 42920516
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005508",
+   "aug_seed": 1598137536
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000708",
+   "aug_seed": 26119121
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000108",
+   "aug_seed": 334058193
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004308",
+   "aug_seed": 781537859
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003337",
+   "aug_seed": 1480685751
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000337",
+   "aug_seed": 1567796640
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003637",
+   "aug_seed": 1542040997
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003037",
+   "aug_seed": 1960841298
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005368",
+   "aug_seed": 2131650794
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006568",
+   "aug_seed": 1156532282
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002968",
+   "aug_seed": 939923570
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002068",
+   "aug_seed": 1475648291
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000233",
+   "aug_seed": 1092348303
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001433",
+   "aug_seed": 913956649
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002933",
+   "aug_seed": 923679397
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003833",
+   "aug_seed": 797826773
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002296",
+   "aug_seed": 638502646
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005896",
+   "aug_seed": 878296718
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000796",
+   "aug_seed": 142734453
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000496",
+   "aug_seed": 1951749343
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001029",
+   "aug_seed": 1560208302
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003429",
+   "aug_seed": 36113158
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004029",
+   "aug_seed": 490976432
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006729",
+   "aug_seed": 1328566029
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004523",
+   "aug_seed": 618253984
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002723",
+   "aug_seed": 2009499645
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006323",
+   "aug_seed": 565721825
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003023",
+   "aug_seed": 980783939
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000624",
+   "aug_seed": 1167023703
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006324",
+   "aug_seed": 407609380
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001824",
+   "aug_seed": 1298343326
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005424",
+   "aug_seed": 11818906
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000587",
+   "aug_seed": 505474024
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002087",
+   "aug_seed": 1225362195
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001487",
+   "aug_seed": 757746925
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005087",
+   "aug_seed": 2001973386
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00007046",
+   "aug_seed": 1028891302
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006746",
+   "aug_seed": 269481454
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000446",
+   "aug_seed": 1282118712
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004046",
+   "aug_seed": 1294149548
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001611",
+   "aug_seed": 118227758
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000411",
+   "aug_seed": 2001879060
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006111",
+   "aug_seed": 1207537642
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004911",
+   "aug_seed": 980086899
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003307",
+   "aug_seed": 1386356247
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002107",
+   "aug_seed": 221844828
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005407",
+   "aug_seed": 1356096203
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006007",
+   "aug_seed": 1516515148
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003165",
+   "aug_seed": 851181438
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004665",
+   "aug_seed": 1767560395
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006465",
+   "aug_seed": 1378330159
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003465",
+   "aug_seed": 1972329799
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000662",
+   "aug_seed": 324521040
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005462",
+   "aug_seed": 245326120
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003962",
+   "aug_seed": 1041506788
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003062",
+   "aug_seed": 499232418
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005920",
+   "aug_seed": 1138926047
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005020",
+   "aug_seed": 1065786921
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003520",
+   "aug_seed": 503269217
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003820",
+   "aug_seed": 1531277254
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000821",
+   "aug_seed": 190095581
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003521",
+   "aug_seed": 890903432
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003821",
+   "aug_seed": 1150641928
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000221",
+   "aug_seed": 77096211
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005024",
+   "aug_seed": 646909052
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002624",
+   "aug_seed": 1217482327
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003224",
+   "aug_seed": 392538077
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000224",
+   "aug_seed": 473837103
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003150",
+   "aug_seed": 1681260339
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005850",
+   "aug_seed": 1092090807
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001350",
+   "aug_seed": 1097564926
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003450",
+   "aug_seed": 1191662198
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006752",
+   "aug_seed": 1427517210
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004052",
+   "aug_seed": 210389214
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002552",
+   "aug_seed": 1603908920
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001052",
+   "aug_seed": 136288866
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001015",
+   "aug_seed": 582242224
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001315",
+   "aug_seed": 1258110511
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004015",
+   "aug_seed": 922810817
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006715",
+   "aug_seed": 309510434
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000119",
+   "aug_seed": 1318987990
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000419",
+   "aug_seed": 277024171
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004919",
+   "aug_seed": 580972993
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004019",
+   "aug_seed": 540857215
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000275",
+   "aug_seed": 612800316
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000575",
+   "aug_seed": 1302418385
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004775",
+   "aug_seed": 980216735
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003275",
+   "aug_seed": 2111520765
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001339",
+   "aug_seed": 146906144
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00007039",
+   "aug_seed": 380576567
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005539",
+   "aug_seed": 1537682865
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006739",
+   "aug_seed": 915395278
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00005095",
+   "aug_seed": 683604075
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004495",
+   "aug_seed": 252388261
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004795",
+   "aug_seed": 916195837
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002995",
+   "aug_seed": 1914245708
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003863",
+   "aug_seed": 16379499
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000563",
+   "aug_seed": 2066670074
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006863",
+   "aug_seed": 292664157
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000863",
+   "aug_seed": 698950915
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00004129",
+   "aug_seed": 510551220
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006529",
+   "aug_seed": 1243550434
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006829",
+   "aug_seed": 152837906
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00000229",
+   "aug_seed": 1661769224
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00006791",
+   "aug_seed": 1551436478
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00003191",
+   "aug_seed": 801696839
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00001391",
+   "aug_seed": 2093723950
+  },
+  {
+   "scene_id": "scene_a4019af3ef4aa8f6_00002891",
+   "aug_seed": 1689840853
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+.venv/
+work
+__pycache__/
+queue.json
+queue.json.tmp

@@ -1,0 +1,36 @@
+{
+  "samples": 1000,
+  "families": 46,
+  "label_version": "primitives-compounds-v2",
+  "base_names": [
+    "unlabeled",
+    "line",
+    "arc",
+    "circle"
+  ],
+  "arbitrary_profile_removed": true,
+  "split_counts": {
+    "train": 816,
+    "val": 82,
+    "test": 66,
+    "ood": 36
+  },
+  "base_support_length": [
+    0.0,
+    325944.6216914654,
+    46208.13956475258,
+    209984.46273708344
+  ],
+  "compound_support_length": [
+    451076.67758369446,
+    82332.10361671448,
+    3399.774513244629,
+    9288.478116989136,
+    36041.78832626343
+  ],
+  "whole_base_membership": true,
+  "design_split_isolation": true,
+  "cache_targets_normalized": true,
+  "max_tokens": 37632,
+  "max_rings": 577
+}

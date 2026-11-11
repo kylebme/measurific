@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "units": "px",
+  "features": [
+    {"id": "upper", "type": "line", "max_rms_residual": 0.5, "selection": {"region": {"box": [30, 48, 170, 52]}}},
+    {"id": "lower", "type": "line", "max_rms_residual": 0.5, "selection": {"region": {"box": [30, 148, 170, 152]}}},
+    {"id": "hole", "type": "circle", "selection": {"region": {"circle": [100, 100, 25]}}},
+    {"id": "plate_width", "type": "width", "members": ["upper", "lower"]}
+  ],
+  "measurements": [
+    {"id": "width_at_stations", "operator": "compound", "feature_refs": ["plate_width"], "params": {"stations": [-40, 0, 40]}},
+    {"id": "line_separation", "operator": "distance", "feature_refs": ["upper", "lower"], "nominal_value": 100, "tolerance": {"lower": 99.5, "upper": 100.5}},
+    {"id": "hole_center_to_upper", "operator": "distance", "feature_refs": ["upper", "hole"]},
+    {"id": "hole_diameter", "operator": "least_squares_diameter", "feature_refs": ["hole"]},
+    {"id": "side_parallelism_degrees", "operator": "parallelism", "feature_refs": ["upper", "lower"]}
+  ]
+}

@@ -1,0 +1,1048 @@
+{
+  "repaired_parts": 260,
+  "repaired_rings": 2026,
+  "observations_bitwise_unchanged": true,
+  "model_inputs_bitwise_unchanged": true,
+  "checks": [
+    {
+      "id": "000000045",
+      "coordinate_hash": "1dec74d95aa0cb05fadbbb5dd26bef3ddf01d74728e756fa90a47b8220cd5434"
+    },
+    {
+      "id": "000000091",
+      "coordinate_hash": "801142450c2555e2598e94550ec61be6e1aa0d6860caa5a63cd5d012af7c22ce"
+    },
+    {
+      "id": "000000137",
+      "coordinate_hash": "4de59269d35d8d413007fad02e4641466f7f39964fca8824ced37ebf86fe81ac"
+    },
+    {
+      "id": "000000183",
+      "coordinate_hash": "49d9252e4288fbf8debd2ee6f2b429d8ef2d12c6713bb8788192328f6bc4557d"
+    },
+    {
+      "id": "000000229",
+      "coordinate_hash": "c64f97f3614fd6d802f0d960364734fb1361dce0d4cb3aeee0be584d85747291"
+    },
+    {
+      "id": "000000275",
+      "coordinate_hash": "05aed02d9aa94195e770fc6d642568946dab87a2b910c2b89452e8600aa8c917"
+    },
+    {
+      "id": "000000321",
+      "coordinate_hash": "8b293ce80c18bce65774acd46a747ab8267933fc361249d288e5debed3fb0191"
+    },
+    {
+      "id": "000000367",
+      "coordinate_hash": "0463b76d5621d109b0c032e18750e44677cef35dd6afe3c1dd8fdf92cb49972c"
+    },
+    {
+      "id": "000000413",
+      "coordinate_hash": "4c4d5c257cc44e287bbf63d8bad5297834ffa9923cd16f52b04d4d90a114fe0c"
+    },
+    {
+      "id": "000000459",
+      "coordinate_hash": "a6c904cb92c72e9de50530749b289c74f7ac298391b57f2ee7c9f2f1df02b257"
+    },
+    {
+      "id": "000000505",
+      "coordinate_hash": "bf81b766ecde323b9f01d19905049c95374feccc0ce573d1270f58afaa69b010"
+    },
+    {
+      "id": "000000551",
+      "coordinate_hash": "ad8f20bb002d09c5a03c3129795a0bda146d9f572e03f54a7adaeaf6023871de"
+    },
+    {
+      "id": "000000597",
+      "coordinate_hash": "8163c3721216ab2314b7e5d8ac14e0c41e29366136b19cd2ded33cebdc3350c3"
+    },
+    {
+      "id": "000000643",
+      "coordinate_hash": "839b8099c8797a9a9fdfba7a2d421a6100f1c6ee5b1b808f8d699f49153b6fbb"
+    },
+    {
+      "id": "000000689",
+      "coordinate_hash": "43bfc12e288d6a099b6300389d6eca407d1ab46f3781506a2dec52df19225b30"
+    },
+    {
+      "id": "000000735",
+      "coordinate_hash": "02671aa194171b79a3cdf6b4184eb64e75a6ea5e7e5e7d4c8e8c7e244cd0e577"
+    },
+    {
+      "id": "000000781",
+      "coordinate_hash": "569570c8914bd6a08a8a2f2c855886b72961dc63730e0a3832b608a8be9838f1"
+    },
+    {
+      "id": "000000827",
+      "coordinate_hash": "30ea3e6e07eebdf2f2654405cc834a69dc4bf770d76263b8470c01912e2a077d"
+    },
+    {
+      "id": "000000873",
+      "coordinate_hash": "9a0762d40438373e5b2bbf735d800c7ab61f6feb583d99dba5116598e777ef7e"
+    },
+    {
+      "id": "000000919",
+      "coordinate_hash": "8ce5fa7dbec9de829ad21ec2ad9c17f054b23ffe7a9e7446a55f4b63007f7eef"
+    },
+    {
+      "id": "000000965",
+      "coordinate_hash": "6579ca46cd191910eecd7821ffcfb0b7d8c3f17f4602e729032f052c50e83476"
+    },
+    {
+      "id": "000001011",
+      "coordinate_hash": "87e4bad5ae6d557186254675b62cb784538ed869ad9e65332ab1a3677e537624"
+    },
+    {
+      "id": "000001057",
+      "coordinate_hash": "552cfae3e9416286905f651ea1becbc6a5816fe6216ca5df626f4f1d8d61e9ae"
+    },
+    {
+      "id": "000001103",
+      "coordinate_hash": "a0950dfdf96534ceb573535fe55d9813e2a92b3fc4cfe3182d1ae4b48f8aefa5"
+    },
+    {
+      "id": "000001149",
+      "coordinate_hash": "6bc20f1ad41a192c784610b78a7192318f77ecf43df98018a708124858c0f2ca"
+    },
+    {
+      "id": "000001195",
+      "coordinate_hash": "3913e6b0200d968f389a58a6dff71c0cfcd315d71812ca841bd3003f7153bd80"
+    },
+    {
+      "id": "000001241",
+      "coordinate_hash": "01f252784c109c3689e3e3a3a7e4d71a6749438df750eed5232fc7262a1b9c82"
+    },
+    {
+      "id": "000001287",
+      "coordinate_hash": "57e8958fa20de32a7562c7cf1aa52b5a9b137c30def5356d753e57aa06f0a3e3"
+    },
+    {
+      "id": "000001333",
+      "coordinate_hash": "3964f11c8c7626a96d039df07cf0a5361060ae7fde65b5f8f941cbf42a3bf72d"
+    },
+    {
+      "id": "000001379",
+      "coordinate_hash": "611b7ef3ca3c7844f1235e949c75aa67c32b98f6843bd8808038c7767ade8ef7"
+    },
+    {
+      "id": "000001425",
+      "coordinate_hash": "edd3d76d08503f191992f110b1fe74673e42d6e63f8c2b28619b9cb94437d327"
+    },
+    {
+      "id": "000001471",
+      "coordinate_hash": "8a6def034d9a0d5a8aeeecb9684e686d7235ab5a9fa0bef0b19a930e7e6b5c42"
+    },
+    {
+      "id": "000001517",
+      "coordinate_hash": "b8c558704afe26d55cabb05f32b2b71f388748fad96b21f229732bd768267f52"
+    },
+    {
+      "id": "000001563",
+      "coordinate_hash": "a2f51d5e8cd50264f4124142f9a1f1ff142d9691b969ae128fdbf9efc02b3ff9"
+    },
+    {
+      "id": "000001609",
+      "coordinate_hash": "37acefae5960af68224f84711ea1d99b9b02e6a3e50a22e4e4724efde1c975fe"
+    },
+    {
+      "id": "000001655",
+      "coordinate_hash": "bfdf721ed1d1798fd8aa1765292e686248987c727591f52698cb3b473c54a3d2"
+    },
+    {
+      "id": "000001701",
+      "coordinate_hash": "7ce32401ba8c455910420a3795e52c2b5d004bb3c510befe1022162aa55a3197"
+    },
+    {
+      "id": "000001747",
+      "coordinate_hash": "565446c9e40d68229f8677b30d90fdb980344af7f311257347a4279c4c346c96"
+    },
+    {
+      "id": "000001793",
+      "coordinate_hash": "02d01b68bacfd46807f884b094894e5f23a14ce546c99d6c449df96494b1022b"
+    },
+    {
+      "id": "000001839",
+      "coordinate_hash": "6579ca46cd191910eecd7821ffcfb0b7d8c3f17f4602e729032f052c50e83476"
+    },
+    {
+      "id": "000001885",
+      "coordinate_hash": "33ae8e849d1e3ab024edf331f44fd35fa6700a4ecf64e6c81f6034f360581e8b"
+    },
+    {
+      "id": "000001931",
+      "coordinate_hash": "70038e9962f24a6b971677ac04d28400cf20ebc49374acaba970fe6037fd2ce1"
+    },
+    {
+      "id": "000001977",
+      "coordinate_hash": "66585eacf665c17ec04e27a2c32d2e00a357789896733c440d1b8b7269a1bda8"
+    },
+    {
+      "id": "000002023",
+      "coordinate_hash": "10d532edc4ee0f86737e333886f310b064a81c82d8e651c396b352fc4ba0ccaf"
+    },
+    {
+      "id": "000002069",
+      "coordinate_hash": "c27e1877c4697490fa351b2a2a14d4a779cdc398330591e8998af1dd4c7166a2"
+    },
+    {
+      "id": "000002115",
+      "coordinate_hash": "ceb112562bbf0326e42501ce1c58e932c03f076a7b2ed0f1243061c63169059d"
+    },
+    {
+      "id": "000002161",
+      "coordinate_hash": "ad5b3720e254bd2183a44636318def2c9673ab04bc37d1bedb45d3c75fedc540"
+    },
+    {
+      "id": "000002207",
+      "coordinate_hash": "10c4442fcb340c6f8e348fa06aa0eb0fb56cd1b249a7e65caab60059cf278b2f"
+    },
+    {
+      "id": "000002253",
+      "coordinate_hash": "2c2954b8f27f7de22bc48d2147bfb7b698499a113c5a689bf355e16f3f0c7639"
+    },
+    {
+      "id": "000002299",
+      "coordinate_hash": "ef1cca6800892ba185bf2e8cfbf012989bc51e1e6b980915f76bcb519f9078e2"
+    },
+    {
+      "id": "000002345",
+      "coordinate_hash": "d5c88e861544bc9f65ac69f45d5b7f17ab66660daae80e36f44d6362816755c7"
+    },
+    {
+      "id": "000002391",
+      "coordinate_hash": "03f404104825c7e5a06535ce903be3b21c1ff072805441d1e5326983c981c32f"
+    },
+    {
+      "id": "000002437",
+      "coordinate_hash": "37218437edb4e6a5283a3c64eaf7b01dabf01b34b18cd75f32fe95b2bee06504"
+    },
+    {
+      "id": "000002483",
+      "coordinate_hash": "ab1b6535dc8552680b2ea71c4ed731502a088faecd8eaf2bdc6174563bd00fb2"
+    },
+    {
+      "id": "000002529",
+      "coordinate_hash": "f2d134f39510e06d9a379583e4d70a4871aa38bbae9cacac236f2021e0b55549"
+    },
+    {
+      "id": "000002575",
+      "coordinate_hash": "8a23258a854db2c59a6aed226561338d6f33587d768f28ea43f528b901931295"
+    },
+    {
+      "id": "000002621",
+      "coordinate_hash": "6f13ff3ee8849296e11269881136b821ff740534bc217489f4df05a18c2ced39"
+    },
+    {
+      "id": "000002667",
+      "coordinate_hash": "5b40e782c28a32959a0884139f3149694bb06e8f7b3597388e72e8899cbcf9ba"
+    },
+    {
+      "id": "000002713",
+      "coordinate_hash": "5433a643e6c83c685a3d313878f25301a0ffa278291ece88da37ef8924f23422"
+    },
+    {
+      "id": "000002759",
+      "coordinate_hash": "9aa9c39c56fa49785f4d272809d9989dafe529364b0e0911f9cc6ea87ab148c3"
+    },
+    {
+      "id": "000002805",
+      "coordinate_hash": "740afc3c4ca4871edf201f883a761e4153e428ca0859579e54c449e7b5a7b899"
+    },
+    {
+      "id": "000002851",
+      "coordinate_hash": "3412eec95762f34476e92495cf8e960e05187a9f680b747119b2d38852c7f89f"
+    },
+    {
+      "id": "000002897",
+      "coordinate_hash": "755e2682adcea8fd091ade7507874b6671940ce209cb5b04d8ea330cb5a44a60"
+    },
+    {
+      "id": "000002943",
+      "coordinate_hash": "679c74f53dc5f74c0dd4372cea16bdb74c17943b0639527a52f96f34ed84c939"
+    },
+    {
+      "id": "000002989",
+      "coordinate_hash": "f6e73652ffaefe8a9457dfb56d354289ce835aa2a42f9c0eefd22ebcfd37920f"
+    },
+    {
+      "id": "000003035",
+      "coordinate_hash": "2956c761f02e4bab9be4c95975f6a3fe878b939230d1ef5be6b06ca730320d49"
+    },
+    {
+      "id": "000003081",
+      "coordinate_hash": "1d75656c7b908853eb1c5698e6eee79677748005664e2d7b3d46a2dd5b9d869a"
+    },
+    {
+      "id": "000003127",
+      "coordinate_hash": "372ab800ec6945af0cbe311ae98a0bff5dcfa3ee7941365463c884c29f3dde1a"
+    },
+    {
+      "id": "000003173",
+      "coordinate_hash": "a02d4308ef6930f2f0959bc4062a5a39f5e71d9ed57350ee5e31f3d5b533261a"
+    },
+    {
+      "id": "000003219",
+      "coordinate_hash": "3c8210cdaaab05b32cb3107315aa29d2c7ac17f335ceba11d9dc074ce991d88f"
+    },
+    {
+      "id": "000003265",
+      "coordinate_hash": "3490445ef6f6dceaee84fa89d83989ba2e1840a2922582fdfb7843b315656204"
+    },
+    {
+      "id": "000003311",
+      "coordinate_hash": "732d8005fc5403ff9681eb63a2ae7f64b7cd8c41ba8a6698e90ebc14b642554a"
+    },
+    {
+      "id": "000003357",
+      "coordinate_hash": "8cf4c8001b121f08653299449ad124cc4e9f4bc1d9183ef7e00d02e03b081cf4"
+    },
+    {
+      "id": "000003403",
+      "coordinate_hash": "7898dbe0400ec2899ba0d0c7098ee2249bceca1e3bcd714bf8bd8c892134c188"
+    },
+    {
+      "id": "000003449",
+      "coordinate_hash": "ea9d358d3fde7ccf15fc79dbf8984eb0a8589c079804249fc7b07f834050e006"
+    },
+    {
+      "id": "000003495",
+      "coordinate_hash": "c004dffd0fd6b598ec97e1b1439ccd370463b287e3cb6d53164ba74f26a45830"
+    },
+    {
+      "id": "000003541",
+      "coordinate_hash": "67fd81d14c30bca70d8abdcada8ddb16cd11df86a4147af9eef7194393ddc7cb"
+    },
+    {
+      "id": "000003587",
+      "coordinate_hash": "84f9b1fcbbd7cc4dc6fa49edbccb896fa5c78abdaabb1d61f0423810af98ad3b"
+    },
+    {
+      "id": "000003633",
+      "coordinate_hash": "64abf0852a582b40919df4bfcf81ba5539d096b46f2bdca67c1abc001df7cceb"
+    },
+    {
+      "id": "000003679",
+      "coordinate_hash": "c7eb6457cbac2365e49bbadd9f7b640d200823695538aa431657dd5cca4b5490"
+    },
+    {
+      "id": "000003725",
+      "coordinate_hash": "274ea22192cd7077d5d93094dd8f2f7a76aa42d0e111e5f17b9dd0fdbfa0fc72"
+    },
+    {
+      "id": "000003771",
+      "coordinate_hash": "4e99aa9dbe3b9f79138cd6953865af28fd65838d6ae230bc87d95b96fe20a1d1"
+    },
+    {
+      "id": "000003817",
+      "coordinate_hash": "6b8bf6d2e975991d7a1ce2f9ed4150f21b8a1c4f4637b6b81dbf684489a19878"
+    },
+    {
+      "id": "000003863",
+      "coordinate_hash": "a52a29b8dd50439a124eec7deeeb62fee0dc755f2fa1db2225c41b189d03c3af"
+    },
+    {
+      "id": "000003909",
+      "coordinate_hash": "80c4f9ba134370dc99c6013c73f6c7784007eeff54bf91b39cf85b7939138194"
+    },
+    {
+      "id": "000003955",
+      "coordinate_hash": "66043a03bb0ab518a26ceb613d9b19795ac2a9692d01902a72767637640380c1"
+    },
+    {
+      "id": "000004001",
+      "coordinate_hash": "054a3215253a76bb958dcf785c2bcf7bd78d1e0d4aab93325291da0011753c03"
+    },
+    {
+      "id": "000004047",
+      "coordinate_hash": "e4e3becf117e05ef5afed5e7c41a9517474b1492bd859f63604b26d8047856c9"
+    },
+    {
+      "id": "000004093",
+      "coordinate_hash": "f5ba8e2175144529e06d58d78c03fae1bc2e7868bae31c752009910c276e4f56"
+    },
+    {
+      "id": "000004139",
+      "coordinate_hash": "327be35588a633980a537f84f18aad1bc00c7dd549a2f45ba06aef4bf4269e87"
+    },
+    {
+      "id": "000004185",
+      "coordinate_hash": "24d358c0dc997e14eb4ff4cce47faf07ed0d9acccce40e9da5c948f7cd1b2002"
+    },
+    {
+      "id": "000004231",
+      "coordinate_hash": "985ff5180dd6230dd39595dc39c11e414ea16dbbfb4facbeb9be9fd1040aedb6"
+    },
+    {
+      "id": "000004277",
+      "coordinate_hash": "5cfaaaf9b622cbf194efcf174fffbebeef91cc194d42520c25ad13312aaaa85a"
+    },
+    {
+      "id": "000004323",
+      "coordinate_hash": "115e8b48fa1c9452b0ba49c1f3d95ecfbf51ab5ad10e51facde2d4d2c89da18f"
+    },
+    {
+      "id": "000004369",
+      "coordinate_hash": "cdda6563359ba3d7f1523d0d0f7a6b3b42fc8f75d993b397c26cdef79a897477"
+    },
+    {
+      "id": "000004415",
+      "coordinate_hash": "9956bb18e716a4b7edf6a1010c0d181846e99f1924b09fc129e52e5ad75229ee"
+    },
+    {
+      "id": "000004461",
+      "coordinate_hash": "3243a4c1959072925f6d78c4340275e2ebe3135a6e57f3b7112fa636c8b2c6ee"
+    },
+    {
+      "id": "000004507",
+      "coordinate_hash": "01879cb8906997eb8625f7320681d2be6d769be3dec3892c5139dc873eb3e6e3"
+    },
+    {
+      "id": "000004553",
+      "coordinate_hash": "2c53090ca61b39152f55efcbd3a1cf6941419a256a132c9dddab64909cb63e71"
+    },
+    {
+      "id": "000004599",
+      "coordinate_hash": "cb0784865a1580ca8155e7b2a4156bb7be1cce1dd8655457d8d0c76734e88212"
+    },
+    {
+      "id": "000004645",
+      "coordinate_hash": "f3f83198717feb5f1451a86037f3f41475c292f9bacb2e2127bdacb4e01fcdf7"
+    },
+    {
+      "id": "000004691",
+      "coordinate_hash": "bd56d72e44ef3d2aa3808303ee37aaf1edbc948712db2685d1967188f7f0d917"
+    },
+    {
+      "id": "000004737",
+      "coordinate_hash": "c8bb28dccc7fc7be859946ee0ff206811f2f6a0714466fcc29dd37e4c9e5b713"
+    },
+    {
+      "id": "000004783",
+      "coordinate_hash": "fb5cb1aefab72783e0e7a1da5df42044cf34b26db447f7ad7ff28ee2cba3029e"
+    },
+    {
+      "id": "000004829",
+      "coordinate_hash": "2c05f5b43173ca68ef6d5bd65f59d14d966833037a686b3346f9f9028cc4022d"
+    },
+    {
+      "id": "000004875",
+      "coordinate_hash": "865639d29e44a663ea83e6f2edb092ea93e496367f781b7cc814ef502806e7d1"
+    },
+    {
+      "id": "000004921",
+      "coordinate_hash": "1582c260a98fa49a29cc55a4b327cdab2d310c5837c1713c13b7381a20b4c5e6"
+    },
+    {
+      "id": "000004967",
+      "coordinate_hash": "ef36f2345dd92fda5b80b2ffe1d6e9517a81ba601c78c89afc356657b7314f9f"
+    },
+    {
+      "id": "000005013",
+      "coordinate_hash": "79d976e9520977871f509e8bace67a3bff70d6aebb975250069af17701b92f2c"
+    },
+    {
+      "id": "000005059",
+      "coordinate_hash": "e62191d8510c47eef340836c124d5d46acd03376bb577a9b10b91693b3d95bc8"
+    },
+    {
+      "id": "000005105",
+      "coordinate_hash": "5edf183ce12f0aa712e16addd46763e0890c77e3466b042e595d865b360332f5"
+    },
+    {
+      "id": "000005151",
+      "coordinate_hash": "66e213eda7787d60405b116fe8554d020709aa13b4558ab66cb9d27e8bc7f339"
+    },
+    {
+      "id": "000005197",
+      "coordinate_hash": "c83f819adab4332fb38f1af59c654bb46b95db2ef74daded703194572ef716b7"
+    },
+    {
+      "id": "000005243",
+      "coordinate_hash": "47f037a172de0467c9feab720e9872dbaa26dd823d5190411e7093f6b1a1edce"
+    },
+    {
+      "id": "000005289",
+      "coordinate_hash": "e5bf33b6cf37ad5f1363e556a6ec9ccc9b25f0814e8bacf43be74ee857811f04"
+    },
+    {
+      "id": "000005335",
+      "coordinate_hash": "66e39c529a5cb9e35b5c7d9ef58aad56e3eb8b3cd94ea532e29a48dcaee5c4c9"
+    },
+    {
+      "id": "000005381",
+      "coordinate_hash": "c09fde6cc373649cb9f1adebab9e71be6eaac50f27a83c317ac9bf8c0f5db32f"
+    },
+    {
+      "id": "000005427",
+      "coordinate_hash": "5b12fd4c12e6472595adfe927d2c08496b6dba1f7d6206d2c75e10e7333dba97"
+    },
+    {
+      "id": "000005473",
+      "coordinate_hash": "5e78bb29f5af26d2713267f020af109559229ce7ae49d4e3a1352978981f8e7d"
+    },
+    {
+      "id": "000005519",
+      "coordinate_hash": "a756d9b747dda561ebcba3f40b1699597d74fda540619eeaed71657083a3c4e5"
+    },
+    {
+      "id": "000005565",
+      "coordinate_hash": "5c0e4d5a4961ebfbd3482f40ab000e6d630395b3220e62c527a67f33bb861e07"
+    },
+    {
+      "id": "000005611",
+      "coordinate_hash": "82e5b78f1213a6bf580e1826689ea48850da956b22bcd4f63d3bbe5894ac0d6c"
+    },
+    {
+      "id": "000005657",
+      "coordinate_hash": "86d4b1377d5556c2775fdc46b86c9be72bfaff4d29630b8b0acdd2acc1e73872"
+    },
+    {
+      "id": "000005703",
+      "coordinate_hash": "f61b39515b4a9c2629acaa4ede8b120f8bb371a9040950a7ba80802699354aae"
+    },
+    {
+      "id": "000005749",
+      "coordinate_hash": "7d90f86a24fdad794a1d04720ba06ed89dbeddbedfb386805ffc57e176644992"
+    },
+    {
+      "id": "000005795",
+      "coordinate_hash": "4000555715bf92f617e8a9bdb8fbdf7327c4172fbd56912367545467e5c1ef91"
+    },
+    {
+      "id": "000005841",
+      "coordinate_hash": "3c9bd25981021e2be09acaa3b7b60db63094aec668ac1c61f7d66de8b18c8e8e"
+    },
+    {
+      "id": "000005887",
+      "coordinate_hash": "4de59269d35d8d413007fad02e4641466f7f39964fca8824ced37ebf86fe81ac"
+    },
+    {
+      "id": "000005933",
+      "coordinate_hash": "f0da8eba4b014e945024a05f49dc2649a8cd0db11cebab2e606feaffa604b1d5"
+    },
+    {
+      "id": "000005979",
+      "coordinate_hash": "7a8ad15287d54a50b3314464bfee5cadd42910666a6fbd87838c26915a29f6ec"
+    },
+    {
+      "id": "000006025",
+      "coordinate_hash": "f522a0d343ba37a4be111efe77a008ab482e34234bbe14b3efaa15b1670faf85"
+    },
+    {
+      "id": "000006071",
+      "coordinate_hash": "a55f72b5cadbbdbfb947513df35439ecccdcb6bc016017ef73f53d0a5a1a7ebb"
+    },
+    {
+      "id": "000006117",
+      "coordinate_hash": "94f6a3a53cecd370deb236b11503ecba000eadbb19685c1df791d165a67cba9e"
+    },
+    {
+      "id": "000006163",
+      "coordinate_hash": "bd258172acbb7d68a3fbf8599aa301e29cc37505b0e658ca57506c7f55463fb9"
+    },
+    {
+      "id": "000006209",
+      "coordinate_hash": "45d58dd198b720acfcf098e5cf6122adf00cd60591e8956c8069b1a3914588a2"
+    },
+    {
+      "id": "000006255",
+      "coordinate_hash": "95ba4948a26ba83b6c50c3b351cdc97708c7b2b52d0e419f72f709fe00cf5dcd"
+    },
+    {
+      "id": "000006301",
+      "coordinate_hash": "8cce153a31c4fca6b30fb872103fe0d2d27089aafcb98d4fd82e97a9bcef5b51"
+    },
+    {
+      "id": "000006347",
+      "coordinate_hash": "d1d19addb2eba5ad94f0750ca87c6c63377116fbfbaf65490572da78f1a22850"
+    },
+    {
+      "id": "000006393",
+      "coordinate_hash": "b54d1d481b143b7a0ccb2fda9246ffac3e0d8f9a9c2108125f532b952c1323c8"
+    },
+    {
+      "id": "000006439",
+      "coordinate_hash": "22acf49e1d2acd93dd1cd4d78694e161f0e391b3c29f1afe0c24364c6cd14864"
+    },
+    {
+      "id": "000006485",
+      "coordinate_hash": "e74f0d920c5b5abfe9de73a0a8914275967131195f4ea3f650c70ffb18d32038"
+    },
+    {
+      "id": "000006531",
+      "coordinate_hash": "5f837b0425b97f9d6fbd75aceaf734d828bce6bdd662c83456976b588f0514b8"
+    },
+    {
+      "id": "000006577",
+      "coordinate_hash": "bdc175d12e22781b0de1c8c9632ee7b564e14e9fa21dc9ba4c2b8a05eee3130d"
+    },
+    {
+      "id": "000006623",
+      "coordinate_hash": "d29c12cfa4d313f3de48fb9d67554fd55df21734e0b4732fa88a593da058a54d"
+    },
+    {
+      "id": "000006669",
+      "coordinate_hash": "a8e68d5512d923e51ddfcc4bb47f6e753fcaa1012eea871643e0313f98b944b4"
+    },
+    {
+      "id": "000006715",
+      "coordinate_hash": "2c5d3d9bad8a8a0a33461f444498a6322f96abe78d8287ed373f48f3744d4f3d"
+    },
+    {
+      "id": "000006761",
+      "coordinate_hash": "f0856df5b0c3cef33ef3235697204c757474455631988ae557d3f971c4da348f"
+    },
+    {
+      "id": "000006807",
+      "coordinate_hash": "d50967f6d2b2ce4fda5450ab90572554d5ca9131169861b51d75280703f60b16"
+    },
+    {
+      "id": "000006853",
+      "coordinate_hash": "e7060ed3c01e17b424cf38ce6f3fe2ba0d5cd157636f459625bea4a6dd0b7722"
+    },
+    {
+      "id": "000006899",
+      "coordinate_hash": "2a6e8cb54f9f7f08ebe6505866538f2666c61afc69d38631466af032a72b14d9"
+    },
+    {
+      "id": "000006945",
+      "coordinate_hash": "3f9411fcca2ad0738ba8aaa9be6c199df549807565cfafb35c098e7b86fbf34a"
+    },
+    {
+      "id": "000006991",
+      "coordinate_hash": "9b952126c2319994706f7971a5a0f07f636e771a7acf77b812b6d8a93db11847"
+    },
+    {
+      "id": "000007037",
+      "coordinate_hash": "f80c09d993b2f6cb9ccbfa96c9eba39e630faa81438f786224c7abe24f5ac048"
+    },
+    {
+      "id": "000007083",
+      "coordinate_hash": "7decf62e3c578af4e8f4831671099bb9462bfbcb8d148a8e7785da5589a7b018"
+    },
+    {
+      "id": "000007129",
+      "coordinate_hash": "b8c751bd96f51c0bc1b2977f2d040696c5d8bbb42b8356fb7e873b67c40aa4a8"
+    },
+    {
+      "id": "000007175",
+      "coordinate_hash": "0252c1352f1137e209b70333842746632d7714989bb5c285d3d723d9726b186a"
+    },
+    {
+      "id": "000007221",
+      "coordinate_hash": "de6959c2635364813540fd86da7ca61583dbc5d07b75cf915725ce53d9383826"
+    },
+    {
+      "id": "000007267",
+      "coordinate_hash": "ba961a223e4b56a788ab7b1479bf6dc144a402b61188a7f3e145207607c59797"
+    },
+    {
+      "id": "000007313",
+      "coordinate_hash": "69070dbe20c85c1329041a8ade1f02c0a29f6ef96f0029f5226b3509cbe61704"
+    },
+    {
+      "id": "000007359",
+      "coordinate_hash": "9d857c2350ddb0290c6d53b9487c764d46153fd5f322054575ee07a5705ffd1c"
+    },
+    {
+      "id": "000007405",
+      "coordinate_hash": "a3374578eef8a59bfd9f61cbb890b06e6a5a5b3fcc53dc524e9749364869e2e3"
+    },
+    {
+      "id": "000007451",
+      "coordinate_hash": "85765818cec35c801324d86139dc6129633d90bf0db83ca12eb672ab2e73d5dc"
+    },
+    {
+      "id": "000007497",
+      "coordinate_hash": "683610b42b0682862c6b69ade6b298cc3c3058e6d149a5745d386d80702c5adb"
+    },
+    {
+      "id": "000007543",
+      "coordinate_hash": "730b88efbdb090abb1d2b28117e1a9af376431e86a4d8ea9453ccf42e385947d"
+    },
+    {
+      "id": "000007589",
+      "coordinate_hash": "9fc68df108913162167ff8eeaffeee6a24d5b86e44594dd37aa5a30792af8321"
+    },
+    {
+      "id": "000007635",
+      "coordinate_hash": "9d11f0170a7debb21db92bd41f2ab0db29a7ccf9d2d88cf7cebc93a409ccb87c"
+    },
+    {
+      "id": "000007681",
+      "coordinate_hash": "b278cfd87bb68e8285dda9702a3ce6d5ddd2eb117012cf3b85722242ad17a339"
+    },
+    {
+      "id": "000007727",
+      "coordinate_hash": "ba6c7cf49c43ae0d418e123b56fcc387151a5afd63e63d6f15e2379101360503"
+    },
+    {
+      "id": "000007773",
+      "coordinate_hash": "f3e2cf9f9b66676996b3cd9d67b2700bb1b2a91ee3928e6a7956594a4c32ff18"
+    },
+    {
+      "id": "000007819",
+      "coordinate_hash": "f53c6f5cc3796e3c5f432fa4111090105622b8791f524a7d31b9b4992133b51e"
+    },
+    {
+      "id": "000007865",
+      "coordinate_hash": "d0b9b230dbb8b83afc5a074fd01e5f6894c5578538c839011c7328f6632e3e5b"
+    },
+    {
+      "id": "000007911",
+      "coordinate_hash": "01408afee397e534ad25b8b48869087dc0520e82d689432ad871b8da0cd31377"
+    },
+    {
+      "id": "000007957",
+      "coordinate_hash": "bd7a52a8f01f94860da5e713f40c5f7b3c3e28b295d8183614b89fbb3d173ca5"
+    },
+    {
+      "id": "000008003",
+      "coordinate_hash": "56788a51857848f406102c7d7d668e20620ebeb7f8b2394cfc947d900ec0badc"
+    },
+    {
+      "id": "000008049",
+      "coordinate_hash": "6505a9356a11c76ee61e2359ab9bdfd3a9ac1988b63707aa0a1322a92f69d823"
+    },
+    {
+      "id": "000008095",
+      "coordinate_hash": "e86119d3870c4f1d94b5e1e424d137fdbad936be825b219b2476e859cf1bd2db"
+    },
+    {
+      "id": "000008141",
+      "coordinate_hash": "7b2c54cc6604464e47db2b9b39a6dbb697ff4e26c9f8d2bad49bf2bde88c1b95"
+    },
+    {
+      "id": "000008187",
+      "coordinate_hash": "3f2fcbcb65caef06654ac777e8c0af62fffa998323e3e47f9cc858d1684af7be"
+    },
+    {
+      "id": "000008233",
+      "coordinate_hash": "331eda0a30632c34a02aaf4c4f30df983fa7948e55f451304b7465ea981207eb"
+    },
+    {
+      "id": "000008279",
+      "coordinate_hash": "eda9b47641c47f2ebaa633d15de09d1f0e8fe4d5c132b4795f24d1983041a885"
+    },
+    {
+      "id": "000008325",
+      "coordinate_hash": "9bbfa44045efe973d7f869f4d22a6653fcb2358b28633ab3eda4c1f03997b96a"
+    },
+    {
+      "id": "000008371",
+      "coordinate_hash": "8b4af896d67ced4f639ee98b72fa3e8011d9db31d70ba8424340cc2f66485e0c"
+    },
+    {
+      "id": "000008417",
+      "coordinate_hash": "035407208e045b02a651a029d2a3bf70db94d48df708089fade658370cec921d"
+    },
+    {
+      "id": "000008463",
+      "coordinate_hash": "3a148ad206c28821fc47cf9f91876d1e4ceb238fae1ccebae1f94ecbed0292a7"
+    },
+    {
+      "id": "000008509",
+      "coordinate_hash": "66e28f190755218239a3dd14505b1a07bce55d4b33ca0f167ed3173082bcd3d0"
+    },
+    {
+      "id": "000008555",
+      "coordinate_hash": "f5062cd586d56cbaed8b6740284e824f6b7a76893073b42a4a740fce1125c9d9"
+    },
+    {
+      "id": "000008601",
+      "coordinate_hash": "338f3eee160819903eea13fadd587ed09274cb281e946c1b23bc89f038b6b23b"
+    },
+    {
+      "id": "000008647",
+      "coordinate_hash": "8d925b5b1c2f6334e9ce92a5d7608719f3737e7de0a90fc7438e7beccd73591e"
+    },
+    {
+      "id": "000008693",
+      "coordinate_hash": "745e253e0876a76c02efc66b91a0981dd87a37fd02956011fe13f167fe91371a"
+    },
+    {
+      "id": "000008739",
+      "coordinate_hash": "9d4e9598df3a855602d3cf1bd82d6edaadcc3485dfab05715e23557572653d8b"
+    },
+    {
+      "id": "000008785",
+      "coordinate_hash": "b97b180eae29a16ea62a00aac008013a13d04fe340284377e70de7c22fcf424b"
+    },
+    {
+      "id": "000008831",
+      "coordinate_hash": "9b454dcbea9102e02696fb9f55ea72fd01d0ac4a68c9c18e0d5074d55d30bb80"
+    },
+    {
+      "id": "000008877",
+      "coordinate_hash": "e55992a5df33ec05b69557d835119ec40f6c0c3e753d928afcae936101943648"
+    },
+    {
+      "id": "000008923",
+      "coordinate_hash": "5e4e3cc523800e8d8fd44bd0855a621a1e3b5cb988b673964ca1ec4c8efbe286"
+    },
+    {
+      "id": "000008969",
+      "coordinate_hash": "9f8f51f2d0b31d1fd696d302c073fec510bf00849c43d64c0d556827f8045e54"
+    },
+    {
+      "id": "000009015",
+      "coordinate_hash": "01afa3f14cbb8e7d495ea4c397327032aac7f8e2af5e4d1dbf4fc5904b6aad32"
+    },
+    {
+      "id": "000009061",
+      "coordinate_hash": "6d6a9b6a5c1efa7204bb7a06459512e030fc07ff1eef53ab74425aa9c0466ec0"
+    },
+    {
+      "id": "000009107",
+      "coordinate_hash": "c7d0f89b4b3b5e2b82588d7ba9ad48604892ec4d634488feb64e7e010abf3925"
+    },
+    {
+      "id": "000009153",
+      "coordinate_hash": "d457794b9e3cd55bbfb8405bc5adff369520ae1bc878b27d694e42bdd78366ba"
+    },
+    {
+      "id": "000009199",
+      "coordinate_hash": "4c56e807738b241c1cf4bdd6d7a543fbde2976d3e179ff0cae96ba508a9c8565"
+    },
+    {
+      "id": "000009245",
+      "coordinate_hash": "c4e5d4c17f27aca1c4a5c900355e811ee00a0063e63b1f533cc5cd617b175fb3"
+    },
+    {
+      "id": "000009291",
+      "coordinate_hash": "caac41f574de624c330be9ea463596b97e475f37a95c97dbf283f2c9ae1d7a41"
+    },
+    {
+      "id": "000009337",
+      "coordinate_hash": "0b7d7b8bc12e167883c0c455c885735ac98cd7bc2066ae5f0ddfb7a2d9b57b51"
+    },
+    {
+      "id": "000009383",
+      "coordinate_hash": "be821948c557683e892574e135cc9572df767f3316e2373657849be257ecb339"
+    },
+    {
+      "id": "000009429",
+      "coordinate_hash": "0d7d8c2338c92da70f7fac8e968900b73b0c4099159f4f53fb462beaa6ead0b0"
+    },
+    {
+      "id": "000009475",
+      "coordinate_hash": "74ebcd5e2b56eb712e7e4857f412c46ff994d6c3d02fd32210d77cbea3196cee"
+    },
+    {
+      "id": "000009521",
+      "coordinate_hash": "93442a39ca3239e8a9a30c68a615730f3aeadc00c24f82c282bfbfbfb3ff0cb5"
+    },
+    {
+      "id": "000009567",
+      "coordinate_hash": "599efef74cd286e45fae06836c81cfce0866e0bbb9de4fea93042e8bfc4643e0"
+    },
+    {
+      "id": "000009613",
+      "coordinate_hash": "f99e8cc913154911d4f45aa3d6dee96b3211b2af72c055f07e327c9958dd5c34"
+    },
+    {
+      "id": "000009659",
+      "coordinate_hash": "e13a26926018e40999d76a115ec18598f8de5c175c633c3a9a1134c129eed131"
+    },
+    {
+      "id": "000009705",
+      "coordinate_hash": "f3301e0f67a97a01c32847b55b201971f00a2dc18e39930e269b22f851a0b95b"
+    },
+    {
+      "id": "000009751",
+      "coordinate_hash": "cd9e92aae41dbe14a6715596cfeb4c3f204b3db6c346876476076006ebbe1e33"
+    },
+    {
+      "id": "000009797",
+      "coordinate_hash": "b7aafa788a1083a43008648eaf317adbf537440058612833913b40b7c7b0234e"
+    },
+    {
+      "id": "000009843",
+      "coordinate_hash": "1a9f78741d0e92dc744b4e3737e9729c8dc35b9f75c493de78f28637435e821e"
+    },
+    {
+      "id": "000009889",
+      "coordinate_hash": "ad5b3720e254bd2183a44636318def2c9673ab04bc37d1bedb45d3c75fedc540"
+    },
+    {
+      "id": "000009935",
+      "coordinate_hash": "a756d9b747dda561ebcba3f40b1699597d74fda540619eeaed71657083a3c4e5"
+    },
+    {
+      "id": "000009981",
+      "coordinate_hash": "b8ae2a494f12eebccccbafe55413ba226d6b761ec281d3669ef638971b9f8801"
+    },
+    {
+      "id": "000010027",
+      "coordinate_hash": "528ef85c585591b9968ad1c158faaba9acd60eff71de3ff2014df915ffdfa14e"
+    },
+    {
+      "id": "000010073",
+      "coordinate_hash": "85359df5edd79f6376eb5fa496814c8b44435516682eb301b5573113199a01a2"
+    },
+    {
+      "id": "000010119",
+      "coordinate_hash": "f5798f39fc3feadb4eb93b392b59d8996181f714ea7f218c84af257079f14df3"
+    },
+    {
+      "id": "000010165",
+      "coordinate_hash": "b1e476bbe47bdb665ef4af5ace400480d39a964e944dbf7958e944273144bb3f"
+    },
+    {
+      "id": "000010211",
+      "coordinate_hash": "ad5b3720e254bd2183a44636318def2c9673ab04bc37d1bedb45d3c75fedc540"
+    },
+    {
+      "id": "000010257",
+      "coordinate_hash": "be72bd7293221524f09529e283f169bae5fefc0b657a2a2f3bd01a9e9304204e"
+    },
+    {
+      "id": "000010303",
+      "coordinate_hash": "43dec3890bdd0a812e0d9399c51d07cc6400e8d6d8d65ca9332fe07e981d1d6b"
+    },
+    {
+      "id": "000010349",
+      "coordinate_hash": "4cdcb29ae1095dfc76a180036a808f34215c8d78e3defc6ab95dbb1e0fef4a05"
+    },
+    {
+      "id": "000010395",
+      "coordinate_hash": "0a6a6156797d70a758f68b48b030cbc4e34f07c7f28d24dcc539cad10058ac71"
+    },
+    {
+      "id": "000010441",
+      "coordinate_hash": "cfc8e0042fa1b060b2f9851d310345ab29bf7c9e711559084397dcfaf8dc229a"
+    },
+    {
+      "id": "000010487",
+      "coordinate_hash": "c83554ba9bd73d6b1db40445b938de9e4d44a432cbbce32c5f8443e826e4229e"
+    },
+    {
+      "id": "000010533",
+      "coordinate_hash": "bf5ea0666e318863e6828b966220edd77b664d012d01267b54c198915e706c9d"
+    },
+    {
+      "id": "000010579",
+      "coordinate_hash": "0e9d7eb68676a98e2477ee73598a8974e3e9c31679296c37d5dfeef8155fa0b3"
+    },
+    {
+      "id": "000010625",
+      "coordinate_hash": "bbfd7972eabf25ecee07db492f87fc972658df03ad1990c9114d8c6f2940da8a"
+    },
+    {
+      "id": "000010671",
+      "coordinate_hash": "63227d56c2746a42547dc6d67e822e39e3c5b4013925bcc2ce004918a6902037"
+    },
+    {
+      "id": "000010717",
+      "coordinate_hash": "e4842c38252044346c872d34b0ae9b09cb8be4a47feb7b6732fa39940d2ebff5"
+    },
+    {
+      "id": "000010763",
+      "coordinate_hash": "72059a38a1ae1cc513b7dae64f98ae9a219aaced8dfef96cd02a47010bb673a1"
+    },
+    {
+      "id": "000010809",
+      "coordinate_hash": "b94eeef4ee4c7a2cddec59f7e845041374ab7a0a0db737e62fb8332748fe612c"
+    },
+    {
+      "id": "000010855",
+      "coordinate_hash": "12fcd2cacc5e1ebac005325f879337c378e392dc07051574c48d67f0020251f8"
+    },
+    {
+      "id": "000010901",
+      "coordinate_hash": "116c156c88b52a6b308b2bd4fb9c3c1e785888b5e1cb41e0105a26939695f100"
+    },
+    {
+      "id": "000010947",
+      "coordinate_hash": "9ab8da23df2b70bcb48c5cbfaff6db0de9763937c816ade9f8f02c14372aadca"
+    },
+    {
+      "id": "000010993",
+      "coordinate_hash": "8441522b7ffa03a24553fa1cc74eb613c569e28503c29ce6f7c072befa8c057a"
+    },
+    {
+      "id": "000011039",
+      "coordinate_hash": "cb447f92041c4c01c004879c19bb326dad15d4364c62ffd54cacc9d62a67081b"
+    },
+    {
+      "id": "000011085",
+      "coordinate_hash": "f515fafbcbb9e9f4903a44fb348ff846186bcd4062d5ee983d58ffa0f526eafc"
+    },
+    {
+      "id": "000011131",
+      "coordinate_hash": "5352fe610ff5ef04dc04ce841397e581871006bce850f5b5f2945111244a3eaf"
+    },
+    {
+      "id": "000011177",
+      "coordinate_hash": "023fa82d63ce3911c92b308ed35890366a4c3fd79b4043f30b3a77c6fb649b7e"
+    },
+    {
+      "id": "000011223",
+      "coordinate_hash": "bfca802abf409c7a69514d00c64aef5df10e4a6ec2f9ef79180f8dd1a6938993"
+    },
+    {
+      "id": "000011269",
+      "coordinate_hash": "f2dd9c504df68da2aa13fd8dea7cde175caf3997b81720241d8b3b589914a1d4"
+    },
+    {
+      "id": "000011315",
+      "coordinate_hash": "df5372ba616b975805358237f598f6d37bb56235fb73d959ea887087cc3e693e"
+    },
+    {
+      "id": "000011361",
+      "coordinate_hash": "bf32ea3ebdb7efcf7d046f9c80a02f8274d2a0b83830701eebee5c70fb2164d3"
+    },
+    {
+      "id": "000011407",
+      "coordinate_hash": "054495cef8e50d1e8f523419c370ec2c7e8046a7d15b9835313ee3ac24cd8ce0"
+    },
+    {
+      "id": "000011453",
+      "coordinate_hash": "7801e11b676625dcddec011eccb60ad5df75dd0cfb1e102e974c9fc358e108dd"
+    },
+    {
+      "id": "000011499",
+      "coordinate_hash": "0f610c43043952b634e4e83a64792963d93b9f94871f3ae2d489809f51b89c83"
+    },
+    {
+      "id": "000011545",
+      "coordinate_hash": "5935bf57ddb188d5a56c22d0941552c785e80cc0c848320a0803da589528cb57"
+    },
+    {
+      "id": "000011591",
+      "coordinate_hash": "b3dbdb883f2a381750bd751043cd9b0a9846c0a2541c8318d6bf47358b8a25d7"
+    },
+    {
+      "id": "000011637",
+      "coordinate_hash": "fccea0cc1a7b7916572d6d10abce926f0b7e02f0cfc57147ac5f4239c02f2519"
+    },
+    {
+      "id": "000011683",
+      "coordinate_hash": "abfa364e06a565462bec45e35403922244d0f109c7b6982e73b48c0afccd7efe"
+    },
+    {
+      "id": "000011729",
+      "coordinate_hash": "e525f5b34af82f717c4f6d0589745163a90a8702921bf9bde30ddf186415e6ae"
+    },
+    {
+      "id": "000011775",
+      "coordinate_hash": "8aeb0f9935ca9c0d5beb055be1464c76ff331cc9d8cb1567413e2e6c16ab7af8"
+    },
+    {
+      "id": "000011821",
+      "coordinate_hash": "c27b937982a7fe4e07da945a9b2a7a45800dbeb4bc062c7e9bffbf19ebcec279"
+    },
+    {
+      "id": "000011867",
+      "coordinate_hash": "912e952d8f074eb7be88f70755e88abdd3f359ec8977c2d37c94f3991156b099"
+    },
+    {
+      "id": "000011913",
+      "coordinate_hash": "988eaf2cddab6669f7ed27810adcbb5a6f53be294c073d9a02abf2e1658a1da4"
+    },
+    {
+      "id": "000011959",
+      "coordinate_hash": "ad19710f0c2b67caac03665d1d51ca893bc859017ccc600444e84daf4b0f11e1"
+    }
+  ]
+}

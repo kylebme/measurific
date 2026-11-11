@@ -1,0 +1,10 @@
+{
+  "config": {
+    "camera": {"width": 1920, "height": 1080, "pixel_pitch_um": 3.45, "magnification": 0.1},
+    "illumination": {"kind": "collimated"},
+    "optics": {"object_na": 0.01, "wavelength_um": 0.63, "psf": "gaussian", "sigma_px": 0.65, "support_px": 4},
+    "sampling": {"supersample": 4, "tile_px": 64}
+  },
+  "shapes": [{"kind": "cylinder", "name": "pin", "radius_mm": 5, "length_mm": 20, "center_mm": [0, 0, 5], "axis": "y", "angle_deg": 12}],
+  "dataset": {"count": 1, "seed": 42, "exposures_ms": [1]}
+}

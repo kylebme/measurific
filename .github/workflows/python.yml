@@ -1,0 +1,55 @@
+name: Python packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/**'
+      - 'research/synthetic-shapes/**'
+      - '.github/workflows/python.yml'
+  pull_request:
+    paths:
+      - 'packages/**'
+      - 'research/synthetic-shapes/**'
+      - '.github/workflows/python.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: python-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    env:
+      OMP_NUM_THREADS: 2
+      PY: ${{ github.workspace }}/.venv/bin/python
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v7
+      - name: Install packages
+        run: |
+          uv venv --python 3.13 .venv
+          # CPU-only torch keeps the environment small; contour-model training code needs it.
+          uv pip install --python .venv/bin/python torch --index-url https://download.pytorch.org/whl/cpu
+          uv pip install --python .venv/bin/python \
+            -e 'packages/edge-model[onnx]' -e packages/pae -e 'packages/measurement[test,image]' \
+            -e 'packages/contour-model[test,bridge,onnx]' -e 'research/synthetic-shapes[test]'
+      - name: measurement
+        working-directory: packages/measurement
+        run: $PY -m pytest -q
+      - name: pae
+        working-directory: packages/pae
+        run: $PY -m pytest -q
+      - name: edge-model
+        working-directory: packages/edge-model
+        run: $PY -m pytest -q
+      - name: contour-model
+        working-directory: packages/contour-model
+        run: $PY -m pytest -q
+      - name: synthetic-shapes
+        working-directory: research/synthetic-shapes
+        run: $PY -m pytest -q

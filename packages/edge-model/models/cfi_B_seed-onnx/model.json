@@ -1,0 +1,65 @@
+{
+  "format": "edgesr-cfi-onnx-v1",
+  "model_config": {
+    "coarse_widths": [
+      24,
+      48,
+      64
+    ],
+    "coarse_blocks": [
+      0,
+      2,
+      2
+    ],
+    "ctx_channels": 16,
+    "block": "dense",
+    "norm": "ln",
+    "fine_width": 24,
+    "fine_dilations": [
+      1,
+      1,
+      2,
+      3
+    ],
+    "fine_expand": 2,
+    "decoder": "block",
+    "dec_hidden": 32,
+    "dec_fourier": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "edge_head": true,
+    "context": "seed"
+  },
+  "geometry": {
+    "cell": 16,
+    "scale": 16,
+    "margin": 16,
+    "window": 48,
+    "radius": 13,
+    "frame_pad": 32
+  },
+  "inference_defaults": {
+    "min_object_area": 50.0,
+    "min_hole_area": 8.0,
+    "pixel_band": -1.0
+  },
+  "provenance": {
+    "source_checkpoint": "models/cfi_B_seed.pt",
+    "source_checkpoint_sha256": "4dcf240aa9e2c9b2630833cf5e66e6da6585ad41686b90922a58ca58f2951665",
+    "training": {
+      "training_checkpoint": "work/runs/c3_B_s0_60m/final.pt",
+      "train_steps": 59924,
+      "train_seconds": 3600.042891740799,
+      "note": ""
+    },
+    "torch_version": "2.14.0",
+    "opset": 18
+  },
+  "graphs": {
+    "fine": "803d684b396019c68202dd4fe710b36e2923cb5547b9d1cab2b1ecc05169a898",
+    "decode": "ae275b6b2f41cc661a37ccb0a906a9e7c5268181f3567ccaf03b8c42ebf42be1"
+  }
+}

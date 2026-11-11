@@ -1,0 +1,774 @@
+{
+  "description": "Artifact-grouped benchmark: train on pins/blocks over a 3x3 field grid; hold out dimensions, positions, geometries and optical conditions. Preview sampling; qualify representative patches with validation-suite.",
+  "seed": 2026,
+  "exposures_ms": [
+    0.5,
+    1.0
+  ],
+  "repeat_captures": 2,
+  "config": {
+    "camera": {
+      "width": 256,
+      "height": 192,
+      "pixel_pitch_um": 10,
+      "magnification": 1,
+      "distortion_radial": [
+        0.007,
+        -0.001,
+        0
+      ],
+      "distortion_tangential": [
+        0.0005,
+        -0.0003
+      ]
+    },
+    "illumination": {
+      "kind": "collimated"
+    },
+    "optics": {
+      "psf": "mixture",
+      "object_na": 0.025,
+      "support_px": 4,
+      "field_grid": [
+        3,
+        3
+      ],
+      "field_nodes": [
+        {
+          "sigma_px": 0.78,
+          "sigma_y_px": 0.6,
+          "angle_deg": -135.0,
+          "tail_offset_px": [
+            -0.5,
+            -0.5
+          ],
+          "tail_weight": 0.1
+        },
+        {
+          "sigma_px": 0.63,
+          "sigma_y_px": 0.54,
+          "angle_deg": -90.0,
+          "tail_offset_px": [
+            0.0,
+            -0.5
+          ],
+          "tail_weight": 0.07
+        },
+        {
+          "sigma_px": 0.78,
+          "sigma_y_px": 0.6,
+          "angle_deg": -45.0,
+          "tail_offset_px": [
+            0.5,
+            -0.5
+          ],
+          "tail_weight": 0.1
+        },
+        {
+          "sigma_px": 0.63,
+          "sigma_y_px": 0.54,
+          "angle_deg": 180.0,
+          "tail_offset_px": [
+            -0.5,
+            0.0
+          ],
+          "tail_weight": 0.07
+        },
+        {
+          "sigma_px": 0.48,
+          "sigma_y_px": 0.48,
+          "angle_deg": 0,
+          "tail_offset_px": [
+            0.0,
+            0.0
+          ],
+          "tail_weight": 0.04
+        },
+        {
+          "sigma_px": 0.63,
+          "sigma_y_px": 0.54,
+          "angle_deg": 0.0,
+          "tail_offset_px": [
+            0.5,
+            0.0
+          ],
+          "tail_weight": 0.07
+        },
+        {
+          "sigma_px": 0.78,
+          "sigma_y_px": 0.6,
+          "angle_deg": 135.0,
+          "tail_offset_px": [
+            -0.5,
+            0.5
+          ],
+          "tail_weight": 0.1
+        },
+        {
+          "sigma_px": 0.63,
+          "sigma_y_px": 0.54,
+          "angle_deg": 90.0,
+          "tail_offset_px": [
+            0.0,
+            0.5
+          ],
+          "tail_weight": 0.07
+        },
+        {
+          "sigma_px": 0.78,
+          "sigma_y_px": 0.6,
+          "angle_deg": 45.0,
+          "tail_offset_px": [
+            0.5,
+            0.5
+          ],
+          "tail_weight": 0.1
+        }
+      ]
+    },
+    "sampling": {
+      "supersample": 16,
+      "tile_px": 32
+    }
+  },
+  "groups": [
+    {
+      "id": "cal_pin_small",
+      "split": "calibration",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "z",
+          "radius_mm": 0.06,
+          "length_mm": 0.03
+        }
+      ],
+      "placements_px": [
+        [
+          56,
+          40
+        ],
+        [
+          128,
+          40
+        ],
+        [
+          200,
+          40
+        ],
+        [
+          56,
+          96
+        ],
+        [
+          128,
+          96
+        ],
+        [
+          200,
+          96
+        ],
+        [
+          56,
+          152
+        ],
+        [
+          128,
+          152
+        ],
+        [
+          200,
+          152
+        ]
+      ],
+      "phases_px": [
+        [
+          0.19,
+          0.37
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "pin",
+        "field_calibration"
+      ]
+    },
+    {
+      "id": "cal_pin_large",
+      "split": "calibration",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "z",
+          "radius_mm": 0.085,
+          "length_mm": 0.03
+        }
+      ],
+      "placements_px": [
+        [
+          56,
+          40
+        ],
+        [
+          128,
+          40
+        ],
+        [
+          200,
+          40
+        ],
+        [
+          56,
+          96
+        ],
+        [
+          128,
+          96
+        ],
+        [
+          200,
+          96
+        ],
+        [
+          56,
+          152
+        ],
+        [
+          128,
+          152
+        ],
+        [
+          200,
+          152
+        ]
+      ],
+      "phases_px": [
+        [
+          0.19,
+          0.37
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "pin",
+        "field_calibration"
+      ]
+    },
+    {
+      "id": "cal_block_small",
+      "split": "calibration",
+      "shapes": [
+        {
+          "kind": "box",
+          "size_mm": [
+            0.12,
+            0.15,
+            0.03
+          ]
+        }
+      ],
+      "placements_px": [
+        [
+          56,
+          40
+        ],
+        [
+          128,
+          40
+        ],
+        [
+          200,
+          40
+        ],
+        [
+          56,
+          96
+        ],
+        [
+          128,
+          96
+        ],
+        [
+          200,
+          96
+        ],
+        [
+          56,
+          152
+        ],
+        [
+          128,
+          152
+        ],
+        [
+          200,
+          152
+        ]
+      ],
+      "phases_px": [
+        [
+          0.19,
+          0.37
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "block",
+        "field_calibration"
+      ]
+    },
+    {
+      "id": "cal_block_large",
+      "split": "calibration",
+      "shapes": [
+        {
+          "kind": "box",
+          "size_mm": [
+            0.17,
+            0.13,
+            0.03
+          ]
+        }
+      ],
+      "placements_px": [
+        [
+          56,
+          40
+        ],
+        [
+          128,
+          40
+        ],
+        [
+          200,
+          40
+        ],
+        [
+          56,
+          96
+        ],
+        [
+          128,
+          96
+        ],
+        [
+          200,
+          96
+        ],
+        [
+          56,
+          152
+        ],
+        [
+          128,
+          152
+        ],
+        [
+          200,
+          152
+        ]
+      ],
+      "phases_px": [
+        [
+          0.19,
+          0.37
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "block",
+        "field_calibration"
+      ]
+    },
+    {
+      "id": "test_pin_dimension",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "z",
+          "radius_mm": 0.073,
+          "length_mm": 0.03
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "unseen_dimension",
+        "unseen_position",
+        "matched_optics"
+      ]
+    },
+    {
+      "id": "test_rotated_block",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "box",
+          "size_mm": [
+            0.146,
+            0.178,
+            0.03
+          ],
+          "angle_deg": 17
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "unseen_dimension",
+        "unseen_orientation",
+        "matched_optics"
+      ]
+    },
+    {
+      "id": "test_sphere_diffuse",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "sphere",
+          "radius_mm": 0.081,
+          "center_mm": [
+            0,
+            0,
+            0.12
+          ]
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "illumination": {
+        "kind": "diffuse",
+        "samples": 64
+      },
+      "tags": [
+        "unseen_geometry",
+        "diffuse",
+        "height"
+      ]
+    },
+    {
+      "id": "test_horizontal_pin",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "y",
+          "radius_mm": 0.068,
+          "length_mm": 0.17,
+          "center_mm": [
+            0,
+            0,
+            0.18
+          ],
+          "angle_deg": 13
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "illumination": {
+        "kind": "diffuse",
+        "samples": 64
+      },
+      "tags": [
+        "diffuse",
+        "height",
+        "unseen_orientation"
+      ]
+    },
+    {
+      "id": "test_nearby_edges",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "box",
+          "size_mm": [
+            0.061,
+            0.18,
+            0.05
+          ],
+          "center_mm": [
+            -0.04,
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "box",
+          "size_mm": [
+            0.061,
+            0.18,
+            0.05
+          ],
+          "center_mm": [
+            0.04,
+            0,
+            0
+          ]
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "tags": [
+        "nearby_edges",
+        "narrow_gap",
+        "model_mismatch"
+      ]
+    },
+    {
+      "id": "test_corner_asymmetric",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "box",
+          "size_mm": [
+            0.155,
+            0.155,
+            0.04
+          ],
+          "angle_deg": 45
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "optics": {
+        "psf": "mixture",
+        "field_grid": [
+          1,
+          1
+        ],
+        "field_nodes": [],
+        "sigma_px": 0.5,
+        "tail_weight": 0.22,
+        "tail_offset_px": [
+          1.2,
+          0.7
+        ],
+        "tail_sigma_px": 1.4,
+        "support_px": 6
+      },
+      "tags": [
+        "corners",
+        "asymmetric",
+        "model_mismatch"
+      ]
+    },
+    {
+      "id": "test_airy",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "sphere",
+          "radius_mm": 0.076
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "optics": {
+        "psf": "airy",
+        "field_grid": [
+          1,
+          1
+        ],
+        "field_nodes": [],
+        "object_na": 0.08,
+        "support_px": 8
+      },
+      "tags": [
+        "diffraction_proxy",
+        "model_mismatch"
+      ]
+    },
+    {
+      "id": "test_tabulated_kernel",
+      "split": "held_out",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "z",
+          "radius_mm": 0.091,
+          "length_mm": 0.031
+        }
+      ],
+      "placements_px": [
+        [
+          92,
+          68
+        ],
+        [
+          164,
+          124
+        ]
+      ],
+      "phases_px": [
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "roi_size": [
+        32,
+        32
+      ],
+      "optics": {
+        "psf": "measured",
+        "field_grid": [
+          1,
+          1
+        ],
+        "field_nodes": [],
+        "measured_path": "synthetic_tabulated_psf.npy",
+        "measured_pitch_um": 1,
+        "support_px": 6
+      },
+      "kernel_provenance": {
+        "kind": "synthetic",
+        "description": "Two displaced anisotropic radial-exponential components; generated by make_benchmark_specs.py, not measured from hardware",
+        "pre_pixel": true,
+        "registered_origin": true
+      },
+      "tags": [
+        "tabulated_kernel",
+        "model_mismatch"
+      ]
+    }
+  ]
+}

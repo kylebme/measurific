@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inspection-pae"
+version = "0.1.0"
+description = "CPU PAE subpixel edge localization for grayscale images"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Giuseppe Vitucci"},
+  {name = "Nicola Vitucci"},
+]
+dependencies = [
+  "numba>=0.61",
+  "numpy>=1.26",
+  "opencv-python-headless>=4.8",
+  "scipy>=1.12",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Reference = "https://github.com/gravi-toni/subpixel-edges"
+Paper = "https://doi.org/10.1016/j.imavis.2012.10.005"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pae"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"

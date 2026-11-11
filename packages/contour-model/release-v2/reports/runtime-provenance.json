@@ -1,0 +1,11 @@
+{
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "torch": "2.11.0+cu128",
+  "numpy": "1.26.4",
+  "scipy": "1.17.1",
+  "shapely": "2.1.2",
+  "torch_cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "cpu_threads_for_validation": 4
+}

@@ -1,0 +1,14 @@
+# Third-party packages for the bundled worker runtime. The pipeline packages
+# (edge-model, measurement, contour-model) are installed from source with --no-deps,
+# so torch and other training dependencies never enter the app.
+# Regenerate the lock after editing: npm run python:lock
+numpy>=1.26
+scipy>=1.12
+shapely>=2
+pillow>=10
+opencv-python-headless>=4.8
+# PAE's per-edge kernels (pae, the default edge method).
+numba>=0.61
+onnxruntime>=1.20 ; sys_platform != "win32"
+# DirectML runs on any DirectX 12 GPU and includes the CPU provider.
+onnxruntime-directml>=1.20 ; sys_platform == "win32"

@@ -1,0 +1,34 @@
+[
+  {
+    "family": "slotted_bracket",
+    "id": "000000007",
+    "source": "/media/T7Shield/inspection-contour-training/primitives-independent-v1/shards/00000/sources/000000007.contours.npz",
+    "source_sha256": "9c0850465d7bb3e6b7bf60d5bbcd6fbd2a3aef0bae7ad2b882d42cd9f36bcb2e",
+    "input": "slotted_bracket.contours.npz",
+    "coordinate_arrays_only": true
+  },
+  {
+    "family": "multi_thread_shaft",
+    "id": "000000041",
+    "source": "/media/T7Shield/inspection-contour-training/primitives-independent-v1/shards/00000/sources/000000041.contours.npz",
+    "source_sha256": "fd7e352d0a707ccbcf616d04b5d5c0071b6d90166a05add53879af35175b03a5",
+    "input": "multi_thread_shaft.contours.npz",
+    "coordinate_arrays_only": true
+  },
+  {
+    "family": "toothed_disk",
+    "id": "000000009",
+    "source": "/media/T7Shield/inspection-contour-training/primitives-independent-v1/shards/00000/sources/000000009.contours.npz",
+    "source_sha256": "d4afa387a0630fc5bad89e5d3fe5326b00eb27958603a6334732512de2ac6ef5",
+    "input": "toothed_disk.contours.npz",
+    "coordinate_arrays_only": true
+  },
+  {
+    "family": "labyrinth_plate",
+    "id": "000000045",
+    "source": "/media/T7Shield/inspection-contour-training/primitives-independent-v1/shards/00000/sources/000000045.contours.npz",
+    "source_sha256": "82a7f58d0e2623aaa011e4ba072460823cfe5430b0786bbc6a7759f445023a6a",
+    "input": "labyrinth_plate.contours.npz",
+    "coordinate_arrays_only": true
+  }
+]

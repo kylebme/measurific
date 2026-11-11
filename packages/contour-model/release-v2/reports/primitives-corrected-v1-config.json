@@ -1,0 +1,24 @@
+{
+  "source": "primitive-audited-corpus-v1",
+  "seed": 19237,
+  "source_hash": "222c757e33f449b22b7cfe5a9b74683958fa9d5ff9574a1b5e67f621525dd51d",
+  "label_version": "primitives-compounds-v1",
+  "sampling": "adaptive-turn-v1",
+  "tokens": "adaptive",
+  "base_names": [
+    "unlabeled",
+    "line",
+    "arc",
+    "circle",
+    "arbitrary_profile"
+  ],
+  "compound_names": [
+    "none",
+    "full_round_slot",
+    "triangular_thread",
+    "trapezoidal_thread",
+    "tooth_profile"
+  ],
+  "parent_source": "/media/T7Shield/inspection-contour-training/primitives-whole-v1",
+  "parent_source_hash": "1e7637aff2890622e7b5532d7af5782f1f41a1361569cf4ca57e14282f8e8b77"
+}

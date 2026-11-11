@@ -1,0 +1,298 @@
+{
+  "description": "Curved/diffuse phase-height studies, independent source seeds, analytic-vs-mesh tolerance, field distortion/asymmetry. Failures are retained; increase resolution for failing cases.",
+  "tolerance_px": 0.01,
+  "config": {
+    "camera": {
+      "width": 48,
+      "height": 40,
+      "pixel_pitch_um": 10,
+      "magnification": 1
+    },
+    "illumination": {
+      "kind": "diffuse",
+      "samples": 128
+    },
+    "optics": {
+      "psf": "gaussian",
+      "object_na": 0.025,
+      "sigma_px": 0.6,
+      "support_px": 4
+    },
+    "sampling": {
+      "supersample": 64,
+      "tile_px": 16
+    }
+  },
+  "cases": [
+    {
+      "id": "sphere_diffuse_phase_height",
+      "shapes": [
+        {
+          "kind": "sphere",
+          "radius_mm": 0.07
+        }
+      ],
+      "roi": [
+        25,
+        14,
+        12,
+        12
+      ],
+      "phases_px": [
+        [
+          0.13,
+          0.29
+        ],
+        [
+          0.61,
+          0.83
+        ]
+      ],
+      "z_offsets_mm": [
+        -0.06,
+        0.1
+      ],
+      "source_seeds": [
+        17
+      ],
+      "levels": [
+        16,
+        32,
+        64
+      ],
+      "angular_levels": [
+        32,
+        128
+      ],
+      "contour_count": 512
+    },
+    {
+      "id": "horizontal_pin_diffuse_seeds",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "y",
+          "radius_mm": 0.07,
+          "length_mm": 0.4,
+          "angle_deg": 11
+        }
+      ],
+      "roi": [
+        25,
+        14,
+        12,
+        12
+      ],
+      "phases_px": [
+        [
+          0.37,
+          0.19
+        ]
+      ],
+      "z_offsets_mm": [
+        0.04,
+        0.18
+      ],
+      "source_seeds": [
+        3,
+        19
+      ],
+      "levels": [
+        16,
+        32,
+        64
+      ],
+      "angular_levels": [
+        32,
+        128
+      ],
+      "contour_count": 512
+    },
+    {
+      "id": "mesh_tessellation",
+      "shapes": [
+        {
+          "kind": "cylinder",
+          "axis": "z",
+          "radius_mm": 0.07,
+          "length_mm": 0.03
+        }
+      ],
+      "roi": [
+        25,
+        14,
+        12,
+        12
+      ],
+      "phases_px": [
+        [
+          0.29,
+          0.41
+        ]
+      ],
+      "config": {
+        "illumination": {
+          "kind": "collimated"
+        }
+      },
+      "levels": [
+        16,
+        32,
+        64
+      ],
+      "mesh_sections": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "contour_count": 512
+    },
+    {
+      "id": "field_distortion_asymmetry",
+      "shapes": [
+        {
+          "kind": "sphere",
+          "radius_mm": 0.07,
+          "center_mm": [
+            0.08,
+            0.03,
+            0
+          ]
+        }
+      ],
+      "roi": [
+        32,
+        17,
+        12,
+        12
+      ],
+      "config": {
+        "camera": {
+          "distortion_radial": [
+            0.008,
+            0,
+            0
+          ],
+          "distortion_tangential": [
+            0.001,
+            -0.0005
+          ]
+        },
+        "illumination": {
+          "kind": "collimated"
+        },
+        "optics": {
+          "psf": "mixture",
+          "field_grid": [
+            3,
+            3
+          ],
+          "field_nodes": [
+            {
+              "sigma_px": 0.78,
+              "sigma_y_px": 0.6,
+              "angle_deg": -135.0,
+              "tail_offset_px": [
+                -0.5,
+                -0.5
+              ],
+              "tail_weight": 0.1
+            },
+            {
+              "sigma_px": 0.63,
+              "sigma_y_px": 0.54,
+              "angle_deg": -90.0,
+              "tail_offset_px": [
+                0.0,
+                -0.5
+              ],
+              "tail_weight": 0.07
+            },
+            {
+              "sigma_px": 0.78,
+              "sigma_y_px": 0.6,
+              "angle_deg": -45.0,
+              "tail_offset_px": [
+                0.5,
+                -0.5
+              ],
+              "tail_weight": 0.1
+            },
+            {
+              "sigma_px": 0.63,
+              "sigma_y_px": 0.54,
+              "angle_deg": 180.0,
+              "tail_offset_px": [
+                -0.5,
+                0.0
+              ],
+              "tail_weight": 0.07
+            },
+            {
+              "sigma_px": 0.48,
+              "sigma_y_px": 0.48,
+              "angle_deg": 0,
+              "tail_offset_px": [
+                0.0,
+                0.0
+              ],
+              "tail_weight": 0.04
+            },
+            {
+              "sigma_px": 0.63,
+              "sigma_y_px": 0.54,
+              "angle_deg": 0.0,
+              "tail_offset_px": [
+                0.5,
+                0.0
+              ],
+              "tail_weight": 0.07
+            },
+            {
+              "sigma_px": 0.78,
+              "sigma_y_px": 0.6,
+              "angle_deg": 135.0,
+              "tail_offset_px": [
+                -0.5,
+                0.5
+              ],
+              "tail_weight": 0.1
+            },
+            {
+              "sigma_px": 0.63,
+              "sigma_y_px": 0.54,
+              "angle_deg": 90.0,
+              "tail_offset_px": [
+                0.0,
+                0.5
+              ],
+              "tail_weight": 0.07
+            },
+            {
+              "sigma_px": 0.78,
+              "sigma_y_px": 0.6,
+              "angle_deg": 45.0,
+              "tail_offset_px": [
+                0.5,
+                0.5
+              ],
+              "tail_weight": 0.1
+            }
+          ],
+          "support_px": 5
+        }
+      },
+      "levels": [
+        16,
+        32,
+        64
+      ],
+      "support_levels": [
+        4,
+        6
+      ],
+      "contour_count": 512
+    }
+  ]
+}

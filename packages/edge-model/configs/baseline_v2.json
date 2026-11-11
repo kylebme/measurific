@@ -1,0 +1,75 @@
+{
+ "model": {
+  "width": 64,
+  "blocks": 8,
+  "dec_channels": [
+   48,
+   32,
+   16,
+   8
+  ],
+  "dec_blocks": 1,
+  "upsample": "pixelshuffle",
+  "act": "silu",
+  "input_skip": false,
+  "dilations": null,
+  "backlight_input": false
+ },
+ "sampler": {
+  "weights": {
+   "edge": 0.35,
+   "dense": 0.2,
+   "narrow": 0.15,
+   "corner": 0.15,
+   "sparse": 0.1,
+   "uniform": 0.05
+  },
+  "jitter_px": 16.0,
+  "p_lattice": 0.3
+ },
+ "aug": {
+  "background_level": [
+   0.35,
+   0.95
+  ],
+  "offset": [
+   0.0,
+   0.03
+  ],
+  "full_well_e": [
+   2000.0,
+   40000.0
+  ],
+  "read_noise": [
+   0.0001,
+   0.002
+  ],
+  "bit_depths": [
+   8,
+   10,
+   12,
+   16
+  ],
+  "exposure_ref": "backlight",
+  "backlight_jitter": 0.03
+ },
+ "train": {
+  "batch": 32,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "warmup_frac": 0.05,
+  "budget_minutes": 30.0,
+  "max_steps": null,
+  "amp": "bf16",
+  "channels_last": true,
+  "compile": true,
+  "workers": 6,
+  "seed": 0,
+  "quick_eval_minutes": 5.0,
+  "quick_eval_patches": 300,
+  "checkpoint_minutes": 10.0,
+  "grad_clip": 1.0,
+  "overfit_n": 0
+ },
+ "benchmark": "val_v2"
+}

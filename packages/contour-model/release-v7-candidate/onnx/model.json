@@ -1,0 +1,38 @@
+{
+  "format": "contour-transformer-onnx-v1",
+  "model_config": {
+    "width": 64,
+    "global_width": 128,
+    "heads": 4,
+    "window": 64,
+    "local_depth": 2,
+    "global_depth": 3,
+    "pooled_tokens": 256,
+    "queries": 32,
+    "backbone": "transformer",
+    "topology_instances": false,
+    "adaptive_sampling": true,
+    "query_scope": "compounds",
+    "sampling_version": "adaptive-turn-v1",
+    "label_schema": "primitives-compounds-v2",
+    "direct_global_context": true,
+    "dropout": 0.1,
+    "full_context": true
+  },
+  "checkpoint": {
+    "label_version": "primitives-compounds-v2",
+    "instances_trained": true,
+    "step": 48000
+  },
+  "provenance": {
+    "source_checkpoint": "model.pt",
+    "source_checkpoint_sha256": "dbc4d5cdfb3f675c44d39a17d1c4bcfd7a3051e2cc7a6c7c9bfbb844f0979ca4",
+    "torch_version": "2.11.0+cu128",
+    "opset": 18
+  },
+  "graphs": {
+    "encoder": "410bb2d63ed481c14fc7c434f24280ca57b67c78f25a2f3d853473d0d51f91a5",
+    "context": "de9c75a201174f8029782019cde7460a973657dab09c1eb9ed56cd03122dfd7b",
+    "head": "3d234952831a705ebf09608214d32aa120945527b6fad6d96c0e27142095dcf5"
+  }
+}

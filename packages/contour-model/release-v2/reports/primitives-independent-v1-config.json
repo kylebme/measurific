@@ -1,0 +1,22 @@
+{
+  "source": "primitive-corpus-v1",
+  "seed": 89237,
+  "source_hash": "540da42aafe958d736f73783e66ac4b667769263401bc4e02281ea68af876dd2",
+  "label_version": "primitives-compounds-v1",
+  "sampling": "adaptive-turn-v1",
+  "tokens": "adaptive",
+  "base_names": [
+    "unlabeled",
+    "line",
+    "arc",
+    "circle",
+    "arbitrary_profile"
+  ],
+  "compound_names": [
+    "none",
+    "full_round_slot",
+    "triangular_thread",
+    "trapezoidal_thread",
+    "tooth_profile"
+  ]
+}

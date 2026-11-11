@@ -1,0 +1,145 @@
+{
+  "threads": 4,
+  "device": "cpu",
+  "samples": [
+    {
+      "id": "000000001",
+      "family": "threaded_shaft",
+      "tokens": 768,
+      "rings": 1,
+      "previous": {
+        "forward_median_ms": 6.174340996949468,
+        "end_to_end_ms": 24.905161997594405,
+        "base_or_legacy_features": 9,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 6.023037996783387,
+        "end_to_end_ms": 32.712672000343446,
+        "base_or_legacy_features": 64,
+        "compound_features": 1
+      }
+    },
+    {
+      "id": "000000702",
+      "family": "mixed_shaft",
+      "tokens": 1504,
+      "rings": 1,
+      "previous": {
+        "forward_median_ms": 9.633202003897168,
+        "end_to_end_ms": 45.42317500454374,
+        "base_or_legacy_features": 21,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 8.801901996775996,
+        "end_to_end_ms": 54.61751599796116,
+        "base_or_legacy_features": 128,
+        "compound_features": 1
+      }
+    },
+    {
+      "id": "000008608",
+      "family": "drilled_plate",
+      "tokens": 3008,
+      "rings": 36,
+      "previous": {
+        "forward_median_ms": 23.041508997266646,
+        "end_to_end_ms": 107.28202699829126,
+        "base_or_legacy_features": 44,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 23.92192999832332,
+        "end_to_end_ms": 93.96439999545692,
+        "base_or_legacy_features": 50,
+        "compound_features": 0
+      }
+    },
+    {
+      "id": "000003426",
+      "family": "internal_spline_ring",
+      "tokens": 5984,
+      "rings": 2,
+      "previous": {
+        "forward_median_ms": 40.83979900315171,
+        "end_to_end_ms": 102.39953400014201,
+        "base_or_legacy_features": 2,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 42.62556100002257,
+        "end_to_end_ms": 200.5117299995618,
+        "base_or_legacy_features": 597,
+        "compound_features": 1
+      }
+    },
+    {
+      "id": "000001727",
+      "family": "serrated_washer",
+      "tokens": 11968,
+      "rings": 2,
+      "previous": {
+        "forward_median_ms": 86.88144799816655,
+        "end_to_end_ms": 202.27686200087192,
+        "base_or_legacy_features": 2,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 89.8541770002339,
+        "end_to_end_ms": 438.3215810012189,
+        "base_or_legacy_features": 1288,
+        "compound_features": 2
+      }
+    },
+    {
+      "id": "000000613",
+      "family": "perforated_grid_plate",
+      "tokens": 23808,
+      "rings": 361,
+      "previous": {
+        "forward_median_ms": 168.06183500011684,
+        "end_to_end_ms": 1249.8455380045925,
+        "base_or_legacy_features": 369,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 166.25707400089595,
+        "end_to_end_ms": 1115.922501005116,
+        "base_or_legacy_features": 368,
+        "compound_features": 0
+      }
+    },
+    {
+      "id": "000000338",
+      "family": "staggered_filter_plate",
+      "tokens": 34560,
+      "rings": 529,
+      "previous": {
+        "forward_median_ms": 276.0697510020691,
+        "end_to_end_ms": 2243.359028994746,
+        "base_or_legacy_features": 537,
+        "compound_features": 0
+      },
+      "primitive": {
+        "forward_median_ms": 302.7282769980957,
+        "end_to_end_ms": 2034.1552360041533,
+        "base_or_legacy_features": 542,
+        "compound_features": 0
+      }
+    }
+  ],
+  "timing_policy": "warm inference; five forward repeats and one full prediction per sample",
+  "checkpoint_sha256": {
+    "previous": "4fdf7c4c272431e1461a3ff88060bdb4139caf41a69aeecbda992de8a7151866",
+    "primitive": "8184719686a5d7a07950d7941e34466d15b055cf8d263b020f3e50c82b9f229f"
+  },
+  "parameters": {
+    "previous": 780215,
+    "primitive": 780567
+  },
+  "median_forward_ms": {
+    "previous": 40.83979900315171,
+    "primitive": 42.62556100002257
+  }
+}

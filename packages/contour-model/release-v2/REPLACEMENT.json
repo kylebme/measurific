@@ -1,0 +1,6 @@
+{
+  "replaced_at_utc": "2026-09-09T15:48:25.484680+00:00",
+  "previous_model_sha256": "4fdf7c4c272431e1461a3ff88060bdb4139caf41a69aeecbda992de8a7151866",
+  "previous_release_backup": "/home/kyle/inspection/contour-model/artifacts/release-v2-before-primitives-20260909T154825Z",
+  "label_version": "primitives-compounds-v1"
+}

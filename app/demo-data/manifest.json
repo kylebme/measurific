@@ -1,0 +1,34 @@
+[
+  {
+    "file": "stepped_shaft.png",
+    "family": "stepped_shaft",
+    "sample_id": "000000000",
+    "feature_count": 17,
+    "severity": 2.5,
+    "source": "synthetic-shapes"
+  },
+  {
+    "file": "grooved_pin.png",
+    "family": "grooved_pin",
+    "sample_id": "000000002",
+    "feature_count": 21,
+    "severity": 1.0,
+    "source": "synthetic-shapes"
+  },
+  {
+    "file": "drilled_plate.png",
+    "family": "drilled_plate",
+    "sample_id": "000000006",
+    "feature_count": 14,
+    "severity": 2.5,
+    "source": "synthetic-shapes"
+  },
+  {
+    "file": "slotted_bracket.png",
+    "family": "slotted_bracket",
+    "sample_id": "000000007",
+    "feature_count": 13,
+    "severity": 1.0,
+    "source": "synthetic-shapes"
+  }
+]

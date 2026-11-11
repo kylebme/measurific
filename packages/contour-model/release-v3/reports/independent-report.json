@@ -1,0 +1,195 @@
+{
+  "samples": 1000,
+  "base": {
+    "macro_f1": 0.9913185549219042,
+    "accuracy": 0.9963309791199385,
+    "classes": {
+      "unlabeled": {
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support_length": 0.0
+      },
+      "line": {
+        "f1": 0.9967164105430616,
+        "precision": 0.9999105938603112,
+        "recall": 0.9935425696811493,
+        "support_length": 326272.6880922066
+      },
+      "arc": {
+        "f1": 0.977239254222651,
+        "precision": 0.9560690254523286,
+        "recall": 0.9993682575422155,
+        "support_length": 45881.04585870635
+      },
+      "circle": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support_length": 209981.9972963333
+      }
+    },
+    "confusion": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        324165.8049439071,
+        2106.88314829953,
+        0.0
+      ],
+      [
+        0.0,
+        28.985004676505923,
+        45852.06085402984,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        209981.9972963333
+      ]
+    ]
+  },
+  "compound": {
+    "macro_f1": 0.993478342801345,
+    "accuracy": 0.9996383323173156,
+    "classes": {
+      "none": {
+        "f1": 0.9998569052310146,
+        "precision": 0.9999349967472975,
+        "recall": 0.999778825911142,
+        "support_length": 451073.15249681845
+      },
+      "full_round_slot": {
+        "f1": 0.9999371304719145,
+        "precision": 0.9999992705643048,
+        "recall": 0.9998749981018319,
+        "support_length": 82332.22272396088
+      },
+      "triangular_thread": {
+        "f1": 0.9826923828317169,
+        "precision": 0.9821270272679551,
+        "recall": 0.9832583896574884,
+        "support_length": 3399.024497061968
+      },
+      "trapezoidal_thread": {
+        "f1": 0.99130876983515,
+        "precision": 0.9873263263652355,
+        "recall": 0.9953234702932189,
+        "support_length": 9289.23532141745
+      },
+      "tooth_profile": {
+        "f1": 0.9999750880665983,
+        "precision": 0.9999539441414353,
+        "recall": 0.9999962328859523,
+        "support_length": 36042.09620798752
+      }
+    },
+    "confusion": [
+      [
+        450973.38680330664,
+        0.0,
+        33.85331079736352,
+        64.35408818349242,
+        1.5582945309579372
+      ],
+      [
+        10.291684120893478,
+        82321.93103983998,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.5769160762429237,
+        0.0,
+        3342.119353387505,
+        54.32822759822011,
+        0.0
+      ],
+      [
+        16.312267817556858,
+        0.06004859879612923,
+        26.967343162745237,
+        9245.793936483562,
+        0.10172535479068756
+      ],
+      [
+        0.13577468693256378,
+        0.0,
+        0.0,
+        0.0,
+        36041.960433300585
+      ]
+    ]
+  },
+  "repeat_instances": {
+    "precision_iou50": 0.840782122905028,
+    "recall_iou50": 0.9148936170212766,
+    "f1_iou50": 0.87627365356623,
+    "counts": [
+      301.0,
+      358.0,
+      329.0
+    ]
+  },
+  "boundary": {
+    "precision": 0.89777574708098,
+    "recall": 0.9976593202173136
+  },
+  "by_family": {
+    "stepped_shaft": 1.0,
+    "threaded_shaft": 1.0,
+    "grooved_pin": 1.0,
+    "tapered_pin": 1.0,
+    "washer": 1.0,
+    "flange": 1.0,
+    "drilled_plate": 0.9832287738487572,
+    "slotted_bracket": 0.9775135624106746,
+    "polygon_spacer": 1.0,
+    "toothed_disk": 0.9846447245823761,
+    "rack": 1.0,
+    "cam": 1.0,
+    "mixed_shaft": 1.0,
+    "mixed_plate": 0.9952725661522844,
+    "perforated_disk": 0.9981135724119966,
+    "perforated_grid_plate": 0.955929880912359,
+    "staggered_filter_plate": 0.9803827362461898,
+    "multi_bolt_circle_flange": 1.0,
+    "slotted_grille": 0.9634888194084459,
+    "mixed_aperture_panel": 0.9998013900057038,
+    "honeycomb_screen": 0.9848561591558536,
+    "spoke_wheel": 0.9941366918138922,
+    "internal_spline_ring": 0.9877873163024283,
+    "ratchet_wheel": 0.9813140163753485,
+    "timing_pulley": 0.9999860825804565,
+    "serrated_washer": 0.9418886765420502,
+    "lobed_coupling": 1.0,
+    "eccentric_cam": 1.0,
+    "polygon_broach_plate": 0.9885955769057285,
+    "d_profile_spacer": 0.9998964951106508,
+    "clevis_link": 0.9983726786804065,
+    "dogbone_link": 0.9980110188049903,
+    "l_bracket": 1.0,
+    "t_bracket": 1.0,
+    "c_frame": 1.0,
+    "u_channel_section": 1.0,
+    "comb_plate": 1.0,
+    "connector_strip": 1.0,
+    "heat_sink_section": 1.0,
+    "multi_step_shaft": 1.0,
+    "groove_stack_pin": 1.0,
+    "multi_thread_shaft": 0.9999943110519608,
+    "stepped_taper_arbor": 1.0,
+    "sawtooth_rack": 1.0,
+    "index_plate": 1.0,
+    "labyrinth_plate": 0.9983489170189828
+  },
+  "selection_score": 0.9802460223622249
+}

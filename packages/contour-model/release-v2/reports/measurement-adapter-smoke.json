@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "units": "px",
+  "base_instances": 379,
+  "compound_instances": 4,
+  "all_compounds_fitted": true,
+  "coordinate_hash": "655e68d2195a42cf6e43a554f763e7f52ef1b476a5193f74ae89fcc08d0bbe0e",
+  "measurements": {
+    "measured": 1520,
+    "failed_or_unavailable": 0,
+    "tolerance_failures": 0
+  }
+}

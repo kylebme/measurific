@@ -1,0 +1,14 @@
+{
+  "config": {
+    "camera": {"width": 320, "height": 180, "pixel_pitch_um": 3.45, "magnification": 0.1},
+    "illumination": {"kind": "diffuse", "samples": 64},
+    "optics": {"object_na": 0.015, "wavelength_um": 0.63, "psf": "mixture", "sigma_px": 0.55, "support_px": 5},
+    "sampling": {"supersample": 8, "tile_px": 32}
+  },
+  "shapes": [
+    {"kind": "sphere", "name": "ball", "radius_mm": 0.9, "center_mm": [-3.4, 0, 0.7]},
+    {"kind": "cylinder", "name": "horizontal_pin", "radius_mm": 0.55, "length_mm": 3.4, "axis": "y", "center_mm": [0, 0, 0.55], "angle_deg": 15},
+    {"kind": "box", "name": "gauge_block", "size_mm": [1.6, 2.9, 0.2], "center_mm": [3.4, 0, 0.1], "angle_deg": -12}
+  ],
+  "dataset": {"count": 1, "seed": 2026, "exposures_ms": [0.5, 1.5]}
+}

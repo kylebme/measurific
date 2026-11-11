@@ -1,0 +1,11 @@
+{
+  "objective": "Reduce extra segments and mislabels of the contour primitive recognizer on edge-model-extracted contours",
+  "primary_metric": "bench.py results.edge.base.overall.f1 (base instance F1, IoU>=0.5, edge-model test renders)",
+  "decision_metric": "results.edge_val.base.overall.f1",
+  "secondary_metrics": ["edge arc/line precision+recall", "fp_fragment", "fp_mislabel", "edge_accuracy", "orig F1", "compound F1", "latency_p95"],
+  "benchmark_corpus": "/media/kyle/T7 Shield/inspection-contour-training/primitives-edge-v1-bench",
+  "train_corpora": ["/media/kyle/T7 Shield/inspection-contour-training/primitives-intent-v1-20260920", "/media/kyle/T7 Shield/inspection-contour-training/primitives-edge-v1-train"],
+  "budget_unit": "optimizer steps at batch 1 (16k steps ~ 22 min alone on RTX 3070)",
+  "constraints": ["no test/val designs in training", "CPU inference speed must stay similar", "large files on T7"],
+  "state_files": ["RESEARCH.md", "autoresearch/ledger.jsonl", "autoresearch/queue.json"]
+}

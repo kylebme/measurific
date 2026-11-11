@@ -1,0 +1,163 @@
+name: Desktop app
+
+# Pull requests and manual runs build installers as workflow artifacts.
+# Pushing a tag vX.Y.Z (matching app/package.json) also uploads them to a
+# draft GitHub release, which electron-updater reads once it is published.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'camera-bridge/**'
+      - 'packages/edge-model/edgesr/**'
+      - 'packages/edge-model/models/sdf_v5-onnx/**'
+      - 'packages/edge-model/models/coarse_v2-onnx/**'
+      - 'packages/edge-model/pyproject.toml'
+      - 'packages/measurement/**'
+      - 'packages/pae/**'
+      - 'packages/contour-model/src/**'
+      - 'packages/contour-model/release-v6/onnx/**'
+      - '.github/workflows/desktop.yml'
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: desktop-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: astral-sh/setup-uv@v7
+      - run: npm ci
+      - run: npm test
+      - run: npx tsc -b
+      - name: Worker tests against the locked runtime packages
+        run: |
+          uv venv --python 3.13 .venv
+          uv pip install --python .venv/bin/python --require-hashes -r python/runtime/requirements.lock
+          uv pip install --python .venv/bin/python --no-deps -e ../packages/edge-model -e ../packages/measurement -e ../packages/contour-model -e ../packages/pae
+          uv pip install --python .venv/bin/python pytest
+          OMP_NUM_THREADS=4 .venv/bin/python -m pytest -q python
+
+  package:
+    needs: test
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-14
+            platform: mac
+            resources: release/mac-arm64/Measurific.app/Contents/Resources
+            bridge: inspection-camera-bridge
+          - os: windows-2022
+            platform: win
+            resources: release/win-unpacked/resources
+            bridge: inspection-camera-bridge.exe
+          - os: ubuntu-22.04
+            platform: linux
+            resources: release/linux-unpacked/resources
+            bridge: inspection-camera-bridge
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: app
+        shell: bash
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Check the tag matches the app version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: test "${GITHUB_REF_NAME}" = "v$(node -p "require('./package.json').version")"
+
+      - name: Cache the private Aravis build
+        if: matrix.platform != 'win'
+        uses: actions/cache@v4
+        with:
+          path: camera-bridge/build/deps-*
+          key: aravis-${{ matrix.os }}-${{ hashFiles(format('camera-bridge/scripts/build-{0}.sh', matrix.platform == 'mac' && 'macos' || 'linux')) }}
+
+      - name: Camera bridge dependencies (macOS)
+        if: matrix.platform == 'mac'
+        run: brew install cmake pkg-config glib libusb ninja
+      - name: Camera bridge dependencies (Linux)
+        if: matrix.platform == 'linux'
+        run: sudo apt-get update && sudo apt-get install -y cmake pkg-config ninja-build libglib2.0-dev libxml2-dev libusb-1.0-0-dev zlib1g-dev
+      - name: Camera bridge toolchain (Windows)
+        if: matrix.platform == 'win'
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            mingw-w64-ucrt-x86_64-toolchain
+            mingw-w64-ucrt-x86_64-cmake
+            mingw-w64-ucrt-x86_64-ninja
+            mingw-w64-ucrt-x86_64-pkgconf
+            mingw-w64-ucrt-x86_64-aravis
+
+      - name: Build camera bridge (macOS)
+        if: matrix.platform == 'mac'
+        run: ../camera-bridge/scripts/build-macos.sh
+      - name: Build camera bridge (Linux)
+        if: matrix.platform == 'linux'
+        run: ../camera-bridge/scripts/build-linux.sh
+      - name: Build camera bridge (Windows)
+        if: matrix.platform == 'win'
+        shell: msys2 {0}
+        run: ../camera-bridge/scripts/build-windows.sh
+
+      - name: Test native focus metric (macOS/Linux)
+        if: matrix.platform != 'win'
+        run: ctest --test-dir ../camera-bridge/build/${{ matrix.platform == 'mac' && 'macos-arm64' || 'linux-x64' }} --output-on-failure
+      - name: Test native focus metric (Windows)
+        if: matrix.platform == 'win'
+        shell: msys2 {0}
+        run: ctest --test-dir ../camera-bridge/build/win32-x64 --output-on-failure
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run python:build
+
+      - name: Package
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx electron-builder --${{ matrix.platform }} --publish ${{ startsWith(github.ref, 'refs/tags/v') && 'always' || 'never' }}
+
+      - name: Smoke-test the packaged worker
+        run: node scripts/smoke-worker.mjs --resources "${{ matrix.resources }}"
+      - name: Test native ROI metering and sharpness
+        run: node ../camera-bridge/tests/meter.cjs "${{ matrix.resources }}/camera-bridge/bin/${{ matrix.bridge }}"
+      - name: Smoke-test the packaged camera bridge
+        run: node ../camera-bridge/tests/smoke.cjs "${{ matrix.resources }}/camera-bridge/bin/${{ matrix.bridge }}" --fake
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: measurific-${{ matrix.platform }}
+          if-no-files-found: error
+          path: |
+            app/release/*.dmg
+            app/release/*.zip
+            app/release/*.exe
+            app/release/*.AppImage
+            app/release/*.blockmap
+            app/release/latest*.yml

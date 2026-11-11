@@ -1,0 +1,10 @@
+# Tested on Linux x86_64, Python 3.13.13. Install the project separately.
+# This records the exercised environment; pyproject.toml defines portable ranges.
+numpy==2.5.2
+scipy==1.18.1
+trimesh==5.1.0
+rtree==1.4.1
+shapely==2.1.2
+pillow==12.3.0
+embreex==4.4.0
+pytest==9.1.1

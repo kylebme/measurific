@@ -1,0 +1,56 @@
+{
+  "model_config": {
+    "width": 64,
+    "global_width": 128,
+    "heads": 4,
+    "window": 64,
+    "local_depth": 2,
+    "global_depth": 3,
+    "pooled_tokens": 128,
+    "queries": 32,
+    "backbone": "transformer",
+    "topology_instances": false,
+    "adaptive_sampling": true,
+    "query_scope": "compounds",
+    "sampling_version": "adaptive-turn-v1",
+    "label_schema": "primitives-compounds-v2"
+  },
+  "step": 4000,
+  "label_version": "primitives-compounds-v2",
+  "instances_trained": true,
+  "settings": {
+    "tokens": null,
+    "sampling": "adaptive-turn-v1"
+  },
+  "input_contract": {
+    "coordinates": "actual_xy_mm: float64 [N,2]; use --units px for pixels",
+    "connectivity": "ring_offsets: int64 [R+1], starts at 0 and ends at N",
+    "closure": "implicit final edge back to first vertex; do not repeat the first point",
+    "topology": "one outer closed ring and non-touching, non-nested through holes",
+    "semantic_names": [
+      "unlabeled",
+      "line",
+      "arc",
+      "circle"
+    ],
+    "default_threshold": 0.7,
+    "confidence_calibrated": false,
+    "sampling": "adaptive-turn-v1",
+    "max_intervals": 65536,
+    "instance_policy": "closed-loop topology, semantic boundaries and learned repeat associations",
+    "compound_names": [
+      "none",
+      "full_round_slot",
+      "triangular_thread",
+      "trapezoidal_thread",
+      "tooth_profile"
+    ],
+    "compound_policy": "Most likely class for each detected compound; retain base instance references"
+  },
+  "provenance": {
+    "source_checkpoint_sha256": "4045917b2b9e5f30f4270de8581b177c23d0a18b90ad3b34a78d7121f613fc0d",
+    "data_fingerprint": "27fcf320b8c1a9cf9b4363fb08cc85133772390d6c001548087b3a1d7d3a0e70",
+    "source_step": 4000
+  },
+  "artifact_sha256": "1ae43d62f97088db42cbd8415872ad90aedfeade22ee452417a2cca0dafb171a"
+}

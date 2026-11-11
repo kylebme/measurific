@@ -1,0 +1,21 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary assets
+*.onnx binary
+*.pt binary
+*.npz binary
+*.npy binary
+*.png binary
+*.jpg binary
+*.tif binary
+*.stl binary
+*.mat binary
+
+# Generated or recorded data: collapse in diffs, exclude from language stats
+*.lock linguist-generated
+app/package-lock.json linguist-generated
+*.jsonl linguist-generated
+packages/*/benchmarks/*.json linguist-generated
+packages/contour-model/release-*/** linguist-generated

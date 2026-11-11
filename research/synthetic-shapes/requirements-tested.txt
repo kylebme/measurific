@@ -1,0 +1,10 @@
+iniconfig==2.3.0
+-e .
+numpy==2.5.2
+packaging==26.3
+pillow==12.3.0
+pluggy==1.6.0
+pygments==2.21.0
+pytest==9.1.1
+scipy==1.18.1
+shapely==2.1.2

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+artifacts/
+*.egg-info/
+autoresearch/queue.json
+autoresearch/queue.json.tmp
+autoresearch/.runner.lock*
+autoresearch/.edit.lock
+autoresearch/runner.log

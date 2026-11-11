@@ -1,0 +1,229 @@
+{
+  "blurs": [
+    0,
+    0.5,
+    1,
+    2,
+    4,
+    8
+  ],
+  "seed": 42,
+  "results": [
+    {
+      "image": "drilled_plate.png",
+      "metric": "native_selected_metric",
+      "noise": 0,
+      "monotonic": true,
+      "scores": [
+        3.227094153997732,
+        3.0066303279428754,
+        2.393258906930415,
+        1.5368271192495262,
+        0.8407829901212618,
+        0.4329374734327511
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.7416142178453765,
+      "blur_8_ratio": 0.13415706290949928,
+      "noise_inflation_at_blur_4": 0.0
+    },
+    {
+      "image": "drilled_plate.png",
+      "metric": "native_selected_metric",
+      "noise": 0.01,
+      "monotonic": true,
+      "scores": [
+        3.2320466242230887,
+        3.0040062470615605,
+        2.390526921444773,
+        1.537136396062152,
+        0.8379170602276547,
+        0.4339780526385649
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.7396325608450657,
+      "blur_8_ratio": 0.1342734505703127,
+      "noise_inflation_at_blur_4": -0.0034086439988442185
+    },
+    {
+      "image": "drilled_plate.png",
+      "metric": "native_selected_metric",
+      "noise": 0.04,
+      "monotonic": true,
+      "scores": [
+        3.223513017413354,
+        2.9660415633867854,
+        2.4031039295140793,
+        1.5422317065701987,
+        0.8306639405762338,
+        0.4212390283389878
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.7454922367406488,
+      "blur_8_ratio": 0.13067700551028114,
+      "noise_inflation_at_blur_4": -0.01203526910501429
+    },
+    {
+      "image": "grooved_pin.png",
+      "metric": "native_selected_metric",
+      "noise": 0,
+      "monotonic": true,
+      "scores": [
+        1.9891169160054654,
+        1.916088352290797,
+        1.652742251498168,
+        1.1807809988432785,
+        0.6921306521780649,
+        0.36240581826755436
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.83089246197614,
+      "blur_8_ratio": 0.1821943272169923,
+      "noise_inflation_at_blur_4": 0.0
+    },
+    {
+      "image": "grooved_pin.png",
+      "metric": "native_selected_metric",
+      "noise": 0.01,
+      "monotonic": true,
+      "scores": [
+        1.9879135969740653,
+        1.915092282536919,
+        1.6545035783359945,
+        1.1831398384138205,
+        0.6913743813403103,
+        0.3615660462743576
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.8322814335866627,
+      "blur_8_ratio": 0.18188217376485638,
+      "noise_inflation_at_blur_4": -0.0010926706328852065
+    },
+    {
+      "image": "grooved_pin.png",
+      "metric": "native_selected_metric",
+      "noise": 0.04,
+      "monotonic": true,
+      "scores": [
+        1.989505428593711,
+        1.9143963610649872,
+        1.6371037607771672,
+        1.1790532453307974,
+        0.6948519832596163,
+        0.36340378305029775
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.8228697128684689,
+      "blur_8_ratio": 0.18266036263453225,
+      "noise_inflation_at_blur_4": 0.003931817024701356
+    },
+    {
+      "image": "slotted_bracket.png",
+      "metric": "native_selected_metric",
+      "noise": 0,
+      "monotonic": true,
+      "scores": [
+        5.522633914209789,
+        5.240437766732759,
+        4.376363035370367,
+        2.9883891803149405,
+        1.7323923150262264,
+        0.9379719191542186
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.7924412704796426,
+      "blur_8_ratio": 0.16984140787257473,
+      "noise_inflation_at_blur_4": 0.0
+    },
+    {
+      "image": "slotted_bracket.png",
+      "metric": "native_selected_metric",
+      "noise": 0.01,
+      "monotonic": true,
+      "scores": [
+        5.470587995684381,
+        5.234279873876749,
+        4.3752016085679335,
+        2.9766720322739095,
+        1.7336218500149805,
+        0.9407515309155964
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.7997680710043286,
+      "blur_8_ratio": 0.17196534114024548,
+      "noise_inflation_at_blur_4": 0.0007097324192040233
+    },
+    {
+      "image": "slotted_bracket.png",
+      "metric": "native_selected_metric",
+      "noise": 0.04,
+      "monotonic": true,
+      "scores": [
+        5.476654140976056,
+        5.281318297308012,
+        4.414048067049542,
+        2.9549515821315926,
+        1.7942302871245692,
+        0.8829106598343235
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.8059753187669553,
+      "blur_8_ratio": 0.16121351414697335,
+      "noise_inflation_at_blur_4": 0.035695131848588746
+    },
+    {
+      "image": "stepped_shaft.png",
+      "metric": "native_selected_metric",
+      "noise": 0,
+      "monotonic": true,
+      "scores": [
+        2.779733503517554,
+        2.779300951077554,
+        2.462137914335007,
+        1.8440128132311884,
+        1.1285265672240383,
+        0.6111474698531297
+      ],
+      "peak_blur": 0,
+      "blur_1_ratio": 0.885746029689302,
+      "blur_8_ratio": 0.21985829543723032,
+      "noise_inflation_at_blur_4": 0.0
+    },
+    {
+      "image": "stepped_shaft.png",
+      "metric": "native_selected_metric",
+      "noise": 0.01,
+      "monotonic": false,
+      "scores": [
+        2.769782653880601,
+        2.778593306554635,
+        2.460785200382605,
+        1.838116289442305,
+        1.127665205737657,
+        0.6101823670613914
+      ],
+      "peak_blur": 0.5,
+      "blur_1_ratio": 0.8884398192525773,
+      "blur_8_ratio": 0.22029972864711822,
+      "noise_inflation_at_blur_4": -0.0007632620368877019
+    },
+    {
+      "image": "stepped_shaft.png",
+      "metric": "native_selected_metric",
+      "noise": 0.04,
+      "monotonic": false,
+      "scores": [
+        2.6503980969678933,
+        2.7383364959524736,
+        2.412392853854433,
+        1.7951362924433363,
+        1.0733534494868477,
+        0.6103837752296303
+      ],
+      "peak_blur": 0.5,
+      "blur_1_ratio": 0.910200190912549,
+      "blur_8_ratio": 0.23029890337150524,
+      "noise_inflation_at_blur_4": -0.04888951606421288
+    }
+  ]
+}

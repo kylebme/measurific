@@ -1,0 +1,44 @@
+{
+ "format": "edgesr-sdf-onnx-v1",
+ "model_config": {
+  "kind": "sdf",
+  "in_ch": 4,
+  "widths": [
+   48,
+   96,
+   192
+  ],
+  "enc_blocks": [
+   2,
+   2,
+   3
+  ],
+  "dec_blocks": [
+   1,
+   1
+  ],
+  "attention": false,
+  "trunc_px": 8.0,
+  "target": "sdf",
+  "groups": 8,
+  "norm": "ln"
+ },
+ "multiple": 4,
+ "inference_defaults": {
+  "min_object_area": 50.0,
+  "min_hole_area": 8.0,
+  "pad": 32
+ },
+ "coarse_model": "../coarse_v2-onnx",
+ "inputs": "sdf_runtime.model_input (4 channels)",
+ "provenance": {
+  "source_checkpoint": "work/runs/v5_sdf_ft3_180m/final.pt",
+  "source_checkpoint_sha256": "0fecc539141171021795e1d33051513501290408d5d8b33da3eb29a60426e869",
+  "train_state": {
+   "step": 58788,
+   "train_seconds": 10800.15569138527,
+   "samples": 940608,
+   "resumes": 0
+  }
+ }
+}

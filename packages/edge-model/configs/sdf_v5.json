@@ -1,0 +1,106 @@
+{
+ "model": {
+  "widths": [
+   48,
+   96,
+   192
+  ],
+  "enc_blocks": [
+   2,
+   2,
+   3
+  ],
+  "dec_blocks": [
+   1,
+   1
+  ],
+  "attention": false,
+  "target": "sdf",
+  "norm": "ln"
+ },
+ "sampler": {
+  "weights": {
+   "edge": 0.322,
+   "dense": 0.184,
+   "narrow": 0.138,
+   "corner": 0.138,
+   "sparse": 0.092,
+   "uniform": 0.046,
+   "contaminant": 0.08
+  },
+  "jitter_px": 16.0,
+  "focus_weights": null,
+  "p_lattice": 0.3
+ },
+ "aug": {
+  "background_level": [
+   0.35,
+   0.95
+  ],
+  "offset": [
+   0.0,
+   0.03
+  ],
+  "full_well_e": [
+   6000.0,
+   60000.0
+  ],
+  "read_noise": [
+   0.0001,
+   0.002
+  ],
+  "bit_depths": [
+   8,
+   10,
+   12,
+   16
+  ],
+  "exposure_ref": "backlight",
+  "backlight_jitter": 0.03,
+  "p_sharpen": 0.2,
+  "sharpen_sigma": [
+   0.5,
+   1.5
+  ],
+  "sharpen_amount": [
+   0.0,
+   0.6
+  ],
+  "p_jpeg": 0.1,
+  "jpeg_quality": [
+   75,
+   95
+  ]
+ },
+ "crop": {
+  "size": 256,
+  "border": 24,
+  "trunc_px": 8.0,
+  "p_anywhere": 0.15,
+  "p_downscale": 0.1,
+  "downscale": [
+   1.0,
+   2.0
+  ],
+  "coarse_jitter_px": 3.0,
+  "coarse_logit_scale": [
+   0.5,
+   2.0
+  ],
+  "coarse_morph_px": 3,
+  "p_coarse_drop": 0.15
+ },
+ "data": {
+  "cache": "v4",
+  "pool": 16,
+  "swap_every": 48
+ },
+ "train": {
+  "batch": 16,
+  "lr": 0.001,
+  "budget_minutes": 60.0,
+  "workers": 14,
+  "quick_eval_minutes": 15.0,
+  "compile": true
+ }
+}

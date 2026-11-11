@@ -1,0 +1,79 @@
+{
+  "baseline_commit": "cfc919a3150b9d3cb18657d591f4487276efaa14",
+  "before": {
+    "environment": {
+      "python": "3.12.8",
+      "platform": "macOS-26.4.1-arm64-arm-64bit",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "shapely": "2.1.2"
+    },
+    "repeat": 7,
+    "workloads": {
+      "known_truth_12_families": {
+        "median_ms": 45.51020823419094,
+        "min_ms": 45.211459044367075
+      },
+      "noisy_ellipse_1024": {
+        "median_ms": 32.96591714024544,
+        "min_ms": 32.62358391657472
+      },
+      "profile_1024": {
+        "median_ms": 56.48708390071988,
+        "min_ms": 56.00125016644597
+      },
+      "wall_thickness_1024": {
+        "median_ms": 17.438000068068504,
+        "min_ms": 17.175833228975534
+      },
+      "distance_statistics_1024": {
+        "median_ms": 8.505832869559526,
+        "min_ms": 8.328625001013279
+      },
+      "bowed_line_8193": {
+        "median_ms": 75.81979176029563,
+        "min_ms": 73.97829182446003
+      }
+    }
+  },
+  "after": {
+    "environment": {
+      "python": "3.12.8",
+      "platform": "macOS-26.4.1-arm64-arm-64bit",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "shapely": "2.1.2"
+    },
+    "repeat": 7,
+    "workloads": {
+      "known_truth_12_families": {
+        "median_ms": 29.627416748553514,
+        "min_ms": 29.326375108212233
+      },
+      "noisy_ellipse_1024": {
+        "median_ms": 8.226417005062103,
+        "min_ms": 8.177208248525858
+      },
+      "profile_1024": {
+        "median_ms": 9.697374887764454,
+        "min_ms": 9.607083164155483
+      },
+      "wall_thickness_1024": {
+        "median_ms": 9.738625027239323,
+        "min_ms": 9.531583171337843
+      },
+      "distance_statistics_1024": {
+        "median_ms": 2.6400000788271427,
+        "min_ms": 2.585458103567362
+      },
+      "bowed_line_8193": {
+        "median_ms": 15.3049579821527,
+        "min_ms": 15.161457937210798
+      }
+    }
+  },
+  "correctness": {
+    "cases": 300,
+    "truth_checks_passed": 8279
+  }
+}
