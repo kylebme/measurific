@@ -59,7 +59,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-14
+          - os: macos-15
             platform: mac
             resources: release/mac-arm64/Measurific.app/Contents/Resources
             bridge: inspection-camera-bridge
@@ -91,7 +91,7 @@ jobs:
 
       - name: Cache the private Aravis build
         if: matrix.platform != 'win'
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: camera-bridge/build/deps-*
           key: aravis-${{ matrix.os }}-${{ hashFiles(format('camera-bridge/scripts/build-{0}.sh', matrix.platform == 'mac' && 'macos' || 'linux')) }}
@@ -150,7 +150,7 @@ jobs:
       - name: Smoke-test the packaged camera bridge
         run: node ../camera-bridge/tests/smoke.cjs "${{ matrix.resources }}/camera-bridge/bin/${{ matrix.bridge }}" --fake
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: measurific-${{ matrix.platform }}
           if-no-files-found: error
