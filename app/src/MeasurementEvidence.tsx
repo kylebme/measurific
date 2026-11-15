@@ -1,4 +1,5 @@
 import type { FeatureRecord, MeasurementRecord, Point } from './types'
+import { formatLength } from './units'
 
 const path = (points: Point[]) => points.map(([x, y], i) => `${i ? 'L' : 'M'} ${x} ${y}`).join(' ')
 /** Evidence stays in original image coordinates even when deformation is exaggerated. */
@@ -31,7 +32,7 @@ export function MeasurementEvidence({ measurements, previewId, features = [] }: 
         {(['minimum', 'maximum'] as const).map(stat => {
           const witness = m[`${stat}_witness`]
           if (!witness || (stat === 'maximum' && Math.abs((m.maximum || 0)-(m.minimum || 0)) < 1e-9)) return null
-          return <path key={stat} d={path(witness)} className="gap-section"><title>{stat} gap: {m[stat]?.toFixed(3)} px</title></path>
+          return <path key={stat} d={path(witness)} className="gap-section"><title>{stat} gap: {formatLength(m[stat], 'px')}</title></path>
         })}
         {m.witness && (m.dimension_direction ? (() => {
           // Axis components: the measured leg runs along the axis; the offset leg is only a guide.

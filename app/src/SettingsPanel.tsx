@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Download, FolderOpen, LoaderCircle, Lock, RefreshCw, Trash2, Upload, X } from 'lucide-react'
 import type { CalibrationRecord, PersistentStateView, Settings, WorkerHealth } from './types'
+import { decimalsFor, defaultLengthDecimals, lengthUnitLabels, maxLengthDecimals, pixelsPerMmFrom, pixelsPerUnit, scaleEntryUnit, shownLengthUnit, type LengthUnit } from './units'
 
 function errorText(error: unknown) {
   const message = error instanceof Error ? error.message : String(error)
@@ -32,10 +33,40 @@ function SettingRow({ label, locked, children }: { label: string; locked: boolea
   </div>
 }
 
-export function SettingsPanel({ onClose, onReanalyze, canReanalyze }: {
+/** Shows the stored px/mm factor in the entry unit; writes only when the user commits an edit. */
+function PixelScaleInput({ pixelsPerMm, unit, locked, autoFocus, onCommit }: {
+  pixelsPerMm: number | null
+  unit: LengthUnit
+  locked: boolean
+  autoFocus: boolean
+  onCommit: (pixelsPerMm: number | null) => void
+}) {
+  const entryUnit = scaleEntryUnit(unit)
+  const shown = pixelsPerMm == null ? '' : String(Number(pixelsPerUnit(pixelsPerMm, entryUnit).toPrecision(10)))
+  const [draft, setDraft] = useState(shown)
+  const input = useRef<HTMLInputElement>(null)
+  useEffect(() => setDraft(shown), [shown])
+  useEffect(() => { if (autoFocus) input.current?.focus() }, [autoFocus])
+  const commit = () => {
+    if (draft === shown) return
+    if (draft.trim() === '') { onCommit(null); return }
+    const value = Number(draft)
+    if (Number.isFinite(value) && value > 0) onCommit(pixelsPerMmFrom(value, entryUnit))
+    else setDraft(shown)
+  }
+  return <label className="pixel-scale-input">
+    <input ref={input} type="number" inputMode="decimal" min={0} step="any" placeholder="Not set" aria-label={`Pixels per ${lengthUnitLabels[entryUnit]}`}
+      disabled={locked} value={draft} onChange={(event) => setDraft(event.target.value)} onBlur={commit}
+      onKeyDown={(event) => { if (event.key === 'Enter') commit() }}/>
+    <span>px / {lengthUnitLabels[entryUnit]}</span>
+  </label>
+}
+
+export function SettingsPanel({ onClose, onReanalyze, canReanalyze, focusPixelScale = false }: {
   onClose: () => void
   onReanalyze: () => void
   canReanalyze: boolean
+  focusPixelScale?: boolean
 }) {
   const [state, setState] = useState<PersistentStateView | null>(null)
   const [health, setHealth] = useState<WorkerHealth | null>(null)
@@ -64,7 +95,8 @@ export function SettingsPanel({ onClose, onReanalyze, canReanalyze }: {
     setError(null)
     try {
       setState(await window.inspection.updateSettings(patch))
-      setHealth((current) => current && { ...current, pendingRestart: true })
+      // Display units never change analysis results.
+      if (Object.keys(patch).some((key) => key !== 'lengthUnit' && key !== 'pixelsPerMm')) setHealth((current) => current && { ...current, pendingRestart: true })
     } catch (caught) { setError(errorText(caught)) }
   }
   const run = async (action: () => Promise<string | null | void>) => {
@@ -98,6 +130,38 @@ export function SettingsPanel({ onClose, onReanalyze, canReanalyze }: {
           {message && <div className="inline-note">{message}</div>}
           {state.warnings.map((warning) => <div key={warning} className="inline-error">{warning}</div>)}
         </section>}
+
+        <section className="panel-section">
+          <div className="eyebrow">Units</div>
+          <SettingRow label="Lengths" locked={locked('lengthUnit')}>
+            <Segmented value={effective.lengthUnit} disabled={locked('lengthUnit')}
+              options={(['px', 'mm', 'um', 'in'] as const).map((unit) => [unit, lengthUnitLabels[unit]])} onChange={(lengthUnit) => void update({ lengthUnit })}/>
+          </SettingRow>
+          <SettingRow label="Pixel scale" locked={locked('pixelsPerMm')}>
+            <PixelScaleInput pixelsPerMm={effective.pixelsPerMm} unit={effective.lengthUnit} locked={locked('pixelsPerMm')}
+              autoFocus={focusPixelScale} onCommit={(pixelsPerMm) => void update({ pixelsPerMm })}/>
+          </SettingRow>
+          {(() => {
+            const shownUnit = shownLengthUnit(effective)
+            const decimals = decimalsFor(shownUnit, effective)
+            const setDecimals = (next: number) => {
+              if (!Number.isInteger(next) || next < 0 || next > maxLengthDecimals || next === decimals) return
+              void update({ lengthDecimals: { ...defaultLengthDecimals, ...effective.lengthDecimals, [shownUnit]: next } })
+            }
+            return <SettingRow label="Decimal places" locked={locked('lengthDecimals')}>
+              <label className="pixel-scale-input">
+                <select aria-label={`Decimal places for ${lengthUnitLabels[shownUnit]}`} disabled={locked('lengthDecimals')}
+                  value={decimals} onChange={(event) => setDecimals(Number(event.target.value))}>
+                  {Array.from({ length: maxLengthDecimals + 1 }, (_, n) => <option key={n} value={n}>{n}</option>)}
+                </select>
+                <span>e.g. {(12.3456789).toFixed(decimals)} {lengthUnitLabels[shownUnit]}</span>
+              </label>
+            </SettingRow>
+          })()}
+          {effective.pixelsPerMm == null
+            ? <div className="inline-note">Enter how many image pixels span one {lengthUnitLabels[scaleEntryUnit(effective.lengthUnit)]}. Until then, lengths are shown in pixels.</div>
+            : <p className="hint">One fixed factor for the whole image, stored as {Number(effective.pixelsPerMm.toPrecision(10))} px/mm. Switching units converts from pixels each time, so values never drift. Clear the field to remove it.</p>}
+        </section>
 
         <section className="panel-section">
           <div className="eyebrow">Analysis</div>

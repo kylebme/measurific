@@ -243,7 +243,7 @@ describe('size and compound measurements', () => {
   it('draws diameter, radius and length as dimensions between their witnesses', () => {
     const diameter: MeasurementRecord = { id: 'd', operator: 'least_squares_diameter', feature_refs: ['outline'], status: 'measured', value: 120, units: 'px', witness: [[300, 300], [420, 300]] }
     const length: MeasurementRecord = { id: 'l', operator: 'length', feature_refs: ['outline'], status: 'measured', value: 460, units: 'px', witness: [[180, 160], [640, 160]] }
-    expect(formattedValue(diameter)).toBe('Ø120.0 px')
+    expect(formattedValue(diameter)).toBe('Ø120.000 px')
     expect(formattedValue({ ...diameter, operator: 'radius', value: 8 })).toBe('R8.000 px')
     const result = run([diameter, length])
     expect(result.unplaced).toEqual([])

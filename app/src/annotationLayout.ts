@@ -1,5 +1,6 @@
 import type { FeatureRecord, MeasurementRecord, Point } from './types'
 import { distanceShortLabel } from './distanceText'
+import { currentUnitScale, displayLength, type UnitScale } from './units'
 
 export interface Box { x: number; y: number; width: number; height: number }
 export interface Segment { start: Point; end: Point; role?: 'dimension' | 'leader' | 'extension' }
@@ -41,11 +42,13 @@ export const annotationNames: Record<string, string> = {
 export const isAnnotatedMeasurement = (m: MeasurementRecord) => m.status === 'measured' && m.operator in annotationNames
 // Drawing convention: size symbols lead the value without a separator.
 const valueSymbols: Record<string, string> = { least_squares_diameter: 'Ø', radius: 'R' }
-export function formattedValue(m: MeasurementRecord) {
+export function formattedValue(m: MeasurementRecord, scale: UnitScale = currentUnitScale()) {
   if (typeof m.value !== 'number' || !Number.isFinite(m.value)) return '—'
   const prefix = m.annotation_label || (m.operator === 'distance_construction' ? distanceShortLabel(m) : '')
   if (m.units === 'count') return `${prefix ? prefix + ': ' : ''}${m.value.toFixed(Number.isInteger(m.value) ? 0 : 1)}`
-  return `${prefix ? prefix + ': ' : ''}${valueSymbols[m.operator] ?? ''}${m.value.toFixed(m.operator !== 'distance_construction' && Math.abs(m.value) >= 100 ? 1 : 3)}${m.units ? ` ${m.units}` : ''}`
+  const shown = displayLength(m.value, m.units, scale)
+  const decimals = shown.isLength ? shown.decimals : m.operator !== 'distance_construction' && Math.abs(m.value) >= 100 ? 1 : 3
+  return `${prefix ? prefix + ': ' : ''}${valueSymbols[m.operator] ?? ''}${shown.value.toFixed(decimals)}${shown.units ? ` ${shown.units}` : ''}`
 }
 
 /** Compound measurements reported as one table of min/max/average metrics. */

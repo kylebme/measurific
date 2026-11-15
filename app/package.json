@@ -1,6 +1,6 @@
 {
   "name": "measurific",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "main": "electron/main.cjs",
   "type": "module",
@@ -91,7 +91,10 @@
       {
         "from": "../packages/edge-model/models/coarse_v2-onnx",
         "to": "models/coarse_v2-onnx",
-        "filter": ["*.onnx", "coarse.json"]
+        "filter": [
+          "*.onnx",
+          "coarse.json"
+        ]
       },
       {
         "from": "../LICENSE",

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ArrowLeftRight } from 'lucide-react'
 import { useInspectionStore } from './store'
+import { formatLength, useUnitScale } from './units'
 import { anchorNames, availableConstructions, constructionHints, constructionNames, describeDistance, featureNoun, isRound, shortFeatureId } from './distanceText'
 import type { Analysis, DistanceAnchor, DistanceDefinition, FeatureRecord, MeasurementRecord, Point } from './types'
 
@@ -213,6 +214,7 @@ const negativeMeaning = (m: MeasurementRecord) => ({
 
 export function DistanceResult({ measurement: m, describe = true }: { measurement: MeasurementRecord; describe?: boolean }) {
   const { analysis, relationships } = useInspectionStore()
+  useUnitScale()
   const d = m.definition
   const construction = d?.construction || 'normal_gap'
   const features = m.feature_refs.map(id => analysis?.report.features.find(f => f.id === id))
@@ -220,8 +222,8 @@ export function DistanceResult({ measurement: m, describe = true }: { measuremen
   const field = construction === 'normal_gap' || construction === 'section'
   return <div className="distance-result">
     <b>{constructionNames[construction]}{m.selected_statistic ? ` · ${({ minimum: 'smallest', maximum: 'largest', average: 'average' }[m.selected_statistic])}` : ''}</b>
-    <strong>{typeof m.value === 'number' ? m.value.toFixed(3) : '—'} {m.units}</strong>
-    {m.minimum != null && <dl>{(['minimum', 'maximum', 'average'] as const).map(k => <div key={k}><dt>{k === 'average' ? 'Average' : k === 'minimum' ? 'Smallest' : 'Largest'}</dt><dd>{m[k]?.toFixed(3)} px</dd></div>)}</dl>}
+    <strong>{typeof m.value === 'number' ? formatLength(m.value, m.units) : '—'}</strong>
+    {m.minimum != null && <dl>{(['minimum', 'maximum', 'average'] as const).map(k => <div key={k}><dt>{k === 'average' ? 'Average' : k === 'minimum' ? 'Smallest' : 'Largest'}</dt><dd>{formatLength(m[k], 'px')}</dd></div>)}</dl>}
     {describe && d && <small>{describeDistance(d, features, datumLabel)}</small>}
     {m.signed && typeof m.value === 'number' && m.value < 0 && !field && <small>Negative: {negativeMeaning(m)}.</small>}
     {field && <small>{d?.basis === 'fitted' ? 'Best-fit geometry' : 'Actual edges'}{d?.extend ? ' · extended beyond visible edges' : ' · visible edges only'}</small>}

@@ -62,10 +62,23 @@ test('settings that no longer exist are dropped from saved files', () => {
     schemaVersion: 1, recognition: 'geometry', modelPath: null, geometryTolerancePx: 0.5, computeDevice: 'gpu',
   }))
   const state = open(dirs)
-  const expected = { schemaVersion: 1, computeDevice: 'gpu', edgeMethod: 'pae', cameraChannel: 'red' }
+  const expected = { schemaVersion: 1, computeDevice: 'gpu', edgeMethod: 'pae', cameraChannel: 'red', lengthUnit: 'mm', pixelsPerMm: null, lengthDecimals: { px: 3, mm: 4, um: 2, in: 5 } }
   assert.deepEqual({ ...state.describe().settings.values }, expected)
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dirs.userDirectory, 'settings.json'), 'utf8')), expected)
   assert.deepEqual(state.warnings, [])
+})
+
+test('the pixel scale must be positive and can be cleared', () => {
+  const state = open(directories())
+  state.updateSettings({ pixelsPerMm: 50 })
+  assert.throws(() => state.updateSettings({ pixelsPerMm: 0 }))
+  assert.throws(() => state.updateSettings({ pixelsPerMm: -2 }))
+  assert.throws(() => state.updateSettings({ lengthUnit: 'ft' }))
+  assert.throws(() => state.updateSettings({ lengthDecimals: { px: 3, mm: 9, um: 2, in: 5 } }))
+  assert.throws(() => state.updateSettings({ lengthDecimals: { px: 3, mm: 1.5, um: 2, in: 5 } }))
+  assert.equal(state.describe().settings.values.pixelsPerMm, 50)
+  state.updateSettings({ pixelsPerMm: null })
+  assert.equal(state.describe().settings.values.pixelsPerMm, null)
 })
 
 test('a damaged settings file is set aside and defaults are used', () => {
@@ -134,14 +147,14 @@ test('the inspector width defaults, persists and validates', () => {
 
 test('export and import round-trip settings and add only new calibrations', () => {
   const source = open(directories())
-  source.updateSettings({ computeDevice: 'gpu', edgeMethod: 'deep-learning' })
+  source.updateSettings({ computeDevice: 'gpu', edgeMethod: 'deep-learning', lengthUnit: 'um', pixelsPerMm: 192.3, lengthDecimals: { px: 1, mm: 4, um: 0, in: 5 } })
   source.updatePreferences({ lastImageDirectory: '/parts' })
   const calibration = source.saveCalibration({ micronsPerPixel: 7 })
   const bundle = JSON.parse(JSON.stringify(source.exportBundle()))
   bundle.settings.recognition = 'geometry' // exported by an older version
   const target = open(directories())
   assert.deepEqual(target.importBundle(bundle), { added: [calibration.id], conflicts: [] })
-  assert.deepEqual({ ...target.describe().settings.values }, { schemaVersion: 1, computeDevice: 'gpu', edgeMethod: 'deep-learning', cameraChannel: 'red' })
+  assert.deepEqual({ ...target.describe().settings.values }, { schemaVersion: 1, computeDevice: 'gpu', edgeMethod: 'deep-learning', cameraChannel: 'red', lengthUnit: 'um', pixelsPerMm: 192.3, lengthDecimals: { px: 1, mm: 4, um: 0, in: 5 } })
   assert.equal(target.describe().preferences.values.lastImageDirectory, '/parts')
   bundle.calibration[calibration.id].micronsPerPixel = 8
   assert.deepEqual(target.importBundle(bundle), { added: [], conflicts: [calibration.id] })

@@ -34,6 +34,16 @@ GPU inference uses CoreML on macOS and DirectML on Windows; Linux builds run on
 the CPU. CPU is the default. For the current contour model, CoreML only covers
 part of the graph and is slower than the CPU.
 
+Settings → Units sets how lengths are shown (**px**, **mm**, **µm** or **in**)
+and the **pixel scale**: one fixed factor for the whole image, entered as pixels
+per the selected unit but stored only as `pixelsPerMm` in `settings.json`.
+Measurements are always computed in pixels and converted once for display, so
+switching units back and forth never accumulates rounding error. Until a scale
+is set, lengths are shown in pixels and the top bar shows **Set pixel scale**.
+**Decimal places** are set per unit (defaults: px 3, mm 4, µm 2, in 5), so each
+unit keeps its own precision when you switch. Angles and counts are never
+converted and keep their fixed precision.
+
 Settings → Analysis → **Edges** selects how contours are extracted; changing it
 restarts the worker and applies to the next analyzed image:
 

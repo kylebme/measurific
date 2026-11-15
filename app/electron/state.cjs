@@ -24,6 +24,18 @@ const settingsSchema = {
   // Camera image: one Bayer color site at half resolution, or the camera's own
   // grayscale conversion (demosaiced and color-processed).
   cameraChannel: { enum: ['red', 'green', 'blue', 'camera'], default: 'red' },
+  // Lengths are measured in pixels and shown in lengthUnit through one fixed
+  // factor, stored only as pixels per millimetre so switching units is lossless.
+  lengthUnit: { enum: ['px', 'mm', 'um', 'in'], default: 'mm' },
+  pixelsPerMm: { type: ['number', 'null'], exclusiveMinimum: 0, default: null },
+  // Decimal places for displayed lengths, per unit, so each unit keeps its own precision.
+  lengthDecimals: {
+    type: 'object',
+    properties: Object.fromEntries(['px', 'mm', 'um', 'in'].map((unit) => [unit, { type: 'integer', minimum: 0, maximum: 8 }])),
+    required: ['px', 'mm', 'um', 'in'],
+    additionalProperties: false,
+    default: { px: 3, mm: 4, um: 2, in: 5 },
+  },
 }
 const preferencesSchema = {
   schemaVersion: { type: 'integer', default: PREFERENCES_VERSION },

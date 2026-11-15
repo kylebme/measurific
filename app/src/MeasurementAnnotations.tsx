@@ -5,6 +5,7 @@ import {
   expandCompoundAnnotations, metricTables, isMetricTable, tableMetrics, annotationNames, annotationSymbols, formattedValue, isAnnotatedMeasurement, layoutAnnotations,
   type Box, type Size,
 } from './annotationLayout'
+import { displayLength, useUnitScale } from './units'
 
 export { isAnnotatedMeasurement } from './annotationLayout'
 
@@ -23,6 +24,8 @@ interface Props {
 export function MeasurementAnnotations({
   stageRef, imageWidth, imageHeight, features, measurements, hiddenIds, view, deformationFactor, onHide,
 }: Props) {
+  // Subscribing re-renders labels (and re-solves the layout) when units change.
+  const { lengthUnit, pixelsPerMm, lengthDecimals } = useUnitScale()
   const refs = useRef(new Map<string, HTMLDivElement>())
   const [layout, setLayout] = useState<ReturnType<typeof layoutAnnotations>>({ drawings: [], unplaced: [] })
   const [, invalidate] = useState(0)
@@ -57,7 +60,7 @@ export function MeasurementAnnotations({
         const b = element.getBoundingClientRect()
         return { x: b.left - rect.left, y: b.top - rect.top, width: b.width, height: b.height }
       })
-    const key = JSON.stringify([rect.width, rect.height, imageWidth, imageHeight, view, deformationFactor, hiddenIds, [...sizes], obstacles])
+    const key = JSON.stringify([rect.width, rect.height, imageWidth, imageHeight, view, deformationFactor, hiddenIds, [...sizes], obstacles, lengthUnit, pixelsPerMm, lengthDecimals])
     if (previous.current?.key === key && previous.current.features === features && previous.current.measurements === measurements) return
     previous.current = { key, features, measurements }
     const scale = Math.min(rect.width / imageWidth, rect.height / imageHeight)
@@ -113,12 +116,13 @@ export function MeasurementAnnotations({
 /** Min/max/average table for thread, slot and tooth profile measurements. */
 export function MetricTable({ measurement }: { measurement: MeasurementRecord }) {
   const table = metricTables[measurement.operator], metrics = tableMetrics(measurement)
-  const value = (v: number | null, units?: string) => v == null ? '—' : units === 'count' ? v.toFixed(Number.isInteger(v) ? 0 : 1) : v.toFixed(3)
+  useUnitScale()
+  const value = (v: number | null, units?: string) => v == null ? '—' : units === 'count' ? v.toFixed(Number.isInteger(v) ? 0 : 1) : (({ value: shown, decimals }) => shown.toFixed(decimals))(displayLength(v, units))
   return <div className="metric-table"><strong>{table.title}</strong>
     <table><thead><tr><th>Measurement</th><th>Min</th><th>Max</th><th>Avg</th></tr></thead>
       <tbody>{Object.entries(table.names).map(([key, label]) => {
         const metric = metrics[key]
-        return <tr key={key} title={metric?.reason || table.hints[key]}><th>{label}{metric ? ` (${metric.units})` : ''}</th>
+        return <tr key={key} title={metric?.reason || table.hints[key]}><th>{label}{metric ? ` (${displayLength(0, metric.units).units})` : ''}</th>
           <td>{value(metric?.minimum ?? null, metric?.units)}</td><td>{value(metric?.maximum ?? null, metric?.units)}</td><td>{value(metric?.average ?? null, metric?.units)}</td></tr>
       })}</tbody></table>
     <small>{table.note.map((line, i) => <span key={i}>{i > 0 && <br/>}{line}</span>)}</small>

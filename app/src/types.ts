@@ -1,3 +1,4 @@
+import type { LengthDecimals, LengthUnit } from './units'
 export type Point = [number, number]
 
 export interface FeatureRecord {
@@ -277,6 +278,12 @@ export interface Settings {
   computeDevice: ComputeDevice
   edgeMethod: EdgeMethod
   cameraChannel: CameraChannel
+  /** Display unit for lengths; ignored until pixelsPerMm is set. */
+  lengthUnit: LengthUnit
+  /** Image pixels per millimetre; null until the user sets a pixel scale. */
+  pixelsPerMm: number | null
+  /** Decimal places for lengths, per display unit. */
+  lengthDecimals: LengthDecimals
 }
 
 export interface Preferences {

@@ -6,13 +6,14 @@ import {
 } from 'lucide-react'
 import { CameraPanel } from './CameraPanel'
 import { SettingsPanel } from './SettingsPanel'
+import { displayLength, hasPixelScale, lengthUnitLabels, useUnitScale } from './units'
 import { DistanceInspector, DistanceResult } from './DistanceInspector'
 import { constructionNames, shortFeatureId } from './distanceText'
 import { annotationSymbols, isMetricTable } from './annotationLayout'
 import { MeasurementEvidence } from './MeasurementEvidence'
 import { MetricTable, isAnnotatedMeasurement, MeasurementAnnotations } from './MeasurementAnnotations'
 import { allRelationships, measurementIdentity, remeasureRequest, useInspectionStore } from './store'
-import type { CameraAnalysisMask, CameraRoi, CameraState, CompoundOverrideTool, FeatureRecord, MeasurementSpec, MeasurementTool, Point, Tool } from './types'
+import type { CameraAnalysisMask, CameraRoi, CameraState, CompoundOverrideTool, FeatureRecord, MeasurementSpec, MeasurementTool, PersistentStateView, Point, Tool } from './types'
 
 type RoiTool = 'rectangle' | 'circle' | null
 
@@ -105,15 +106,17 @@ function nextDatumLabel(measurements: { operator: string; datum_label?: string }
   return datumLabel(index)
 }
 
-function formatValue(value: unknown, units = '') {
-  if (typeof value === 'number') return `${value.toFixed(value >= 100 ? 1 : 3)}${units ? ` ${units}` : ''}`
-  if (Array.isArray(value)) return `[${value.map((v) => typeof v === 'number' ? v.toFixed(2) : v).join(', ')}] ${units}`
-  return '—'
-}
-
 function ResultValue({ value, units = '' }: { value: unknown; units?: string }) {
-  if (typeof value !== 'number') return <span className="result-value">{formatValue(value, units)}</span>
-  return <span className="result-value">{value.toFixed(value >= 100 ? 1 : 3)}{units && <small>{units}</small>}</span>
+  useUnitScale()
+  if (Array.isArray(value)) {
+    const shown = value.map((v) => typeof v === 'number' ? displayLength(v, units) : null)
+    const label = shown.find(Boolean)?.units ?? units
+    return <span className="result-value">[{value.map((v, i) => shown[i] ? shown[i]!.value.toFixed(shown[i]!.isLength ? shown[i]!.decimals : 2) : String(v)).join(', ')}]{label && <small>{label}</small>}</span>
+  }
+  if (typeof value !== 'number') return <span className="result-value">—</span>
+  const shown = displayLength(value, units)
+  const decimals = shown.isLength ? shown.decimals : value >= 100 ? 1 : 3
+  return <span className="result-value">{shown.value.toFixed(decimals)}{shown.units && <small>{shown.units}</small>}</span>
 }
 
 const resultSymbols: Record<string, string> = {
@@ -572,6 +575,7 @@ function InspectorPanel({ runRelationship, updateCornerExclusion, applyCompound 
   applyCompound: () => Promise<void>
 }) {
   const { analysis, tool, draft, overrideDraft, relationships, suspendedRelationships, hiddenRelationshipIds, toggleRelationshipVisibility, removeRelationship, error, deformationFactor, setDeformationFactor, setTool, editMeasurement } = useInspectionStore()
+  const unitScale = useUnitScale()
   const geometryOverride = isGeometryOverride(tool)
   const compoundOverride = isCompoundOverride(tool) ? compoundOverrideKinds[tool] : null
   const selectedFeatures = draft.map((id) => analysis?.report.features.find((f) => f.id === id)).filter(Boolean) as FeatureRecord[]
@@ -667,6 +671,7 @@ function InspectorPanel({ runRelationship, updateCornerExclusion, applyCompound 
 
     <section className="panel-section results-section">
       <div className="eyebrow">Measurements{relationships.length > 0 && <span>{relationships.length}</span>}</div>
+      {relationships.length > 0 && unitScale.lengthUnit !== 'px' && !hasPixelScale(unitScale) && <p className="hint">Lengths are in pixels. Set a pixel scale in Settings to show them in {lengthUnitLabels[unitScale.lengthUnit]}.</p>}
       {suspendedRelationships.length > 0 && <p className="hint">{suspendedRelationships.length} measurement{suspendedRelationships.length === 1 ? ' is' : 's are'} hidden because {suspendedRelationships.length === 1 ? 'its features are' : 'their features are'} unavailable at this corner exclusion.</p>}
       {!relationships.length ? (!suspendedRelationships.length && <p className="hint">Relative measurements will appear here and on the image.</p>) : relationships.map((result) => {
         const hidden = hiddenRelationshipIds.includes(result.id)
@@ -743,6 +748,7 @@ export default function App() {
   const [roiTool, setRoiTool] = useState<RoiTool>(null)
   const [cameraRoi, setCameraRoi] = useState<CameraRoi | null>(null)
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const [focusPixelScale, setFocusPixelScale] = useState(false)
   const [inspectorWidth, setInspectorWidth] = useState(inspectorWidthRange.initial)
   // Escape closes Settings on its own; it must not also leave the active tool.
   const settingsOpenRef = useRef(false)
@@ -768,6 +774,19 @@ export default function App() {
   useEffect(() => {
     void window.inspection.getState().then((state) => setInspectorWidth(state.preferences.values.inspectorWidth ?? inspectorWidthRange.initial))
   }, [])
+  // Lengths are converted for display from the stored pixels-per-millimetre factor.
+  const unitScale = useUnitScale()
+  const [unitsLoaded, setUnitsLoaded] = useState(false)
+  useEffect(() => {
+    const apply = (state: PersistentStateView) => {
+      const { lengthUnit, pixelsPerMm, lengthDecimals } = state.settings.effective
+      useUnitScale.getState().setUnitScale({ lengthUnit: lengthUnit ?? 'mm', pixelsPerMm: pixelsPerMm ?? null, lengthDecimals })
+      setUnitsLoaded(true)
+    }
+    void window.inspection.getState().then(apply)
+    return window.inspection.onState(apply)
+  }, [])
+  const needsPixelScale = unitsLoaded && !hasPixelScale(unitScale)
   const saveInspectorWidth = useCallback((width: number) => {
     void window.inspection.updatePreferences({ inspectorWidth: width }).catch((error) => setError(error instanceof Error ? error.message : String(error)))
   }, [setError])
@@ -982,6 +1001,8 @@ export default function App() {
           {cameraState.phase === 'starting' || cameraState.phase === 'pausing' ? <LoaderCircle className="spinner" size={15}/> : cameraLive ? <Pause size={15}/> : <span className="live-dot"/>}{cameraLive ? 'Pause' : 'Live camera'}
         </button>
         <button className="open-button" onClick={openImage} disabled={cameraLive}><FolderOpen size={15}/>Open image</button>
+        {needsPixelScale && <button className="stream-button pixel-scale-prompt" onClick={() => { setFocusPixelScale(true); setSettingsOpen(true) }}
+          title="Measurements are shown in pixels until a pixel scale is set"><Ruler size={15}/>Set pixel scale</button>}
         <Tooltip.Root><Tooltip.Trigger asChild><button className="stream-button settings-button" aria-label="Settings" onClick={() => setSettingsOpen(true)}><Settings size={16}/></button></Tooltip.Trigger><Tooltip.Portal><Tooltip.Content className="radix-tooltip" side="bottom">Settings</Tooltip.Content></Tooltip.Portal></Tooltip.Root>
       </div>
     </header>
@@ -1040,7 +1061,7 @@ export default function App() {
         : <InspectorPanel runRelationship={runRelationship} updateCornerExclusion={updateCornerExclusion} applyCompound={applyCompound}/>}
       <PanelResizer width={inspectorWidth} onChange={setInspectorWidth} onCommit={saveInspectorWidth}/>
     </div>
-    {settingsOpen && <SettingsPanel onClose={() => setSettingsOpen(false)} canReanalyze={Boolean(analysis) && !cameraLive}
+    {settingsOpen && <SettingsPanel focusPixelScale={focusPixelScale} onClose={() => { setSettingsOpen(false); setFocusPixelScale(false) }} canReanalyze={Boolean(analysis) && !cameraLive}
       onReanalyze={() => { setSettingsOpen(false); if (analysis) void loadImage(analysis.path) }}/>}
     {loading && <div className="loading-screen"><LoaderCircle className="spinner" size={30}/><strong>Analyzing image</strong><span>Subpixel edges · primitives and compounds · measurements</span></div>}
   </main>
