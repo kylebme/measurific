@@ -16,7 +16,8 @@ export interface AnnotationDrawing {
   witnesses: Point[]
   arc?: { center: Point; radius: number; start: number; sweep: number; path: string }
 }
-interface Candidate extends AnnotationDrawing { cost: number }
+// column: a compound's extrema callouts share one gutter; see the beam penalty.
+interface Candidate extends AnnotationDrawing { cost: number; column?: { group: string; right: boolean } }
 interface Job { measurement: MeasurementRecord; size: Size; anchor: Point; targets: Point[][]; ports: Point[][]; candidates: Candidate[] }
 export interface LayoutInput {
   measurements: MeasurementRecord[]
@@ -251,7 +252,10 @@ function distanceCandidates(job: Job, witness: Point[], contour: Segment[]): Can
   const normal: Point = [-axis[1], axis[0]]
   const rotation = Math.atan2(axis[1], axis[0]) * 180 / Math.PI
   const envelope = localEnvelope(p1, p2, axis, normal, contour), candidates: Candidate[] = []
-  for (const side of [-1, 1]) for (let lane = 0; lane < 4; lane++) {
+  // Inner lanes are cheapest. Outer lanes (~400 px) let a long span clear a
+  // column of compound callouts, whose leaders reach into the part and cannot
+  // be crossed.
+  for (const side of [-1, 1]) for (let lane = 0; lane < 10; lane++) {
     const projection = envelope[side < 0 ? 0 : 1] + side * (14 + job.size.height / 2 + lane * (job.size.height + 12))
     const q1 = add(p1, mul(normal, projection - dot(p1, normal))), q2 = add(p2, mul(normal, projection - dot(p2, normal)))
     const short = span < job.size.width + 24
@@ -362,7 +366,7 @@ function compoundCandidates(jobs: Job[], runs: Map<string, Point[][]>, stage: Bo
         : Math.max(part.x - 32, stage.x + width)
       ordered.forEach((job, i) => {
         const x = right ? edge + job.size.width / 2 : edge - job.size.width / 2
-        job.candidates.push(compoundCallout(job, [x, positions[i]]))
+        job.candidates.push({ ...compoundCallout(job, [x, positions[i]]), column: { group: parent.measurement.id, right } })
       })
     }
     // Give the large summary its own proposals; do not let it displace the
@@ -494,7 +498,10 @@ export function layoutAnnotations(input: LayoutInput): { drawings: AnnotationDra
       for (const c of job.candidates) {
         if (state.chosen.some(other => pair(c, other).conflict)) continue
         const crossings = state.chosen.reduce((n, other) => n + pair(c, other).crossings, 0)
-        next.push({ chosen: [...state.chosen, c], unplaced: state.unplaced, cost: state.cost + c.cost + crossings * 100 })
+        // Splitting one compound's callouts across both gutters scatters the
+        // table and blocks long dimensions on both sides of the part.
+        const split = c.column && state.chosen.some(o => o.column?.group === c.column!.group && o.column.right !== c.column!.right) ? 400 : 0
+        next.push({ chosen: [...state.chosen, c], unplaced: state.unplaced, cost: state.cost + c.cost + crossings * 100 + split })
       }
       next.push({ chosen: state.chosen, unplaced: [...state.unplaced, job.measurement], cost: state.cost })
     }

@@ -11,7 +11,7 @@ and profile parameters, with tolerance checks and an annotated report.
 Everything runs locally on the CPU (GPU optional). The app ships with its own
 Python runtime and ONNX models, so it needs no separate install.
 
-![Measurific demo: hovering recognized features, then adding diameter, distance, length and angle measurements on a drilled plate](docs/demo.gif)
+![Measurific demo: thread measurements and overall length on a threaded part, then diameter, distance, length and angle measurements on a drilled plate](docs/demo.gif)
 
 ([MP4 version](docs/demo.mp4))
 

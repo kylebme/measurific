@@ -388,14 +388,14 @@ function ImageStage({ onFeatureClick, onGeometryClick, controlDown, cameraLive, 
     }
   }
   const hoveredFeature = features.find((f) => f.id === hovered)
-  const viewIsOffset = view.scale > 1.001 || Math.abs(view.x) > .5 || Math.abs(view.y) > .5
+  const viewIsOffset = Math.abs(view.scale - 1) > .001 || Math.abs(view.x) > .5 || Math.abs(view.y) > .5
 
   const zoomAt = (clientX: number, clientY: number, multiplier: number) => {
     const bounds = stageRef.current?.getBoundingClientRect()
     if (!bounds) return
     const px = clientX - bounds.left, py = clientY - bounds.top
     setView((old) => {
-      const scale = Math.max(1, Math.min(20, old.scale * multiplier))
+      const scale = Math.max(.25, Math.min(20, old.scale * multiplier))
       const ratio = scale / old.scale
       return { scale, x: px - (px - old.x) * ratio, y: py - (py - old.y) * ratio }
     })
